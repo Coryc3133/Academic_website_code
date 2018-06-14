@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Cory K. Costello</title>
+    <link>/publication/</link>
+    <description>Recent content in Publications on Cory K. Costello</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018  Cory K. Costello </copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
+    
+	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Revealed Traits: A Novel Method for Estimating Cross-Cultural Similarities and Differences in Personality</title>
+      <link>/publication/revealed-traits/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 -0700</pubDate>
+      
+      <guid>/publication/revealed-traits/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
