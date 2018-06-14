@@ -19,7 +19,7 @@ weight = 5
 [[education.courses]]
   course = "PhD in Social/Personality Psychology"
   institution = "University of Oregon"
-  year = 2020
+  year = "2020 (expected)"
 
 [[education.courses]]
   course = "MA Psychology"
