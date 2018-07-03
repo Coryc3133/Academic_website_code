@@ -33,11 +33,6 @@ url_pdf = "http://journals.sagepub.com/doi/pdf/10.1177/0022022118757914"
 url_preprint = "https://osf.io/3w2zc/"
 url_code = "https://osf.io/wrpnk/"
 url_dataset = "https://osf.io/wrpnk/"
-url_project = "#"
-url_slides = "#"
-url_video = "#"
-url_poster = "#"
-url_source = "#"
 
 # Does the content use math formatting?
 math = false
