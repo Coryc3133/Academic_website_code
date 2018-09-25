@@ -23,8 +23,6 @@
     
     <url>
     
-      <xhtml:link rel="alternate" href="/tags/academic/" hreflang="en"/>
-    
       <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00-08:00</lastmod>
     </url>
@@ -63,16 +61,6 @@
     
       <loc>/project/reputation/</loc>
       <lastmod>2016-04-27T00:00:00-07:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/tags/academic/" hreflang="en"/>
-    
-      <loc>/tags/academic/</loc>
     </url>
     
   

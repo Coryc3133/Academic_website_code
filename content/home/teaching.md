@@ -14,5 +14,3 @@ subtitle = ""
 weight = 60
 
 +++
-
-PLACE HOLDER
