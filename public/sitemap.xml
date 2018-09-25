@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/talk/consensus_accuracy_consequences_hearsay_reputations_ecp2019/</loc>
+      <lastmod>2018-09-25T11:06:00-07:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/publication/revealed-traits/</loc>
       <lastmod>2018-06-13T00:00:00-07:00</lastmod>
     </url>
@@ -13,6 +22,8 @@
     
     
     <url>
+    
+      <xhtml:link rel="alternate" href="/tags/academic/" hreflang="en"/>
     
       <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00-08:00</lastmod>
@@ -59,8 +70,9 @@
     
     <url>
     
-      <loc>/cv/cv/</loc>
-      <lastmod>2018-01-13T00:00:00-08:00</lastmod>
+      <xhtml:link rel="alternate" href="/tags/academic/" hreflang="en"/>
+    
+      <loc>/tags/academic/</loc>
     </url>
     
   
@@ -97,46 +109,6 @@
     
     <url>
     
-      <loc>/cv/</loc>
-      <lastmod>2018-01-13T00:00:00-08:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/experimental-methods/</loc>
-      <lastmod>2016-04-27T00:00:00-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/interpersonal-perception/</loc>
-      <lastmod>2016-04-27T00:00:00-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/path-analysis/</loc>
-      <lastmod>2016-04-27T00:00:00-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/project/</loc>
       <lastmod>2016-04-27T00:00:00-07:00</lastmod>
       <priority>0</priority>
@@ -149,16 +121,6 @@
     
       <loc>/publication_types/</loc>
       <lastmod>2018-06-13T00:00:00-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/reputation/</loc>
-      <lastmod>2016-04-27T00:00:00-07:00</lastmod>
       <priority>0</priority>
     </url>
     
