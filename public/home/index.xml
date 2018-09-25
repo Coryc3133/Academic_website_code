@@ -76,6 +76,15 @@
     </item>
     
     <item>
+      <title>Teaching</title>
+      <link>/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/home/teaching/</guid>
+      <description>Coming soon&amp;hellip;</description>
+    </item>
+    
+    <item>
       <title>Resources</title>
       <link>/home/resources/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
@@ -86,21 +95,12 @@ Social Network Analysis.</description>
     </item>
     
     <item>
-      <title>Teaching</title>
-      <link>/home/teaching/</link>
+      <title>CV</title>
+      <link>/home/cv/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
-      <guid>/home/teaching/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tags</title>
-      <link>/home/tags/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 -0700</pubDate>
-      
-      <guid>/home/tags/</guid>
-      <description></description>
+      <guid>/home/cv/</guid>
+      <description>Download my CV.</description>
     </item>
     
     <item>
@@ -113,12 +113,12 @@ Social Network Analysis.</description>
     </item>
     
     <item>
-      <title>CV</title>
-      <link>/home/cv/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <title>Tags</title>
+      <link>/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0700</pubDate>
       
-      <guid>/home/cv/</guid>
-      <description>Download my CV.</description>
+      <guid>/home/tags/</guid>
+      <description></description>
     </item>
     
   </channel>
