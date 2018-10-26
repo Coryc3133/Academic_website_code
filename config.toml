@@ -64,7 +64,7 @@ enableGitInfo = false
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "Costello_ProfilePic.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "ccostell@uoregon.edu"
-  address = "Straub 439, University of Oregon, Eugene, OR, 97402, USA"
+  address = "Straub 464, University of Oregon, Eugene, OR, 97402, USA"
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""

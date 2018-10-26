@@ -9,4 +9,7 @@ draft = false
 weight = 80
 
 +++
-{{% staticref "files/cv.pdf" %}}Download my CV{{% /staticref %}}.
+Download my...    
+{{% staticref "files/cv_1.pdf" %}}1-page CV{{% /staticref %}}    
+{{% staticref "files/cv_3.pdf" %}}3-page CV{{% /staticref %}}    
+{{% staticref "files/cv_5.pdf" %}}5-page (Full) CV{{% /staticref %}}    
