@@ -12,7 +12,8 @@ weight = 5
   interests = [
     "Personality Assesment & Development",
     "Interpersonal Perception & Reputation",
-    "Computational Social Science"
+    "Computational Social Science",
+    "Data Science"
   ]
 
 # List your qualifications (such as academic degrees).

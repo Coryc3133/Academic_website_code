@@ -17,4 +17,8 @@ weight = 70
 
 Here are a collection of resources and demonstrations that I have contributed to.
 
-{{% staticref "files/Network_Analysis.html" %}}Social Network Analysis{{% /staticref %}}.
+{{%staticref "files/Network_Analysis.html" %}}Social Network Analysis{{%/staticref%}}.
+
+[UO Data Science Club's R Guide](https://uodatascience.github.io/R_Guide/)
+
+[UO Data Science Club's R Guide](https://uodatascience.github.io/ML-CrashCourse)
