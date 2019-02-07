@@ -1,12 +1,12 @@
 +++
 title = "Longitudinal Stability and Change in the Big Six"
-date = 2019-02-07T10:10:00  # Schedule page publish date.
+date = 2019-02-08T10:10:00  # Schedule page publish date.
 draft = false
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-time_start = 2019-02-07T10:10:00
-time_end = 2019-02-07T10:30:00
+time_start = 2019-02-08T10:10:00
+time_end = 2019-02-08T10:30:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Cory K Costello", "Sanjay Srivastava"]
