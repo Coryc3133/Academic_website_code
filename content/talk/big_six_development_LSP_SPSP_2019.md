@@ -40,7 +40,7 @@ tags = []
 url_pdf = "files/Stability & Change Big Six.pdf"
 url_slides = ""
 url_video = ""
-url_code = ""
+url_code = "http://osf.io/2cu8e"
 
 # Does the content use math formatting?
 math = true
@@ -51,8 +51,8 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "headers/hearsay_reputation_banner_img.png"
-caption = "What do people hear and say about others?"
+image = "headers/normative_change_big6.png"
+caption = "Lifespan Development of Big Six"
 
 +++
 
