@@ -3,7 +3,7 @@ title = "Revealed Traits: A Novel Method for Estimating Cross-Cultural Similarit
 date = 2018-06-13T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["CK Costello", "D Wood", "W Tov"]
+authors = ["Cory K Costello", "Dustin Wood", "William Tov"]
 
 # Publication type.
 # Legend:
