@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Do You Feel Like Who You Follow?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Cory K Costello &amp; Sanjay Srivastava" />
+    <meta name="date" content="2019-06-05" />
+    <link href="ARP_2019_Twitter_Friends_MH_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="ARP_2019_Twitter_Friends_MH_files/remark-css-0.0.1/uo.css" rel="stylesheet" />
+    <link href="ARP_2019_Twitter_Friends_MH_files/remark-css-0.0.1/uo-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Do You Feel Like Who You Follow?
+## A Network Approach to Predicting Individual Differences in Mental Health on Twitter.
+### Cory K Costello &amp; Sanjay Srivastava
+### 2019-06-05
+
+---
+
+
+# Mental Health &amp; Twitter
+???
++ At the broadest level, we're interested in predicting psychological characteristics from records of Online behavior.
+
+
+--
+
+
+## Why Mental Health?
+
+
+???
++ We're focusing on mental health now because **predicting mental health from online records has several potential benefits**
+--
+
+
++ Potential Benefits
+  + Applications in Clinical Science
+  + Applications in Public Health 
+  
+
+--
+
+
++ Potential Risks:
+  + threats to privacy
+  + discrimination
+
+
+--
+
+
+## Why Twitter?
+  + Most accounts are public.
+  + Easy access to data.
+  
+---
+class: center, inverse, middle
+# Why followed accounts?
+
+???
+Many records available on twitter, like tweets, but we think there are some **unique advantages to followed accounts.**
+---
+![](assets/img/ckc_friends.png)
+???
++ These are a few of the accounts I follow and just from this you might be able to tell
+  + my interest in psych / research
+  + my interest in american politics (maybe even my partisan lean)
+  + my need for political satire to cope with our current politics.
++ A lot about me is contained in my followed accounts
+---
+# Why Followed Accounts?
+
+???
+Start with **The reason so much is contained in followed accounts is...**
+--
+
+
++ Following accounts is how people control whom and what they see on Twitter.
+  + Under users' direct control.
+  + primary means for controlling the *content of their feed*
+
+
+--
+
+
++ Minimal threshold of Twitter use
+  + Better capture passive users
+  
+  
+--
+
+
++ Potentially less overt impression management
+  + Tweets can be signals, identity cues.
+  + Followed accounts are behavioral residue.
+---
+class: center, inverse, middle
+# Is mental health reflected in followed accounts on Twitter?
+???
++ What about mental health. Is our mental health reflected in the accts we follow?
+
++ We think there are several reasons it is.
+---
+# Followed Accounts &amp; Mental Health
+
+
+--
+
+
++ Mental Health -&gt; Followed Accounts
+	+ Information/Support Seeking
+	+ Homophily
+	+ Emotion Regulation Strategies
+
+
+---
+![](assets/img/MH_friends2.png)
+---
+# Followed Accounts &amp; Mental Health
+
+
++ Mental Health -&gt; Followed Accounts
+	+ Information/Support Seeking
+	+ Homophily
+	+ Emotion Regulation Strategies
+
+
+--
+
+
++ Followed Accounts -&gt; Mental Health
+  + Emotions evoked from Twitter Content
+
+
+--
+
+
++ Followed Accounts &lt;-&gt; Mental Health Transactions
+
+---
+#  Overview of Study
++ **Overarching goal:** Develop and evaluate Followed-account-based assesment for mental health constructs.
+
+
+--
+
+
+## Initial Method Development
+
++ We predicted individual differences in **tweet sentiment** from **followed accounts** on Twitter
+
+
+--
+
+
+## Further Validation
+
++ Predicting individual differences in  **Depression, Anxiety, Anger, and PTSD symptoms** from **followed accounts**.
+  + *Under review as part of RR*
+???
+remember to say **further validation using psychometrically sound measures of mental health**
+---
+# Sentiment
++ **Sentiment analysis** refers to scoring texts for the .green[*positivity*] or .red[*negativity*] of their content. 
+
+
+--
+
+
++ For example:
+  + .green[Some texts are *wondefully positive!*]
+  + .red[Others are *dreadfully negative*]
+  + others are neutral
+
+???
++ wonderful &amp; positive are positive words = pos. sentiment score.
++ dreadful and negative are negative words = neg. sentiment score.
++ third example has no positive or negative words.
+--
+
+
+## Why sentiment?
+
+
++ **Domain-relevance** 
+  + It is related to affect, well-being, and mental health.
+  + .small[Park et al., 2012; Reece et al., 2017]
+
+  
++ It is easy to score reliably from tweets.
+
+
+---
+# Predictive Modeling Approach
+--
+
+
++ Create a predictive algorithm and evaluate how it performs in new data
+
+
+--
+
+
++ Data-driven
+
+
+--
+
+
++ Attempt to avoid bias &amp; capitalizng on chance
+
+
+???
+by taking steps like 10-fold CV in training and evaluating model using holdout sample.
+--
+
+
+## Challenges:
++ More predictors than observations
++ Sparsity
+  + Most followed accounts have few followers.
+
+
+---
+#  Sparsity
+![](assets/img/init_user_friends_followers_hist.png)
+
+---
+# Predictive Modeling Approach
+
++ Create a predictive algorithm and evaluate how it performs in new data
++ Data-driven
++ Attempt to avoid bias &amp; capitalizng on chance
+
+## Challenges:
++ More predictors than observations
++ Sparsity
+  + Most followed accounts have few followers.
+
+## Solutions: 
++ Filter accounts (remove rarely followed accounts), data reduction, and modeling techniques.
+---
+# Samples
+--
+
+
++ We collected several samples of Twitter users through Twitter's API:
+
+
+--
+
+
++ **Initial Sample:** randomly sampled from 3 networks
+.small[+ my 2-step friend network
++ Obama's followers
++ Trump's followers]
+
+
+--
+
+
++ **Replication Sample:** randomly sampled followers of 10 accounts:
+.small[.pull-left[
++ @joelembiid 
++ @katyperry
++ @jimmyfallon
++ @billgates
++ @oprah
+]
+.pull-right[
++ @kevinheart4real
++ @wizkhalifa
++ @adele
++ @nba
++ @nfl
+]]
+
+
+--
+
+
+.pull-left[
++ We only included users that:
+  + had their language (on Twitter) set to English
+  + `\(\geq\)` 25 tweets
+  + `\(\geq\)` 25 friends
+  ]
+
+
+--
+
+
+.pull-right[
++ 
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; sample &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; \(N_{users}\) &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; \(N_{followed}\) &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Initial &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 484 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 237, 930 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; replication &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 129 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 54, 262 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+# Procedure
++ For both samples, we collected **followed accounts** and **tweets**
+
+
+--
+
+
++ Then we scored all of the participants tweets for **sentiment** using the NRC sentiment lexicons (Mohammad &amp; Kiritchenko, 2015)
+
+
+--
+
+
++ We then went through our modeling procedure treating average tweet sentiment as the outcome variable.
+
+---
+#  General Modeling Approach:
+1. Partition Data (60-40 split)
+
+2. Process &amp; Reduce Predictors:
+  + filter accounts based on followers in data
+  + Any further data reductoin.
+
+3. Train &amp; Evaluate Models using 10-fold CV
+
+4. Select Model based on Training Performance and Interpretability
+
+5. (Publically Register Training Results &amp; Model Selection on OSF)
+
+6. Evaluate out-of-sample accuracy with heldout data
+
+---
+# Specific Models
+--
+
+
+We chose four models based on:
+
+
+--
+
+
++ Maximizing predictive accuracy &amp; interpretability
+
+
+--
+
+
++ What techniques work well with *numerous*, *sparse* &amp; *noisy* predictors
+
+
+--
+
+
++ What has been used in previous work.
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; models &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; reason &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Unsuperivised Ridge PCR &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; previous work* &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Relaxed LASSO &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; previous work** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Supervised PCA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; easy to interpret; good for low signal:noise &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Random Forest &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; good for sparse predictors, low signal:noise &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+.small[+ *Kosinski et al., 2013
++ **Youyou et al., 2015]
+---
+class: center, middle, inverse
+# How accurately can we predict Tweet Sentiment from Followed Accounts?
+---
+# Training Results: Initial Sample 
+![](assets/img/combined_samples_training_and_reliability_nopts.png)
+
+???
+**Pause.**
+**describe axes**
+**random forest performed best and was selected**
+---
+class: center, middle, inverse  
+# Out-of-sample Accuracy: 
+# *R* = .42
+
+???
++ The correlation means that predicted scores correlate .42 with observed scores in the heldout data. 
+
++ using just followed accounts **in new data** we can recover users' average sentiment with considerable accuracy.
+---
+# Training Results: Replication 
+![](assets/img/10seed_samples_training_and_reliability_nopts.png)
+???
++ replication, very consistent which was **relieving**
+---
+class: center, middle, inverse
+# Out-of-sample Accuracy: 
+# R = .61
+---
+# Conclusions &amp; Next Steps
+
+
++ Our initial results suggest followed accounts may be psychologically meaningful.
+
+
+--
+
+
++ Followed accounts do predict sentiment with considerable accuracy. 
+
+
+--
+
+
++ Increased confidence that followed accounts relate to mental health.
+  + However, very different DV and sampling plan.
+
+
+---
+# Acknowledgements:
+
+## Funding
++ NIH R21 MH106879-01
++ NSF GRANT #1551817
+
+## Collaborators
++ Coauthors: Sanjay Srivastava, Reza Rejai, &amp; Maureen Zalewski
++ PSD Labmates for feedback
+
+---
+class: center, inverse, middle
+# Questions
+
+Email: ccostell@uoregon.edu
+
+Twitter: @costellock
+
+OSF Project Page: https://osf.io/ky7u3/
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

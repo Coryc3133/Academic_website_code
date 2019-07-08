@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018  Cory K. Costello </copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>/home/hero/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 -0700</pubDate>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0200</pubDate>
       
       <guid>/home/hero/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title></title>
       <link>/home/about/</link>
-      <pubDate>Wed, 13 Jun 2018 18:52:00 -0700</pubDate>
+      <pubDate>Wed, 13 Jun 2018 18:52:00 +0200</pubDate>
       
       <guid>/home/about/</guid>
       <description>Biography Cory Costello is a doctoral candidate in psychology at the University of Oregon. He is a member of the Personality and Social Dynamics Lab (PI: Sanjay Srivastava). His research interests include Personality (who we are), Interpersonal Perception (what people think about us), and Reputations (what people say and hear about us). He combines survey, experimental, and data scientific methods in pursuit of these interests. He is an open science and R enthusiast.</description>
@@ -33,7 +33,7 @@
     <item>
       <title>Selected Publications</title>
       <link>/home/publications_selected/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/publications_selected/</guid>
       <description></description>
@@ -42,7 +42,7 @@
     <item>
       <title>Recent Publications</title>
       <link>/home/publications/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/publications/</guid>
       <description></description>
@@ -51,7 +51,7 @@
     <item>
       <title>Recent &amp; Upcoming Talks</title>
       <link>/home/talks/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/talks/</guid>
       <description></description>
@@ -60,7 +60,7 @@
     <item>
       <title>Recent Posts</title>
       <link>/home/posts/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/posts/</guid>
       <description></description>
@@ -69,7 +69,7 @@
     <item>
       <title>Projects</title>
       <link>/home/projects/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/projects/</guid>
       <description></description>
@@ -78,7 +78,7 @@
     <item>
       <title>Teaching</title>
       <link>/home/teaching/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/teaching/</guid>
       <description>Coming soon&amp;hellip;</description>
@@ -87,7 +87,7 @@
     <item>
       <title>Resources</title>
       <link>/home/resources/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/resources/</guid>
       <description>Here are a collection of resources and demonstrations that I have contributed to.
@@ -98,7 +98,7 @@ UO Data Science Club&amp;rsquo;s Machine Learning Crash Course</description>
     <item>
       <title>CV</title>
       <link>/home/cv/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/cv/</guid>
       <description>Download my&amp;hellip;
@@ -110,7 +110,7 @@ UO Data Science Club&amp;rsquo;s Machine Learning Crash Course</description>
     <item>
       <title>Contact</title>
       <link>/home/contact/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/contact/</guid>
       <description></description>
@@ -119,7 +119,7 @@ UO Data Science Club&amp;rsquo;s Machine Learning Crash Course</description>
     <item>
       <title>Tags</title>
       <link>/home/tags/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0200</pubDate>
       
       <guid>/home/tags/</guid>
       <description></description>

@@ -7,13 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018  Cory K. Costello </copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0200</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Do You Feel Like Who You Follow? A Network Approach to Predicting Individual Differences in Mental Health on Twitter</title>
+      <link>/talk/twitter_friends_mh_arp_2019/</link>
+      <pubDate>Sat, 29 Jun 2019 15:00:00 +0200</pubDate>
+      
+      <guid>/talk/twitter_friends_mh_arp_2019/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Costello, C. K.&lt;/strong&gt; &amp;amp; Srivastava S. (2019). Do You Feel Like Who You Follow? A Network Approach to Predicting Individual Differences in Mental Health on Twitter. In &lt;strong&gt;Costello, C. K.&lt;/strong&gt; &amp;amp; Srivastava S. (Chairs), &lt;em&gt;The Difference Engine: Advancing Personality Science With Digital Records of Language, Networks, and Behavior.&lt;/em&gt; Symposium conducted at the 2019 Biennial Meeting of the Association for Research in Personality (Grand Rapids, MI.)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Longitudinal Stability and Change in the Big Six</title>
       <link>/talk/big_six_development_lsp_spsp_2019/</link>
-      <pubDate>Fri, 08 Feb 2019 10:10:00 -0800</pubDate>
+      <pubDate>Fri, 08 Feb 2019 10:10:00 +0100</pubDate>
       
       <guid>/talk/big_six_development_lsp_spsp_2019/</guid>
       <description>&lt;p&gt;Costello, C. K. &amp;amp; Srivastava, S. (2019). Longitudinal stability and change in the Big Six. In G. Saucier &amp;amp; S. Srivastava (Chairs), &lt;em&gt;Longitudinal Stability/Change in Personality Understood Broadly: Beyond the Big Five.&lt;/em&gt; Symposium to be conducted at the 2019 Lifespan Social-Personality  Preconference, part of the 20th annual meeting of the Society of Personality and Social Psychology (Portland, OR).&lt;/p&gt;
@@ -23,7 +33,7 @@
     <item>
       <title>Ethics-Relevant Values in Adulthood: Longitudinal Findings from the Life and Time Study</title>
       <link>/publication/ethics-relevant-values/</link>
-      <pubDate>Sun, 03 Feb 2019 00:00:00 -0800</pubDate>
+      <pubDate>Sun, 03 Feb 2019 00:00:00 +0100</pubDate>
       
       <guid>/publication/ethics-relevant-values/</guid>
       <description></description>
@@ -32,7 +42,7 @@
     <item>
       <title>Consensus, Accuracy, and Consequences of Hearsay Reputations</title>
       <link>/talk/consensus_accuracy_consequences_hearsay_reputations_ecp2019/</link>
-      <pubDate>Tue, 25 Sep 2018 11:06:00 -0700</pubDate>
+      <pubDate>Tue, 25 Sep 2018 11:06:00 +0200</pubDate>
       
       <guid>/talk/consensus_accuracy_consequences_hearsay_reputations_ecp2019/</guid>
       <description>&lt;p&gt;Costello, C. K. &amp;amp; Srivastava, S. (2018). Consensus, Accuracy, and Consequences of Hearsay Reputations. In R. Rau (Chair), &lt;em&gt;Making good impressions: On the antecedents and consequences of peer reputations.&lt;/em&gt; Symposium conducted at the 19th European Conference on Personality (Zadar, Croatia).&lt;/p&gt;
@@ -42,7 +52,7 @@
     <item>
       <title>Revealed Traits: A Novel Method for Estimating Cross-Cultural Similarities and Differences in Personality</title>
       <link>/publication/revealed-traits/</link>
-      <pubDate>Wed, 13 Jun 2018 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0200</pubDate>
       
       <guid>/publication/revealed-traits/</guid>
       <description></description>
@@ -51,7 +61,7 @@
     <item>
       <title>Stability and Change in the Big Five and Big Six: New Tests of the Maturity and Cumulative Continuity Principles</title>
       <link>/publication/change-stability-big-six/</link>
-      <pubDate>Fri, 23 Jun 2017 00:00:00 -0700</pubDate>
+      <pubDate>Fri, 23 Jun 2017 00:00:00 +0200</pubDate>
       
       <guid>/publication/change-stability-big-six/</guid>
       <description></description>
@@ -60,7 +70,7 @@
     <item>
       <title>Do you Feel Like who You Follow</title>
       <link>/project/twitter_friends_predicting_mh/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/project/twitter_friends_predicting_mh/</guid>
       <description></description>
@@ -69,7 +79,7 @@
     <item>
       <title>Reputation Project</title>
       <link>/project/reputation/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/project/reputation/</guid>
       <description></description>
