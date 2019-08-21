@@ -38,7 +38,7 @@ tags = []
 
 # Links (optional).
 url_pdf = ""
-url_slides = "slides/ARP 2019 Twitter Friends MH.Rmd"
+url_slides = "slides/ARP_2019_Twitter_Friends_MH.html"
 url_video = ""
 url_code = "http://osf.io/ky7u3"
 
