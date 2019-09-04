@@ -13,10 +13,11 @@ image_preview = "headers/hearsay_reputation_banner_img.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["Reputation", "Path Analysis", "Experimental"]`
+
 tags = []
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://osf.io/65wfu/"
+external_link = "https://osf.io/65wfu/?view_only=d55187ada7984d1780b77313d641aec7"
 
 # Does the project detail page use math formatting?
 math = false

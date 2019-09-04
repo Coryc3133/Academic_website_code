@@ -1,0 +1,318 @@
+---
+title: 'Spotify API Fun Vol 1: Similarity in Music Preference Networks across Platforms'
+author: 'Cory K. Costello'
+date: '2019-09-04'
+slug: spotify-api-fun-vol-1-similarity-in-music-preference-networks-across-platforms
+categories: []
+tags: []
+draft: true
+header:
+  caption: ''
+  image: ''
+  preview: yes
+---
+
+I decided to start my blog off with a short series I'm calling spotify api fun. In it, I'll be sharing some things I've learned while messing around with data from Spotify's API. In this post, I'll be combining data from Spotify's and Twitter's API to investigate the extent to which music preferences are expressed similarly across the two platforms. 
+
+looking at The Grateful Dead's recommendation network, using some tools from Network Analysis to see what we can learn.
+
+# Downloading The Grateful Dead's Recommendation Network
+
+My first step was to download the data through Spotify's API, which I did using the wonderful [spotipy](https://spotipy.readthedocs.io) package for python. I used the tools in that package to search the Grateful Dead's Recommendation Network. My basic idea was to:
+
+1. Get the [20 'related artists' that appear on the Grateful Dead's Profile](https://open.spotify.com/artist/4TMHGUX5WI7OOm53PqSDAT/related)
+2. Get each of those 20 artists' related artists.
+3. Repeat to some pre-specified maximum depth. 
+
+The main decision I had to make was how high to set the maximum depth, which I ended up setting to **10**. This means that the network was limited to artists that are at most 10 steps from the Grateful Dead. In case this is confusing, the 20 artists in the Grateful Dead's related artists list are 1 step away; artists related to *those* artists but *not* in the Grateful Dead's related artists are 2 steps away, etc. 
+
+```{r setup, echo = FALSE, message = FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(rio)
+library(tidyverse)
+library(tidygraph)
+library(visNetwork)
+library(rtweet)
+library(igraph)
+dead_relatives <- import("./spotify_data_dead/dead_relative_10steps.csv", skip = 1) %>% 
+  select(-V1) %>% 
+  rename(artist = V2,
+         relative = V3)
+```
+
+# Visualizing The Grateful Dead's Recommendation Network
+
+As a first step, I wanted to visualize the network in a few different ways, highlighting different aspects of it. 
+
+## Distance from the Dead 
+First I wanted to get a rough sense of this network, and examine artists' distance from the dead (the ego of this network). I wanted to do this for two reasons:
+
+1. I wanted to see how far we were able to get from the dead. Recall that the maximum would be 10 steps, but this would require virtually no overlap in related artists.
+
+2. I wanted to do a sanity check: does distance seem to (roughly) track similarity?
+
+This graph shows the Grateful Dead's Recommendation Network where nodes are colored by their distance from the Grateful Dead. Note that you can select particular nodes by their name or highlight the collection of nodes a certain distance from the Grateful dead with the drop down options on the graph. 
+
+```{r}
+dead_relatives %>% 
+  as_tbl_graph() %>% 
+  activate(nodes) %>% 
+  mutate(distance = node_distance_to(nodes = 1, mode = 'all'),
+         group = distance) %>% 
+  arrange(distance) %>% 
+  visIgraph(physics = TRUE) %>%
+  visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
+             selectedBy = "distance",
+             nodesIdSelection = TRUE) %>% 
+  visLayout(randomSeed = 23) %>% 
+  visPhysics(forceAtlas2Based = list("avoidOverlap" = 1)) %>% 
+  visLegend(main = "Distance", zoom = FALSE)
+```
+
+A couple of things immediately jumped out to me when I saw this graph:
+
+1. The maximum distance from the dead is **4 steps**. This suggests that related artists have a fair amount of overlap.
+
+2. At the first step (in yellow) you can already start to anticipate how things might branch, as we have some of their contemporaries (e.g., New Riders of the Purple Sage), some of the jam band artists they inspired (e.g., Phish), traditional Bluegrass (Old & in the Way), as well as some of the Bluegrass/Newgrass that they inspired (e.g., Yonder Mountain String Band).
+
+3. At two steps (in red), things really start to diversify. At one branch we have modern jam bands, some of which sound *really* different from the dead, bands like STS9, The Disco Biscuits, etc. On another branch you get deeper into the classic bluegrass and newgrass network (older artists like *Doc & Merle Watson* and newer ones like *The Infamous Stringdusters*). Finally, you have a more sparse branch of the network that has some of the offshoots of bands that were contemporary with the dead (e.g., Dickey Betts, Derek & the Dominoes, etc.).
+
+4. At three steps (green), we have drastically different artists. As an example, at one end of the network is festival staple and Jazz-Funk band *Medeski, Martin, & Wood* and the other has *Uncle Tupelo*, perhaps best known as the predecessor to *Wilco* and *Son Volt*.
+
+5. At four steps (purple), we actually contract quite a bit to a pretty small, dense, and not very diverse (genre-wise) network of bands. They all seem to be part of the electronica festival scene, which is distantly related to the Dead (via the jam band scene).
+
+In all, this network made a fair amount of sense, so I decided to move onto the next step.
+
+# Downloading Artist-Follower Twitter Networks
+
+This was a little more complicated than it sounds, but basically I took all of the artists in the network above, searched for that artists' name on Twitter, did some screening to make sure the Twitter accounts I searched were indeed the artists I was looking for, and then retrieved full follower lists for all of these artists. Although these were pretty messy search results, I was able to use the Levenshtein distance metric to filter and check potential mismatches. The process worked well and was relatively painless, so I'd recommend checking out the `RecordLinkage` package and the `levenshteinSim()` function if you ever deal with messy search results.
+
+# Working with Artist-Follower Networks
+
+Before we get any further, we need to take a brief detour into the technical weeds of social network analysis. The full, combined Artist-Follower network can be thought of as a *bipartite* network, which basically means a network with two sets of nodes. In this case, that is artists and followers.
+
+[Brieger (1974)](https://academic.oup.com/sf/article-abstract/53/2/181/2229911), demonstrated that one can perform *projections* with a bipartite network to get associations between one of the node types based on the extent of co-occurence of the other node type. In other words, we can get how closely associated artists are based on how many followers they share, which we can call the **artists' co-follower network**. Conveniently, this is found via simple matrix manipulation, where you multiply the artist-follower matrix by its Transpose:
+
+$$M_{Artist-Follower} * M_{Artist-Follower}' = M_{Artist-Artist}$$
+
+We can use the `tidygraph` library to do this very simply with the `bipartite_mapping` & `bipartite_projection` functions.
+
+# Visualizing Artists' Co-Follower Network
+
+First, we might want to visualize the network. Unfortunately, this network is very dense - almost every artist is connected to every other artist - which makes it a little difficult to visualize. Below I have it visualized as a circle, which isn't ideal but is the only layout that allows you to easily see just how interconnected the nodes are.
+```{r}
+# list the files
+follower_files <- paste0("./twitter_data_dead/", list.files("./twitter_data_dead"))
+
+# extract just the artist name
+artists <- str_remove(follower_files, "./twitter_data_dead/") %>% 
+  str_remove("_followers.csv")
+
+# import the files, and match them
+# with the followers with the artist names
+artist_follower <- follower_files %>% 
+  map(import) %>% 
+  map(mutate, user_id = as.character(user_id)) %>%
+  set_names(artists) %>%
+  enframe() %>% 
+  rename(relative = name) %>% 
+  unnest()
+
+dead_relatives_followers <- artist_follower %>% 
+  mutate(relative = fct_relevel(relative,
+                                       "Grateful Dead")) %>% 
+  arrange(relative) %>% 
+  as_tbl_graph(mode = "in") 
+
+dead_twitter_relatives <- dead_relatives_followers %>% 
+  activate(nodes) 
+
+dead_relatives_followers_bip <- dead_relatives_followers %>% 
+  mutate(., type = bipartite_mapping(.)$type) %>% 
+  as.igraph() %>% 
+  bipartite_projection(which = "FALSE") %>% 
+  as_tbl_graph()
+
+
+dead_relatives_followers_bip %>% 
+  arrange(name) %>% 
+  visIgraph(physics = TRUE) %>%
+  visIgraphLayout(layout = "layout_in_circle") %>% 
+  visOptions(highlightNearest = list(enabled = T, degree = 1, hover = T),
+             nodesIdSelection = TRUE) %>% 
+  visLayout(randomSeed = 200)
+```
+
+I think the big take-away from this particular graph is that artists related to each other through Spotify's recommendation network are related through Twitter's co-follower network. [According to Spotify](https://artists.spotify.com/blog/how-fans-also-like-works), their recommendation algorithm is based on:
+
+1. Shared listeners on spotify
+2. Similarity in how artists are descrbed on Spotify, and elsehwere on the internet (e.g., Blogs). 
+
+With that in mind, the above graph suggests that Artists with listeners in common on Spotify tend to have followers in common on Twitter.  This isn't altogether surprising, but it does suggest that musical preferences are expressed similarly in these two very different platforms. 
+
+# Comparing Artists Centrality in Recommendation & Co-Follower Networks
+
+Lastly (for now), I wanted to follow up on this result. The above graph is a pretty coarse comparison, showing that members of the dead's recommendation network on Spotify tend to also be connected via Twitter followers. Next, I wanted to see if these networks were structured similarly, focusing on node centrality. I did this by calculating `Eigen Centrality` for each node in the two networks and correlating these values.
+
+First, let's see how they're each distributed:
+```{r}
+dead_rel_spot_imp <- dead_relatives %>% 
+  as_tbl_graph() %>% 
+  activate(nodes) %>% 
+  mutate(spotify_centrality = centrality_eigen()) %>% 
+  as_tibble()
+
+dead_rel_tw_imp <- dead_relatives_followers_bip %>% 
+  mutate(twitter_centrality = centrality_eigen()) %>% 
+  as_tibble()
+
+library(ggpubr)
+library(ggimage) 
+library(magick)
+library(ggrepel)
+img = "support/bears_t.png"
+
+p_dis <- dead_rel_spot_imp %>% 
+  left_join(dead_rel_tw_imp) %>% 
+  gather(network_measure, score, -name) %>% 
+  separate(network_measure, c("network", "measure")) %>% 
+  ggplot(aes(x = score, fill = network)) + 
+  geom_density(alpha = .5) + 
+  ggthemes::theme_clean() +
+  labs("Distribution of Importance Scores in Each Network")
+ggbackground(p_dis, img)
+```
+
+It looks like both are negatively skewed, though centrality in Spotify's recommendaiton network is more skewed. Let's see if a log (base 10) transformation gets things normalized.
+
+```{r}
+p_dis_log <- dead_rel_spot_imp %>% 
+  left_join(dead_rel_tw_imp) %>% 
+  gather(network_measure, score, -name) %>% 
+  separate(network_measure, c("network", "measure")) %>% 
+  ggplot(aes(x = score, fill = network)) + 
+  geom_density(alpha = .5) + 
+  scale_x_log10() +
+  ggthemes::theme_clean() +
+  labs("Distribution of Logged Importance in Each Network")
+
+
+ggbackground(p_dis_log, img)
+```
+
+Well, they're not perfect but they certainly look a lot better.
+
+Finally, let's take a look at their correlation by getting a scatter plot and a smoothed (lm-based) line. 
+
+```{r}
+p_reg <- dead_rel_spot_imp %>% 
+  left_join(dead_rel_tw_imp) %>% 
+  ggplot(aes(x = twitter_centrality, y = spotify_centrality)) + 
+  geom_point() +
+  geom_smooth(method = "lm", alpha = .1) +
+  stat_cor(size = 5) +
+  ggthemes::theme_clean() + 
+  labs(title = "Eigen Centrality in Spotify and Twitter:",
+       subtitle = "Artists Related to the Grateful Dead",
+       x = "Centrality in Twitter Artist-Follower Network",
+       y = "Centrality in Spotify Related Artist Network") + 
+  scale_x_log10() +
+  scale_y_log10() 
+ 
+ggbackground(p_reg, img)
+```
+
+The above graph shows that an artists' centrality in the Grateful Dead's Spotify recommendation network is correlated with their centrality in their Twitter co-follower network, demonstrating further that music preferences are expressed similarly in Twitter and Spotify. 
+
+To get a better sense of what's going on, let's see who is highly central in both networks; I'll label points that are above .6 centrality in both networks
+
+```{r}
+p_reg <- dead_rel_spot_imp %>% 
+  left_join(dead_rel_tw_imp) %>% 
+  ggplot(aes(x = twitter_centrality, y = spotify_centrality)) + 
+  geom_point() +
+  geom_smooth(method = "lm", alpha = .1) +
+  ggthemes::theme_clean() + 
+  labs(title = "Eigen Centrality in Spotify and Twitter:",
+       subtitle = "Most Central Artists in the Dead's Networks",
+       x = "Centrality in Twitter Artist-Follower Network",
+       y = "Centrality in Spotify Related Artist Network") + 
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_label_repel(aes(label = ifelse(spotify_centrality > .6 & twitter_centrality > .6, name, '')),
+                  box.padding   = 0.15, 
+                  point.padding = 0.6,
+                  force = 20,
+                  segment.color = 'grey50')
+ggbackground(p_reg, img)
+```
+
+It looks like the most central nodes in both networks are Phish, Trey Anastasio (Phish's guitarist & lead singer), & Umphrey's McGee (another modern jam band). This makes a fair amount of sense - these popular newer jam bands probably have fans in common with both classic jam bands (e.g., the Dead) and more modern festival acts (e.g., EDM).
+
+We can also take a look at the least central nodes, which are shown below
+
+```{r}
+p_reg <- dead_rel_spot_imp %>% 
+  left_join(dead_rel_tw_imp) %>% 
+  ggplot(aes(x = twitter_centrality, y = spotify_centrality)) + 
+  geom_point() +
+  geom_smooth(method = "lm", alpha = .1) +
+  ggthemes::theme_clean() + 
+  labs(title = "Eigen Centrality in Spotify and Twitter:",
+       subtitle = "Least Central Artists in the Dead's Networks",
+       x = "Centrality in Twitter Artist-Follower Network",
+       y = "Centrality in Spotify Related Artist Network") + 
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_label_repel(aes(label = ifelse(spotify_centrality < .001 & twitter_centrality <.00001, name, '')),
+                  box.padding   = 0.15, 
+                  point.padding = 0.6,
+                  force = 20,
+                  segment.color = 'grey50')
+ggbackground(p_reg, img)
+```
+
+These are four artists that were new to me when I saw this data. As a fan of the Dead, I think the fact that I had never heard of them is consistent with their low centrality in these networks. 
+
+
+The last thing we might want to look at are the points of divergence; which artists are more central in one network or the other?
+
+```{r}
+p_reg <- dead_rel_spot_imp %>% 
+  left_join(dead_rel_tw_imp) %>% 
+  mutate(centrality_miss = (twitter_centrality - spotify_centrality)^2) %>% 
+  ggplot(aes(x = twitter_centrality, y = spotify_centrality)) + 
+  geom_point() +
+  geom_smooth(method = "lm", alpha = .1) +
+  ggthemes::theme_clean() + 
+  labs(title = "Eigen Centrality in Spotify and Twitter:",
+       subtitle = "Largest Discrepancies in Centrality",
+       x = "Centrality in Twitter Artist-Follower Network",
+       y = "Centrality in Spotify Related Artist Network") + 
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_label_repel(aes(label = ifelse(centrality_miss > .45, name, '')),
+                  box.padding   = 0.35, 
+                  point.padding = 0.2,
+                  force = 58,
+                  segment.color = 'grey50')
+ggbackground(p_reg, img)
+```
+
+The labels at the top like Keller Williams are artists that are more central in the Dead's Spotify Recommendation Network than their Twitter Co-Follower Network, and the one's on the bottom (basically just Greg Allman) are artists more central in Twitter than Spotify. I don't know if either company is currently doing this, but one could easily imagine using these discrepancies to recommend accounts to follow on Twitter or Artists to explore on Spotify.
+
+# Caveats & Limitations
+
+Before I conclude, I wanted to point out a couple of caveats and limitations in the above analyses.
+
+First, a fair amount of the artists - especially older artists that died before Twitter existed (e.g., Lowell George) - didn't have Twitter accounts.
+
+Second, I don't know the full details of Spotify's or Twitter's recommendation systems. It is a distinct possibility that these companies base their recommendations on each others' data. If that were the case, then we have something like methods variance artificially inflating the correlation between artists' centrality. Spotify does not mention Twitter co-followers in [their description of their algorithm](https://artists.spotify.com/blog/how-fans-also-like-works), but that doesn't necessarily rule it out.
+
+Third, this is a single network and we might expect things to look different in other networks. Ideally, one would sample networks and examine the extent to which the pattern varies across networks (e.g., in a HLM/MLM framework). If I find a little more time, I may do this myself and post the results here at some point.
+
+# Conclusion
+
+Even with those limitations in mind, I found this to be a pretty interesting exercise. Although it isn't necessarily surprising, it is sort of neat to find that artists with more listeners in common on spotify have more followers in common on Twitter. Imagine what we could learn about people by linking up digital footprints from different platforms! In practical terms, this also suggests that you might be able to data from one platform to make recommendations on the other, ultimately improving recommendation systems. 
+
+That's all for now! Tune in soon for **Vol. 2** of Spotify API Fun, where I'll take a look at community detection algorithms, and the extent to which they find similar communities in the two networks I introduced today.

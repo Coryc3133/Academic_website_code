@@ -1,0 +1,139 @@
+---
+title: 'Spotify API Fun Vol. 2: Communities'
+author: Cory Costello
+date: '2019-08-23'
+slug: spotify-api-fun-vol-2-artists-related-to-the-grateful-dead
+categories: []
+tags: []
+draft: true
+header:
+  caption: ''
+  image: ''
+  preview: yes
+---
+
+I decided to start my blog off with a short series I'm calling spotify api fun. In it, I'll be sharing some things I've learned while messing around with data from Spotify's API. In this post, we'll be looking at The Grateful Dead's recommendation network, using some tools from Network Analysis to see what we can learn.
+
+# Downloading The Grateful Dead's Recommendation Network
+
+My first step was to download the data through Spotify's API, which I did using the wonderful [spotipy](https://spotipy.readthedocs.io) package for python. I used the tools in that package to search the Grateful Dead's Recommendation Network. My basic idea was to:
+
+1. Get the [20 'related artists' that appear on the Grateful Dead's Profile](https://open.spotify.com/artist/4TMHGUX5WI7OOm53PqSDAT/related)
+2. Get each of those 20 artists' related artists.
+3. Repeat to some pre-specified maximum depth. 
+
+The main decision I had to make was how high to set the maximum depth, which I ended up setting to **10**. This means that the network was limited to artists that are at most 10 steps from the Grateful Dead. In case this is confusing, the 20 artists in the Grateful Dead's related artists list are 1 step away; artists related to *those* artists but *not* in the Grateful Dead's related artists are 2 steps away, etc. 
+
+```{r setup, echo = FALSE, message = FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(rio)
+library(tidyverse)
+library(tidygraph)
+library(visNetwork)
+library(rtweet)
+library(igraph)
+dead_relatives <- import("./spotify_data_dead/dead_relative_10steps.csv", skip = 1) %>% 
+  select(-V1) %>% 
+  rename(artist = V2,
+         relative = V3)
+```
+
+# Visualizing The Grateful Dead's Recommendation Network
+
+As a first step, I wanted to visualize the network in a few different ways, highlighting different aspects of it. 
+
+## Distance from the Dead 
+
+The first thing I wanted to know was:
+
+**How far were we able to get from the Dead in this recommendation network?**
+
+Based on the parameters I set during data collection, we know the maximum would be 10 steps - but this would require essentially no redundancy in related artists, which seems unlikely.  
+
+This graph shows the Grateful Dead's Recommendation Network where nodes are colored by their distance from the Grateful Dead. Note that you can select particular nodes by their name or highlight the collection of nodes a certain distance from the Grateful dead with the drop down options on the graph. 
+
+```{r}
+dead_relatives %>% 
+  as_tbl_graph() %>% 
+  activate(nodes) %>% 
+  mutate(distance = node_distance_to(nodes = 1, mode = 'all'),
+         group = distance) %>% 
+  arrange(name) %>% 
+  visIgraph(physics = TRUE) %>%
+  visOptions(highlightNearest = list(enabled = T, degree = 1, hover = T),
+             selectedBy = "distance",
+             nodesIdSelection = TRUE) %>% 
+  visLayout(randomSeed = 23) %>% 
+  visPhysics(forceAtlas2Based = list("avoidOverlap" = 1)) %>% 
+  visLegend(main = "Distance", zoom = FALSE)
+```
+
+A couple of things immediately jumped out to me when I saw this graph:
+
+1. The maximum distance from the dead is **4 steps**. This suggests that related artists have a fair amount of overlap - at least at this level (i.e., using the 20 related artists on each artists' profiles)
+
+2. At the first step (in green) you can already start to anticipate how things might branch, as we have some of their contemporaries (e.g., New Riders of the Purple Sage), some of the jam band artists they inspired (e.g., Phish), traditional Bluegrass (Old & in the Way), as well as some of the Bluegrass/Newgrass that they inspired (e.g., Yonder Mountain String Band).
+
+3. At two steps (in yellow), things really start to diversify. At one branch we have modern jam bands, some of which sound *really* different from the dead, bands like STS9, The Disco Biscuits, etc. On another branch you get deeper into the classic bluegrass and newgrass network (older artists like *Doc & Merle Watson* and newer ones like *The Infamous Stringdusters*). Finally, you have a more sparse branch of the network that has some of the offshoots of bands that were contemporary with the dead - you have acts related to the Allman Brothers (Dickey Betts, Derek & the Dominoes, etc.), Hot Tuna, Lowell George (of Little Feat fame), and others.
+
+4. At three steps (Blue), we have drastically different artists. As an example, at one of the network is festival staple and Jazz-Funk band *Medeski, Martin, & Wood* and the other has *Uncle Tupelo*, perhaps best known as the predecessor to *Wilco* and *Son Volt*.
+
+5. At four steps (red), we actually contract quite a bit to a pretty small, dense, and not very diverse (genre-wise) network of bands. They all seem to be part of the electronica festival scene. This actually lines up pretty well with my intuitions - the electronica festival scene seems like the outer edges of relevance to the Dead.
+
+## Communities of Related Artists
+
+Next, we'll take a look at how these related artists form communities or groups within the network. I decided to use the [walktrap algorithm](http://arxiv.org/abs/physics/0512106), which basically searches for communities using random walks. The basic idea is to:
+
+1. start at a node 
+2. randomly select an available edge and walk along that edge to a new node
+3. repeat step 2 *k* times
+4. After the *kth* step, start over at step 1.
+
+The algorithm then constructs groups based on how often the random walks lead through the same nodes. For example, if we started our walk at The Allman Brothers Band, we might frequently walk through related acts like the Derek Trucks Band, Dickey Betts and Great Southern, Derek & the Dominoes, etc. If this were the case, these nodes would end up belonging to a group or community. More generally, it defines groups or communities as the nodes that are more densely connected - as evaluated by random walks - than would be expected by chance.
+
+I also want to label the groups to help make sense of them. I decided to label them with the most central artist in that group. I used Eigen Centrality, which quantifies centrality in terms of both the number of connections a node has *and* the relative importance of its connections. So, a node that is both highly connected *and* connected to more central nodes scores higher on this metric. As a bit of foreshadowing, we will be using this measure of centrality again below.
+
+Now let's take a look at the graph:
+
+```{r }
+dead_labs <- dead_relatives %>% 
+  as_tbl_graph() %>% 
+  mutate(group = group_walktrap(),
+         importance = centrality_eigen()) %>% 
+  group_by(group) %>% 
+  top_n(1) %>% 
+  as_tibble() %>% 
+  rename(label = name) %>% 
+  select(group, label) %>% 
+  arrange(group) 
+
+dead_relatives %>% 
+  as_tbl_graph() %>% 
+  activate(nodes) %>% 
+  mutate(group = group_walktrap(),
+         group = factor(group, labels = dead_labs$label),
+         importance = centrality_eigen()) %>% 
+  arrange(name) %>% 
+  visIgraph(physics = TRUE) %>%
+  visOptions(highlightNearest = list(enabled = T, degree = 1, hover = T),
+             selectedBy = "group",
+             nodesIdSelection = TRUE) %>% 
+  visLayout(randomSeed = 23) %>% 
+  visPhysics(forceAtlas2Based = list("avoidOverlap" = 1)) %>% 
+  visLegend(zoom = FALSE)
+```
+
+The graph above shows the Dead's recommendation network where nodes are colored based on group membership. Note that you can again select particular nodes or particular communities using the dropdown options above.
+
+The communities uncovered by walktrap make a fair amount of sense. To highlight a few:
+
+In the middle, in light Blue, we have the largest community, which is basically jam band and Bluegrass music. Fittingly, String Cheese Incident is the most central node in that community.    
+
+In yellow, we have what is basically the electric classic rock community, with bands like Little Feat (most central node), The Band, and The Allman Brothers Band.    
+
+In darker Purple, we have Dickey Betts's neighborhood, which appears to be southern rock that is a little more southern than the bands in yellow.   
+
+The orange community looks like folk rock, and includes a lot of the Crosby, Stills, Nash, & Young related bands, like Stephen Stills (most central node), Buffalo Springfield, & CSNY.    
+
+In dark blue, we have the festival funk neighborhood, with bands like lettuce, Medeski, Martin & Wood,
+

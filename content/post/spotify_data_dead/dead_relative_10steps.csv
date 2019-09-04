@@ -1,0 +1,1301 @@
+,artist,relative
+0,Grateful Dead,Jerry Garcia
+1,Grateful Dead,Widespread Panic
+2,Grateful Dead,The String Cheese Incident
+3,Grateful Dead,moe.
+4,Grateful Dead,Phish
+5,Grateful Dead,Trey Anastasio
+6,Grateful Dead,Keller Williams
+7,Grateful Dead,Bob Weir
+8,Grateful Dead,Jerry Garcia Band
+9,Grateful Dead,Umphrey's McGee
+10,Grateful Dead,Leftover Salmon
+11,Grateful Dead,Twiddle
+12,Grateful Dead,Yonder Mountain String Band
+13,Grateful Dead,Railroad Earth
+14,Grateful Dead,Lotus 
+15,Grateful Dead,Old & In The Way
+16,Grateful Dead,Perpetual Groove
+17,Grateful Dead,Little Feat
+18,Grateful Dead,Merl Saunders
+19,Grateful Dead,New Riders of the Purple Sage
+20,Jerry Garcia,Bob Weir
+21,Jerry Garcia,Old & In The Way
+22,Jerry Garcia,Jerry Garcia Band
+23,Jerry Garcia,Widespread Panic
+24,Jerry Garcia,Trey Anastasio
+25,Jerry Garcia,moe.
+26,Jerry Garcia,Grateful Dead
+27,Jerry Garcia,The String Cheese Incident
+28,Jerry Garcia,Leftover Salmon
+29,Jerry Garcia,New Riders of the Purple Sage
+30,Jerry Garcia,Keller Williams
+31,Jerry Garcia,Merl Saunders
+32,Jerry Garcia,Tea Leaf Green
+33,Jerry Garcia,Phil Lesh & Friends
+34,Jerry Garcia,Phish
+35,Jerry Garcia,Yonder Mountain String Band
+36,Jerry Garcia,Ekoostik Hookah
+37,Jerry Garcia,Hot Tuna
+38,Jerry Garcia,Railroad Earth
+39,Jerry Garcia,Keller & The Keels
+40,Widespread Panic,moe.
+41,Widespread Panic,The String Cheese Incident
+42,Widespread Panic,Keller Williams
+43,Widespread Panic,Tea Leaf Green
+44,Widespread Panic,Trey Anastasio
+45,Widespread Panic,Ekoostik Hookah
+46,Widespread Panic,Leftover Salmon
+47,Widespread Panic,Phish
+48,Widespread Panic,Umphrey's McGee
+49,Widespread Panic,Jerry Garcia
+50,Widespread Panic,Railroad Earth
+51,Widespread Panic,The Disco Biscuits
+52,Widespread Panic,Strangefolk
+53,Widespread Panic,The Big Wu
+54,Widespread Panic,Twiddle
+55,Widespread Panic,Keller & The Keels
+56,Widespread Panic,Phil Lesh & Friends
+57,Widespread Panic,Assembly of Dust
+58,Widespread Panic,Yonder Mountain String Band
+59,Widespread Panic,Lotus 
+60,The String Cheese Incident,moe.
+61,The String Cheese Incident,Keller Williams
+62,The String Cheese Incident,Tea Leaf Green
+63,The String Cheese Incident,Umphrey's McGee
+64,The String Cheese Incident,The Disco Biscuits
+65,The String Cheese Incident,Widespread Panic
+66,The String Cheese Incident,Trey Anastasio
+67,The String Cheese Incident,Ekoostik Hookah
+68,The String Cheese Incident,Leftover Salmon
+69,The String Cheese Incident,Phish
+70,The String Cheese Incident,Strangefolk
+71,The String Cheese Incident,Twiddle
+72,The String Cheese Incident,The Big Wu
+73,The String Cheese Incident,Keller & The Keels
+74,The String Cheese Incident,Perpetual Groove
+75,The String Cheese Incident,Yonder Mountain String Band
+76,The String Cheese Incident,Lotus 
+77,The String Cheese Incident,Railroad Earth
+78,The String Cheese Incident,Phil Lesh & Friends
+79,The String Cheese Incident,Assembly of Dust
+80,moe.,Keller Williams
+81,moe.,The String Cheese Incident
+82,moe.,Widespread Panic
+83,moe.,Tea Leaf Green
+84,moe.,Ekoostik Hookah
+85,moe.,Trey Anastasio
+86,moe.,Umphrey's McGee
+87,moe.,The Disco Biscuits
+88,moe.,Leftover Salmon
+89,moe.,Phish
+90,moe.,Strangefolk
+91,moe.,Twiddle
+92,moe.,The Big Wu
+93,moe.,Assembly of Dust
+94,moe.,Perpetual Groove
+95,moe.,Keller & The Keels
+96,moe.,Railroad Earth
+97,moe.,Phil Lesh & Friends
+98,moe.,Lotus 
+99,moe.,Yonder Mountain String Band
+100,Phish,moe.
+101,Phish,The String Cheese Incident
+102,Phish,Trey Anastasio
+103,Phish,Widespread Panic
+104,Phish,Keller Williams
+105,Phish,Umphrey's McGee
+106,Phish,Tea Leaf Green
+107,Phish,The Disco Biscuits
+108,Phish,Leftover Salmon
+109,Phish,Twiddle
+110,Phish,Jerry Garcia
+111,Phish,Ekoostik Hookah
+112,Phish,Perpetual Groove
+113,Phish,Jerry Garcia Band
+114,Phish,Yonder Mountain String Band
+115,Phish,Lotus 
+116,Phish,Railroad Earth
+117,Phish,Mike Gordon
+118,Phish,Grateful Dead
+119,Phish,Spafford
+120,Trey Anastasio,moe.
+121,Trey Anastasio,The String Cheese Incident
+122,Trey Anastasio,Widespread Panic
+123,Trey Anastasio,Keller Williams
+124,Trey Anastasio,Tea Leaf Green
+125,Trey Anastasio,Phish
+126,Trey Anastasio,Umphrey's McGee
+127,Trey Anastasio,Mike Gordon
+128,Trey Anastasio,Ekoostik Hookah
+129,Trey Anastasio,The Disco Biscuits
+130,Trey Anastasio,Leftover Salmon
+131,Trey Anastasio,Vida Blue
+132,Trey Anastasio,Jerry Garcia
+133,Trey Anastasio,Strangefolk
+134,Trey Anastasio,Assembly of Dust
+135,Trey Anastasio,Twiddle
+136,Trey Anastasio,Perpetual Groove
+137,Trey Anastasio,The Big Wu
+138,Trey Anastasio,Keller & The Keels
+139,Trey Anastasio,Phil Lesh & Friends
+140,Keller Williams,moe.
+141,Keller Williams,The String Cheese Incident
+142,Keller Williams,Tea Leaf Green
+143,Keller Williams,Umphrey's McGee
+144,Keller Williams,Widespread Panic
+145,Keller Williams,Leftover Salmon
+146,Keller Williams,Ekoostik Hookah
+147,Keller Williams,Trey Anastasio
+148,Keller Williams,The Disco Biscuits
+149,Keller Williams,Twiddle
+150,Keller Williams,Keller & The Keels
+151,Keller Williams,The Big Wu
+152,Keller Williams,Lotus 
+153,Keller Williams,Phish
+154,Keller Williams,Perpetual Groove
+155,Keller Williams,Yonder Mountain String Band
+156,Keller Williams,Railroad Earth
+157,Keller Williams,Strangefolk
+158,Keller Williams,Assembly of Dust
+159,Keller Williams,Spafford
+160,Bob Weir,Jerry Garcia
+161,Bob Weir,Phil Lesh & Friends
+162,Bob Weir,Hot Tuna
+163,Bob Weir,New Riders of the Purple Sage
+164,Bob Weir,Merl Saunders
+165,Bob Weir,Widespread Panic
+166,Bob Weir,Leftover Salmon
+167,Bob Weir,Old & In The Way
+168,Bob Weir,moe.
+169,Bob Weir,Ekoostik Hookah
+170,Bob Weir,Trey Anastasio
+171,Bob Weir,Little Feat
+172,Bob Weir,Grateful Dead
+173,Bob Weir,Tea Leaf Green
+174,Bob Weir,The String Cheese Incident
+175,Bob Weir,Jerry Garcia Band
+176,Bob Weir,Warren Haynes
+177,Bob Weir,Keller Williams
+178,Bob Weir,Mickey Hart
+179,Bob Weir,Phish
+180,Jerry Garcia Band,Jerry Garcia
+181,Jerry Garcia Band,Old & In The Way
+182,Jerry Garcia Band,Keller Williams
+183,Jerry Garcia Band,Twiddle
+184,Jerry Garcia Band,Trey Anastasio
+185,Jerry Garcia Band,moe.
+186,Jerry Garcia Band,Phil Lesh & Friends
+187,Jerry Garcia Band,Circles Around The Sun
+188,Jerry Garcia Band,Bob Weir
+189,Jerry Garcia Band,Widespread Panic
+190,Jerry Garcia Band,The String Cheese Incident
+191,Jerry Garcia Band,Leftover Salmon
+192,Jerry Garcia Band,Perpetual Groove
+193,Jerry Garcia Band,Phish
+194,Jerry Garcia Band,Umphrey's McGee
+195,Jerry Garcia Band,Merl Saunders
+196,Jerry Garcia Band,Spafford
+197,Jerry Garcia Band,Yonder Mountain String Band
+198,Jerry Garcia Band,New Riders of the Purple Sage
+199,Jerry Garcia Band,Grateful Dead
+200,Umphrey's McGee,The String Cheese Incident
+201,Umphrey's McGee,moe.
+202,Umphrey's McGee,Lotus 
+203,Umphrey's McGee,Keller Williams
+204,Umphrey's McGee,The Disco Biscuits
+205,Umphrey's McGee,Perpetual Groove
+206,Umphrey's McGee,Tea Leaf Green
+207,Umphrey's McGee,Trey Anastasio
+208,Umphrey's McGee,Twiddle
+209,Umphrey's McGee,Widespread Panic
+210,Umphrey's McGee,Phish
+211,Umphrey's McGee,Ekoostik Hookah
+212,Umphrey's McGee,Leftover Salmon
+213,Umphrey's McGee,STS9
+214,Umphrey's McGee,Strangefolk
+215,Umphrey's McGee,Yonder Mountain String Band
+216,Umphrey's McGee,Papadosio
+217,Umphrey's McGee,Keller & The Keels
+218,Umphrey's McGee,Mike Gordon
+219,Umphrey's McGee,Railroad Earth
+220,Leftover Salmon,Keller Williams
+221,Leftover Salmon,Yonder Mountain String Band
+222,Leftover Salmon,Railroad Earth
+223,Leftover Salmon,The String Cheese Incident
+224,Leftover Salmon,moe.
+225,Leftover Salmon,Tea Leaf Green
+226,Leftover Salmon,Ekoostik Hookah
+227,Leftover Salmon,Widespread Panic
+228,Leftover Salmon,Keller & The Keels
+229,Leftover Salmon,The Big Wu
+230,Leftover Salmon,Strangefolk
+231,Leftover Salmon,Assembly of Dust
+232,Leftover Salmon,Trey Anastasio
+233,Leftover Salmon,Old & In The Way
+234,Leftover Salmon,Umphrey's McGee
+235,Leftover Salmon,Jerry Garcia
+236,Leftover Salmon,Phil Lesh & Friends
+237,Leftover Salmon,Donna The Buffalo
+238,Leftover Salmon,Twiddle
+239,Leftover Salmon,The Disco Biscuits
+240,Twiddle,Perpetual Groove
+241,Twiddle,Lotus 
+242,Twiddle,STS9
+243,Twiddle,moe.
+244,Twiddle,Umphrey's McGee
+245,Twiddle,Keller Williams
+246,Twiddle,Spafford
+247,Twiddle,The String Cheese Incident
+248,Twiddle,The Disco Biscuits
+249,Twiddle,Pigeons Playing Ping Pong
+250,Twiddle,Trey Anastasio
+251,Twiddle,Dopapod
+252,Twiddle,Papadosio
+253,Twiddle,The Motet
+254,Twiddle,Jerry Garcia Band
+255,Twiddle,Widespread Panic
+256,Twiddle,Railroad Earth
+257,Twiddle,Yonder Mountain String Band
+258,Twiddle,Leftover Salmon
+259,Twiddle,Phish
+260,Yonder Mountain String Band,Leftover Salmon
+261,Yonder Mountain String Band,Railroad Earth
+262,Yonder Mountain String Band,Old & In The Way
+263,Yonder Mountain String Band,Keller Williams
+264,Yonder Mountain String Band,The String Cheese Incident
+265,Yonder Mountain String Band,Keller & The Keels
+266,Yonder Mountain String Band,moe.
+267,Yonder Mountain String Band,The Infamous Stringdusters
+268,Yonder Mountain String Band,Sam Bush
+269,Yonder Mountain String Band,Greensky Bluegrass
+270,Yonder Mountain String Band,Tea Leaf Green
+271,Yonder Mountain String Band,Ekoostik Hookah
+272,Yonder Mountain String Band,Trey Anastasio
+273,Yonder Mountain String Band,Widespread Panic
+274,Yonder Mountain String Band,Perpetual Groove
+275,Yonder Mountain String Band,The Big Wu
+276,Yonder Mountain String Band,Umphrey's McGee
+277,Yonder Mountain String Band,Strangefolk
+278,Yonder Mountain String Band,Twiddle
+279,Yonder Mountain String Band,Hot Buttered Rum
+280,Railroad Earth,Leftover Salmon
+281,Railroad Earth,Yonder Mountain String Band
+282,Railroad Earth,Keller & The Keels
+283,Railroad Earth,Greensky Bluegrass
+284,Railroad Earth,Keller Williams
+285,Railroad Earth,The String Cheese Incident
+286,Railroad Earth,moe.
+287,Railroad Earth,Widespread Panic
+288,Railroad Earth,Tea Leaf Green
+289,Railroad Earth,Strangefolk
+290,Railroad Earth,Ekoostik Hookah
+291,Railroad Earth,Spafford
+292,Railroad Earth,Assembly of Dust
+293,Railroad Earth,Hot Buttered Rum
+294,Railroad Earth,Old & In The Way
+295,Railroad Earth,Trey Anastasio
+296,Railroad Earth,Twiddle
+297,Railroad Earth,Umphrey's McGee
+298,Railroad Earth,Donna The Buffalo
+299,Railroad Earth,The Big Wu
+300,Lotus ,STS9
+301,Lotus ,Perpetual Groove
+302,Lotus ,Twiddle
+303,Lotus ,The Motet
+304,Lotus ,The Disco Biscuits
+305,Lotus ,Umphrey's McGee
+306,Lotus ,Papadosio
+307,Lotus ,Spafford
+308,Lotus ,Keller Williams
+309,Lotus ,The String Cheese Incident
+310,Lotus ,moe.
+311,Lotus ,Dopapod
+312,Lotus ,Pigeons Playing Ping Pong
+313,Lotus ,Tea Leaf Green
+314,Lotus ,The New Deal
+315,Lotus ,Trey Anastasio
+316,Lotus ,BoomBox
+317,Lotus ,Zoogma
+318,Lotus ,Lettuce
+319,Lotus ,EOTO
+320,Old & In The Way,Peter Rowan
+321,Old & In The Way,David Grisman
+322,Old & In The Way,John Hartford
+323,Old & In The Way,Yonder Mountain String Band
+324,Old & In The Way,The Del McCoury Band
+325,Old & In The Way,Leftover Salmon
+326,Old & In The Way,Sam Bush
+327,Old & In The Way,Doc & Merle Watson
+328,Old & In The Way,Flatt & Scruggs
+329,Old & In The Way,Jerry Garcia
+330,Old & In The Way,Doc Watson
+331,Old & In The Way,Del McCoury
+332,Old & In The Way,Tony Rice
+333,Old & In The Way,Vassar Clements
+334,Old & In The Way,New Grass Revival
+335,Old & In The Way,Jerry Garcia Band
+336,Old & In The Way,Bill Monroe
+337,Old & In The Way,Keller & The Keels
+338,Old & In The Way,Keller Williams
+339,Old & In The Way,Hot Rize
+340,Perpetual Groove,Twiddle
+341,Perpetual Groove,Lotus 
+342,Perpetual Groove,STS9
+343,Perpetual Groove,The Motet
+344,Perpetual Groove,Umphrey's McGee
+345,Perpetual Groove,moe.
+346,Perpetual Groove,The Disco Biscuits
+347,Perpetual Groove,Keller Williams
+348,Perpetual Groove,The String Cheese Incident
+349,Perpetual Groove,Tea Leaf Green
+350,Perpetual Groove,Trey Anastasio
+351,Perpetual Groove,Spafford
+352,Perpetual Groove,Papadosio
+353,Perpetual Groove,Pigeons Playing Ping Pong
+354,Perpetual Groove,Railroad Earth
+355,Perpetual Groove,Widespread Panic
+356,Perpetual Groove,Dopapod
+357,Perpetual Groove,Ekoostik Hookah
+358,Perpetual Groove,Yonder Mountain String Band
+359,Perpetual Groove,Jerry Garcia Band
+360,Little Feat,Lowell George
+361,Little Feat,Leon Russell
+362,Little Feat,Bob Weir
+363,Little Feat,Hot Tuna
+364,Little Feat,Gregg Allman
+365,Little Feat,Jerry Garcia
+366,Little Feat,Stephen Stills
+367,Little Feat,The Derek Trucks Band
+368,Little Feat,The Marshall Tucker Band
+369,Little Feat,New Riders of the Purple Sage
+370,Little Feat,Derek & The Dominos
+371,Little Feat,Dave Mason
+372,Little Feat,Levon Helm
+373,Little Feat,The Band
+374,Little Feat,Widespread Panic
+375,Little Feat,Traffic
+376,Little Feat,The Allman Brothers Band
+377,Little Feat,Ry Cooder
+378,Little Feat,Merl Saunders
+379,Little Feat,Warren Haynes
+380,Merl Saunders,Jerry Garcia
+381,Merl Saunders,moe.
+382,Merl Saunders,Ekoostik Hookah
+383,Merl Saunders,The String Cheese Incident
+384,Merl Saunders,Keller Williams
+385,Merl Saunders,Trey Anastasio
+386,Merl Saunders,Widespread Panic
+387,Merl Saunders,Tea Leaf Green
+388,Merl Saunders,Phil Lesh & Friends
+389,Merl Saunders,Leftover Salmon
+390,Merl Saunders,Keller & The Keels
+391,Merl Saunders,Bob Weir
+392,Merl Saunders,Strangefolk
+393,Merl Saunders,The Big Wu
+394,Merl Saunders,Assembly of Dust
+395,Merl Saunders,Railroad Earth
+396,Merl Saunders,Old & In The Way
+397,Merl Saunders,Mike Gordon
+398,Merl Saunders,Phish
+399,Merl Saunders,New Riders of the Purple Sage
+400,New Riders of the Purple Sage,Jerry Garcia
+401,New Riders of the Purple Sage,Hot Tuna
+402,New Riders of the Purple Sage,Bob Weir
+403,New Riders of the Purple Sage,Poco
+404,New Riders of the Purple Sage,Old & In The Way
+405,New Riders of the Purple Sage,Jerry Garcia Band
+406,New Riders of the Purple Sage,Roger McGuinn
+407,New Riders of the Purple Sage,David Bromberg
+408,New Riders of the Purple Sage,Little Feat
+409,New Riders of the Purple Sage,Stephen Stills
+410,New Riders of the Purple Sage,Merl Saunders
+411,New Riders of the Purple Sage,The Flying Burrito Brothers
+412,New Riders of the Purple Sage,The International Submarine Band
+413,New Riders of the Purple Sage,Pure Prairie League
+414,New Riders of the Purple Sage,Leftover Salmon
+415,New Riders of the Purple Sage,Dickey Betts
+416,New Riders of the Purple Sage,Jorma Kaukonen
+417,New Riders of the Purple Sage,Chris Hillman
+418,New Riders of the Purple Sage,Amazing Rhythm Aces
+419,New Riders of the Purple Sage,Phil Lesh & Friends
+600,Hot Tuna,New Riders of the Purple Sage
+601,Hot Tuna,Bob Weir
+602,Hot Tuna,Jerry Garcia
+603,Hot Tuna,Jorma Kaukonen
+604,Hot Tuna,Little Feat
+605,Hot Tuna,Duane Allman
+606,Hot Tuna,Al Kooper
+607,Hot Tuna,David Bromberg
+608,Hot Tuna,Quicksilver Messenger Service
+609,Hot Tuna,Savoy Brown
+610,Hot Tuna,Merl Saunders
+611,Hot Tuna,Traffic
+612,Hot Tuna,Dickey Betts
+613,Hot Tuna,Gregg Allman
+614,Hot Tuna,The Electric Flag
+615,Hot Tuna,Jerry Garcia Band
+616,Hot Tuna,The Derek Trucks Band
+617,Hot Tuna,Old & In The Way
+618,Hot Tuna,Leon Russell
+619,Hot Tuna,Warren Haynes
+640,Poco,Pure Prairie League
+641,Poco,JD Souther
+642,Poco,Firefall
+643,Poco,Loggins & Messina
+644,Poco,Dave Mason
+645,Poco,The Ozark Mountain Daredevils
+646,Poco,Jesse Colin Young
+647,Poco,Atlanta Rhythm Section
+648,Poco,Stephen Stills
+649,Poco,New Riders of the Purple Sage
+650,Poco,Chris Hillman
+651,Poco,Dan Fogelberg
+652,Poco,Jefferson Starship
+653,Poco,"Crosby, Stills & Nash"
+654,Poco,Pablo Cruise
+655,Poco,Graham Nash
+656,Poco,Seals and Crofts
+657,Poco,Orleans
+658,Poco,Bob Welch
+659,Poco,Little River Band
+700,Roger McGuinn,David Crosby
+701,Roger McGuinn,Manassas
+702,Roger McGuinn,Stephen Stills
+703,Roger McGuinn,Graham Nash
+704,Roger McGuinn,Crosby & Nash
+705,Roger McGuinn,Chris Hillman
+706,Roger McGuinn,Gene Clark
+707,Roger McGuinn,Michael Nesmith
+708,Roger McGuinn,Poco
+709,Roger McGuinn,Tim Hardin
+710,Roger McGuinn,Rick Danko
+711,Roger McGuinn,The Flying Burrito Brothers
+712,Roger McGuinn,"McGuinn, Clark & Hillman"
+713,Roger McGuinn,Dillard & Clark
+714,Roger McGuinn,Steve Forbert
+715,Roger McGuinn,John Sebastian
+716,Roger McGuinn,New Riders of the Purple Sage
+717,Roger McGuinn,The Youngbloods
+718,Roger McGuinn,John Phillips
+719,Roger McGuinn,Tom Rush
+720,David Bromberg,Steve Goodman
+721,David Bromberg,Jorma Kaukonen
+722,David Bromberg,Tom Rush
+723,David Bromberg,Chris Smither
+724,David Bromberg,Levon Helm
+725,David Bromberg,Eric Andersen
+726,David Bromberg,Amazing Rhythm Aces
+727,David Bromberg,Peter Rowan
+728,David Bromberg,Jesse Colin Young
+729,David Bromberg,Greg Brown
+730,David Bromberg,Old & In The Way
+731,David Bromberg,Hot Tuna
+732,David Bromberg,Jesse Winchester
+733,David Bromberg,Lowell George
+734,David Bromberg,New Riders of the Purple Sage
+735,David Bromberg,Steve Forbert
+736,David Bromberg,Leon Redbone
+737,David Bromberg,Leo Kottke
+738,David Bromberg,Ry Cooder
+739,David Bromberg,Leon Russell
+760,Stephen Stills,David Crosby
+761,Stephen Stills,Graham Nash
+762,Stephen Stills,The Stills-Young Band
+763,Stephen Stills,Crosby & Nash
+764,Stephen Stills,"Crosby, Stills & Nash"
+765,Stephen Stills,Manassas
+766,Stephen Stills,Poco
+767,Stephen Stills,Dave Mason
+768,Stephen Stills,Jesse Colin Young
+769,Stephen Stills,Roger McGuinn
+770,Stephen Stills,Buffalo Springfield
+771,Stephen Stills,"Crosby, Stills, Nash & Young"
+772,Stephen Stills,The Flying Burrito Brothers
+773,Stephen Stills,Traffic
+774,Stephen Stills,Gene Clark
+775,Stephen Stills,Leon Russell
+776,Stephen Stills,Little Feat
+777,Stephen Stills,The Youngbloods
+778,Stephen Stills,New Riders of the Purple Sage
+779,Stephen Stills,Loggins & Messina
+800,The Flying Burrito Brothers,Gram Parsons
+801,The Flying Burrito Brothers,The International Submarine Band
+802,The Flying Burrito Brothers,Gene Clark
+803,The Flying Burrito Brothers,Dillard & Clark
+804,The Flying Burrito Brothers,Levon Helm
+805,The Flying Burrito Brothers,Stephen Stills
+806,The Flying Burrito Brothers,New Riders of the Purple Sage
+807,The Flying Burrito Brothers,Graham Nash
+808,The Flying Burrito Brothers,Doug Sahm
+809,The Flying Burrito Brothers,The Byrds
+810,The Flying Burrito Brothers,Chris Hillman
+811,The Flying Burrito Brothers,Fred Neil
+812,The Flying Burrito Brothers,The Jayhawks
+813,The Flying Burrito Brothers,Townes Van Zandt
+814,The Flying Burrito Brothers,Poco
+815,The Flying Burrito Brothers,Uncle Tupelo
+816,The Flying Burrito Brothers,The Louvin Brothers
+817,The Flying Burrito Brothers,Roger McGuinn
+818,The Flying Burrito Brothers,Terry Allen
+819,The Flying Burrito Brothers,David Crosby
+820,The International Submarine Band,Gram Parsons' International Submarine Band
+821,The International Submarine Band,The Flying Burrito Brothers
+822,The International Submarine Band,Gram Parsons
+823,The International Submarine Band,Dillard & Clark
+824,The International Submarine Band,Gene Clark
+825,The International Submarine Band,Chris Hillman
+826,The International Submarine Band,Michael Nesmith
+827,The International Submarine Band,Doug Sahm
+828,The International Submarine Band,Terry Allen
+829,The International Submarine Band,John Phillips
+830,The International Submarine Band,Steve Young
+831,The International Submarine Band,Jim Ford
+832,The International Submarine Band,The Louvin Brothers
+833,The International Submarine Band,New Riders of the Purple Sage
+834,The International Submarine Band,Roger McGuinn
+835,The International Submarine Band,Townes Van Zandt
+836,The International Submarine Band,Blaze Foley
+837,The International Submarine Band,The Byrds
+838,The International Submarine Band,Levon Helm
+839,The International Submarine Band,Fred Neil
+840,Pure Prairie League,The Ozark Mountain Daredevils
+841,Pure Prairie League,Poco
+842,Pure Prairie League,Firefall
+843,Pure Prairie League,Loggins & Messina
+844,Pure Prairie League,Atlanta Rhythm Section
+845,Pure Prairie League,Dave Mason
+846,Pure Prairie League,Jonathan Edwards
+847,Pure Prairie League,The Marshall Tucker Band
+848,Pure Prairie League,Wet Willie
+849,Pure Prairie League,Seals and Crofts
+850,Pure Prairie League,JD Souther
+851,Pure Prairie League,Pablo Cruise
+852,Pure Prairie League,Jefferson Starship
+853,Pure Prairie League,Head East
+854,Pure Prairie League,Orleans
+855,Pure Prairie League,Jesse Colin Young
+856,Pure Prairie League,The Outlaws
+857,Pure Prairie League,Dan Fogelberg
+858,Pure Prairie League,Brewer & Shipley
+859,Pure Prairie League,Bob Welch
+880,Dickey Betts,Duane Allman
+881,Dickey Betts,The Gregg Allman Band
+882,Dickey Betts,Gregg Allman
+883,Dickey Betts,Sea Level
+884,Dickey Betts,Wet Willie
+885,Dickey Betts,Cowboy
+886,Dickey Betts,Warren Haynes
+887,Dickey Betts,The Outlaws
+888,Dickey Betts,The Marshall Tucker Band
+889,Dickey Betts,Elvin Bishop
+890,Dickey Betts,Grinderswitch
+891,Dickey Betts,Black Oak Arkansas
+892,Dickey Betts,Hour Glass
+893,Dickey Betts,The Dickey Betts Band
+894,Dickey Betts,Hot Tuna
+895,Dickey Betts,Gov't Mule
+896,Dickey Betts,New Riders of the Purple Sage
+897,Dickey Betts,Dickey Betts and Great Southern
+898,Dickey Betts,Atlanta Rhythm Section
+899,Dickey Betts,Henry Paul Band
+900,Jorma Kaukonen,David Bromberg
+901,Jorma Kaukonen,Hot Tuna
+902,Jorma Kaukonen,New Riders of the Purple Sage
+903,Jorma Kaukonen,Chris Smither
+904,Jorma Kaukonen,Jerry Garcia
+905,Jorma Kaukonen,Tom Rush
+906,Jorma Kaukonen,Leo Kottke
+907,Jorma Kaukonen,Levon Helm
+908,Jorma Kaukonen,Old & In The Way
+909,Jorma Kaukonen,Kelly Joe Phelps
+910,Jorma Kaukonen,Bob Weir
+911,Jorma Kaukonen,John Hammond
+912,Jorma Kaukonen,Ray Bonneville
+913,Jorma Kaukonen,Jesse Colin Young
+914,Jorma Kaukonen,Peter Rowan
+915,Jorma Kaukonen,Merl Saunders
+916,Jorma Kaukonen,Greg Brown
+917,Jorma Kaukonen,Stephen Stills
+918,Jorma Kaukonen,Ry Cooder
+919,Jorma Kaukonen,Little Feat
+920,Chris Hillman,Roger McGuinn
+921,Chris Hillman,Herb Pedersen
+922,Chris Hillman,Poco
+923,Chris Hillman,The Flying Burrito Brothers
+924,Chris Hillman,Amazing Rhythm Aces
+925,Chris Hillman,Dillard & Clark
+926,Chris Hillman,JD Souther
+927,Chris Hillman,The Desert Rose Band
+928,Chris Hillman,Gene Clark
+929,Chris Hillman,The International Submarine Band
+930,Chris Hillman,New Riders of the Purple Sage
+931,Chris Hillman,Michael Nesmith
+932,Chris Hillman,The Souther-Hillman-Furay Band
+933,Chris Hillman,"McGuinn, Clark & Hillman"
+934,Chris Hillman,Gram Parsons
+935,Chris Hillman,Manassas
+936,Chris Hillman,Jesse Colin Young
+937,Chris Hillman,Gene Parsons
+938,Chris Hillman,Rick Danko
+939,Chris Hillman,Richie Furay
+940,Amazing Rhythm Aces,Rodney Crowell
+941,Amazing Rhythm Aces,Chris Hillman
+942,Amazing Rhythm Aces,Doug Sahm
+943,Amazing Rhythm Aces,The Ozark Mountain Daredevils
+944,Amazing Rhythm Aces,David Bromberg
+945,Amazing Rhythm Aces,Lowell George
+946,Amazing Rhythm Aces,Levon Helm
+947,Amazing Rhythm Aces,Delbert McClinton
+948,Amazing Rhythm Aces,Dave Alvin
+949,Amazing Rhythm Aces,New Riders of the Purple Sage
+950,Amazing Rhythm Aces,Pure Prairie League
+951,Amazing Rhythm Aces,Jesse Colin Young
+952,Amazing Rhythm Aces,Wet Willie
+953,Amazing Rhythm Aces,Commander Cody and His Lost Planet Airmen
+954,Amazing Rhythm Aces,Jimmy LaFave
+955,Amazing Rhythm Aces,Steve Forbert
+956,Amazing Rhythm Aces,Poco
+957,Amazing Rhythm Aces,Greg Trooper
+958,Amazing Rhythm Aces,Joe Ely
+959,Amazing Rhythm Aces,John Hiatt
+960,Phil Lesh & Friends,Ekoostik Hookah
+961,Phil Lesh & Friends,moe.
+962,Phil Lesh & Friends,The String Cheese Incident
+963,Phil Lesh & Friends,Strangefolk
+964,Phil Lesh & Friends,Keller Williams
+965,Phil Lesh & Friends,Tea Leaf Green
+966,Phil Lesh & Friends,Trey Anastasio
+967,Phil Lesh & Friends,The Big Wu
+968,Phil Lesh & Friends,Widespread Panic
+969,Phil Lesh & Friends,Leftover Salmon
+970,Phil Lesh & Friends,Assembly of Dust
+971,Phil Lesh & Friends,Jerry Garcia
+972,Phil Lesh & Friends,Keller & The Keels
+973,Phil Lesh & Friends,Mike Gordon
+974,Phil Lesh & Friends,New Monsoon
+975,Phil Lesh & Friends,The Disco Biscuits
+976,Phil Lesh & Friends,Bob Weir
+977,Phil Lesh & Friends,Umphrey's McGee
+978,Phil Lesh & Friends,Jerry Garcia Band
+979,Phil Lesh & Friends,Phish
+1280,Ekoostik Hookah,moe.
+1281,Ekoostik Hookah,Tea Leaf Green
+1282,Ekoostik Hookah,The Big Wu
+1283,Ekoostik Hookah,The String Cheese Incident
+1284,Ekoostik Hookah,Strangefolk
+1285,Ekoostik Hookah,Phil Lesh & Friends
+1286,Ekoostik Hookah,New Monsoon
+1287,Ekoostik Hookah,Assembly of Dust
+1288,Ekoostik Hookah,Widespread Panic
+1289,Ekoostik Hookah,Keller Williams
+1290,Ekoostik Hookah,Leftover Salmon
+1291,Ekoostik Hookah,Trey Anastasio
+1292,Ekoostik Hookah,Keller & The Keels
+1293,Ekoostik Hookah,The Disco Biscuits
+1294,Ekoostik Hookah,Mike Gordon
+1295,Ekoostik Hookah,Umphrey's McGee
+1296,Ekoostik Hookah,Railroad Earth
+1297,Ekoostik Hookah,Particle
+1298,Ekoostik Hookah,Phish
+1299,Ekoostik Hookah,Addison Groove Project
+1340,Strangefolk,Ekoostik Hookah
+1341,Strangefolk,Tea Leaf Green
+1342,Strangefolk,The Big Wu
+1343,Strangefolk,moe.
+1344,Strangefolk,Assembly of Dust
+1345,Strangefolk,New Monsoon
+1346,Strangefolk,The String Cheese Incident
+1347,Strangefolk,Keller Williams
+1348,Strangefolk,Phil Lesh & Friends
+1349,Strangefolk,Leftover Salmon
+1350,Strangefolk,Keller & The Keels
+1351,Strangefolk,Widespread Panic
+1352,Strangefolk,Mike Gordon
+1353,Strangefolk,Trey Anastasio
+1354,Strangefolk,Railroad Earth
+1355,Strangefolk,The Disco Biscuits
+1356,Strangefolk,Umphrey's McGee
+1357,Strangefolk,Addison Groove Project
+1358,Strangefolk,Vida Blue
+1359,Strangefolk,Percy Hill
+1380,Tea Leaf Green,moe.
+1381,Tea Leaf Green,The String Cheese Incident
+1382,Tea Leaf Green,Keller Williams
+1383,Tea Leaf Green,Ekoostik Hookah
+1384,Tea Leaf Green,Strangefolk
+1385,Tea Leaf Green,The Big Wu
+1386,Tea Leaf Green,Widespread Panic
+1387,Tea Leaf Green,The Disco Biscuits
+1388,Tea Leaf Green,Assembly of Dust
+1389,Tea Leaf Green,Trey Anastasio
+1390,Tea Leaf Green,Umphrey's McGee
+1391,Tea Leaf Green,Leftover Salmon
+1392,Tea Leaf Green,New Monsoon
+1393,Tea Leaf Green,Keller & The Keels
+1394,Tea Leaf Green,Phil Lesh & Friends
+1395,Tea Leaf Green,Mike Gordon
+1396,Tea Leaf Green,Railroad Earth
+1397,Tea Leaf Green,Particle
+1398,Tea Leaf Green,Phish
+1399,Tea Leaf Green,Lotus 
+1420,The Big Wu,Tea Leaf Green
+1421,The Big Wu,Ekoostik Hookah
+1422,The Big Wu,Strangefolk
+1423,The Big Wu,moe.
+1424,The Big Wu,The String Cheese Incident
+1425,The Big Wu,Keller Williams
+1426,The Big Wu,Leftover Salmon
+1427,The Big Wu,Assembly of Dust
+1428,The Big Wu,New Monsoon
+1429,The Big Wu,Widespread Panic
+1430,The Big Wu,Phil Lesh & Friends
+1431,The Big Wu,Trey Anastasio
+1432,The Big Wu,The Disco Biscuits
+1433,The Big Wu,Mike Gordon
+1434,The Big Wu,Umphrey's McGee
+1435,The Big Wu,Keller & The Keels
+1436,The Big Wu,Addison Groove Project
+1437,The Big Wu,Vida Blue
+1438,The Big Wu,Particle
+1439,The Big Wu,Railroad Earth
+1480,Assembly of Dust,Tea Leaf Green
+1481,Assembly of Dust,Ekoostik Hookah
+1482,Assembly of Dust,moe.
+1483,Assembly of Dust,Strangefolk
+1484,Assembly of Dust,The Big Wu
+1485,Assembly of Dust,Keller Williams
+1486,Assembly of Dust,The String Cheese Incident
+1487,Assembly of Dust,New Monsoon
+1488,Assembly of Dust,Widespread Panic
+1489,Assembly of Dust,Leftover Salmon
+1490,Assembly of Dust,Mike Gordon
+1491,Assembly of Dust,Keller & The Keels
+1492,Assembly of Dust,Phil Lesh & Friends
+1493,Assembly of Dust,Trey Anastasio
+1494,Assembly of Dust,Railroad Earth
+1495,Assembly of Dust,Umphrey's McGee
+1496,Assembly of Dust,The Disco Biscuits
+1497,Assembly of Dust,Particle
+1498,Assembly of Dust,Addison Groove Project
+1499,Assembly of Dust,Yonder Mountain String Band
+1520,Keller & The Keels,Leftover Salmon
+1521,Keller & The Keels,Railroad Earth
+1522,Keller & The Keels,The String Cheese Incident
+1523,Keller & The Keels,Ekoostik Hookah
+1524,Keller & The Keels,Strangefolk
+1525,Keller & The Keels,Keller Williams
+1526,Keller & The Keels,Tea Leaf Green
+1527,Keller & The Keels,Assembly of Dust
+1528,Keller & The Keels,moe.
+1529,Keller & The Keels,Yonder Mountain String Band
+1530,Keller & The Keels,The Big Wu
+1531,Keller & The Keels,Trey Anastasio
+1532,Keller & The Keels,Widespread Panic
+1533,Keller & The Keels,The Disco Biscuits
+1534,Keller & The Keels,Mike Gordon
+1535,Keller & The Keels,Phil Lesh & Friends
+1536,Keller & The Keels,Umphrey's McGee
+1537,Keller & The Keels,Emmitt-Nershi Band
+1538,Keller & The Keels,Old & In The Way
+1539,Keller & The Keels,New Monsoon
+1540,Mike Gordon,Trey Anastasio
+1541,Mike Gordon,Tea Leaf Green
+1542,Mike Gordon,moe.
+1543,Mike Gordon,Ekoostik Hookah
+1544,Mike Gordon,The String Cheese Incident
+1545,Mike Gordon,Assembly of Dust
+1546,Mike Gordon,Keller Williams
+1547,Mike Gordon,Vida Blue
+1548,Mike Gordon,Page McConnell
+1549,Mike Gordon,Strangefolk
+1550,Mike Gordon,The Big Wu
+1551,Mike Gordon,Keller & The Keels
+1552,Mike Gordon,Phil Lesh & Friends
+1553,Mike Gordon,The Disco Biscuits
+1554,Mike Gordon,Umphrey's McGee
+1555,Mike Gordon,Addison Groove Project
+1556,Mike Gordon,Leftover Salmon
+1557,Mike Gordon,Phish
+1558,Mike Gordon,Particle
+1559,Mike Gordon,New Monsoon
+1560,New Monsoon,Ekoostik Hookah
+1561,New Monsoon,Strangefolk
+1562,New Monsoon,Tea Leaf Green
+1563,New Monsoon,The Big Wu
+1564,New Monsoon,moe.
+1565,New Monsoon,The String Cheese Incident
+1566,New Monsoon,Keller Williams
+1567,New Monsoon,Leftover Salmon
+1568,New Monsoon,Assembly of Dust
+1569,New Monsoon,Phil Lesh & Friends
+1570,New Monsoon,Particle
+1571,New Monsoon,Keller & The Keels
+1572,New Monsoon,Widespread Panic
+1573,New Monsoon,Addison Groove Project
+1574,New Monsoon,The Disco Biscuits
+1575,New Monsoon,Mike Gordon
+1576,New Monsoon,Trey Anastasio
+1577,New Monsoon,Steve Kimock Band
+1578,New Monsoon,Umphrey's McGee
+1579,New Monsoon,Railroad Earth
+1580,The Disco Biscuits,The String Cheese Incident
+1581,The Disco Biscuits,Umphrey's McGee
+1582,The Disco Biscuits,moe.
+1583,The Disco Biscuits,Perpetual Groove
+1584,The Disco Biscuits,Tea Leaf Green
+1585,The Disco Biscuits,Lotus 
+1586,The Disco Biscuits,Keller Williams
+1587,The Disco Biscuits,Twiddle
+1588,The Disco Biscuits,Trey Anastasio
+1589,The Disco Biscuits,Ekoostik Hookah
+1590,The Disco Biscuits,Particle
+1591,The Disco Biscuits,The New Deal
+1592,The Disco Biscuits,Brothers Past
+1593,The Disco Biscuits,Vida Blue
+1594,The Disco Biscuits,The Pnuma Trio
+1595,The Disco Biscuits,Widespread Panic
+1596,The Disco Biscuits,Phish
+1597,The Disco Biscuits,The Big Wu
+1598,The Disco Biscuits,Strangefolk
+1599,The Disco Biscuits,Leftover Salmon
+2120,Spafford,Twiddle
+2121,Spafford,The Magic Beans
+2122,Spafford,Lotus 
+2123,Spafford,Perpetual Groove
+2124,Spafford,Keller Williams
+2125,Spafford,moe.
+2126,Spafford,The String Cheese Incident
+2127,Spafford,Railroad Earth
+2128,Spafford,STS9
+2129,Spafford,Leftover Salmon
+2130,Spafford,Tea Leaf Green
+2131,Spafford,The Disco Biscuits
+2132,Spafford,Trey Anastasio
+2133,Spafford,Umphrey's McGee
+2134,Spafford,Strangefolk
+2135,Spafford,Ekoostik Hookah
+2136,Spafford,Jerry Garcia Band
+2137,Spafford,Assembly of Dust
+2138,Spafford,Keller & The Keels
+2139,Spafford,Widespread Panic
+2160,The Magic Beans,Spafford
+2161,The Magic Beans,The Werks
+2162,The Magic Beans,Mungion
+2163,The Magic Beans,Space Bacon
+2164,The Magic Beans,The Disco Biscuits
+2165,The Magic Beans,Kyle Hollingsworth
+2166,The Magic Beans,Keller Williams
+2167,The Magic Beans,Aqueous
+2168,The Magic Beans,The Heavy Pets
+2169,The Magic Beans,Particle
+2170,The Magic Beans,Dopapod
+2171,The Magic Beans,moe.
+2172,The Magic Beans,Lotus 
+2173,The Magic Beans,Tea Leaf Green
+2174,The Magic Beans,The String Cheese Incident
+2175,The Magic Beans,Cbdb
+2176,The Magic Beans,KIMOCK
+2177,The Magic Beans,Umphrey's McGee
+2178,The Magic Beans,Kung Fu
+2179,The Magic Beans,The Big Wu
+2300,STS9,Lotus 
+2301,STS9,Perpetual Groove
+2302,STS9,Twiddle
+2303,STS9,The Motet
+2304,STS9,The Disco Biscuits
+2305,STS9,Zoogma
+2306,STS9,Papadosio
+2307,STS9,The String Cheese Incident
+2308,STS9,Umphrey's McGee
+2309,STS9,Keller Williams
+2310,STS9,The New Deal
+2311,STS9,moe.
+2312,STS9,Dopapod
+2313,STS9,Spafford
+2314,STS9,Pigeons Playing Ping Pong
+2315,STS9,EOTO
+2316,STS9,Tea Leaf Green
+2317,STS9,BoomBox
+2318,STS9,Break Science
+2319,STS9,The Floozies
+3100,The Motet,Perpetual Groove
+3101,The Motet,Lotus 
+3102,The Motet,STS9
+3103,The Motet,Pigeons Playing Ping Pong
+3104,The Motet,SunSquabi
+3105,The Motet,Lettuce
+3106,The Motet,Dopapod
+3107,The Motet,Galactic
+3108,The Motet,Twiddle
+3109,The Motet,Turkuaz
+3110,The Motet,Umphrey's McGee
+3111,The Motet,Spafford
+3112,The Motet,Keller Williams
+3113,The Motet,Orgone
+3114,The Motet,The String Cheese Incident
+3115,The Motet,The New Mastersounds
+3116,The Motet,Dumpstaphunk
+3117,The Motet,The Disco Biscuits
+3118,The Motet,moe.
+3119,The Motet,Cory Wong
+3160,Papadosio,Lotus 
+3161,Papadosio,Zoogma
+3162,Papadosio,The Disco Biscuits
+3163,Papadosio,STS9
+3164,Papadosio,Twiddle
+3165,Papadosio,Perpetual Groove
+3166,Papadosio,The String Cheese Incident
+3167,Papadosio,Umphrey's McGee
+3168,Papadosio,EOTO
+3169,Papadosio,Keller Williams
+3170,Papadosio,moe.
+3171,Papadosio,Tea Leaf Green
+3172,Papadosio,Pigeons Playing Ping Pong
+3173,Papadosio,Dopapod
+3174,Papadosio,The New Deal
+3175,Papadosio,The Floozies
+3176,Papadosio,BoomBox
+3177,Papadosio,Spafford
+3178,Papadosio,Ekoostik Hookah
+3179,Papadosio,Toubab Krewe
+3260,Dopapod,Lotus 
+3261,Dopapod,Zoogma
+3262,Dopapod,Twiddle
+3263,Dopapod,Perpetual Groove
+3264,Dopapod,STS9
+3265,Dopapod,The Disco Biscuits
+3266,Dopapod,Umphrey's McGee
+3267,Dopapod,Pigeons Playing Ping Pong
+3268,Dopapod,Papadosio
+3269,Dopapod,The Heavy Pets
+3270,Dopapod,Spafford
+3271,Dopapod,moe.
+3272,Dopapod,Keller Williams
+3273,Dopapod,The String Cheese Incident
+3274,Dopapod,Kung Fu
+3275,Dopapod,The Motet
+3276,Dopapod,Tea Leaf Green
+3277,Dopapod,Particle
+3278,Dopapod,Trey Anastasio
+3279,Dopapod,Jimkata
+3280,Pigeons Playing Ping Pong,Umphrey's McGee
+3281,Pigeons Playing Ping Pong,The Disco Biscuits
+3282,Pigeons Playing Ping Pong,Zoogma
+3283,Pigeons Playing Ping Pong,Lotus 
+3284,Pigeons Playing Ping Pong,Perpetual Groove
+3285,Pigeons Playing Ping Pong,The String Cheese Incident
+3286,Pigeons Playing Ping Pong,Dopapod
+3287,Pigeons Playing Ping Pong,The Motet
+3288,Pigeons Playing Ping Pong,moe.
+3289,Pigeons Playing Ping Pong,Twiddle
+3290,Pigeons Playing Ping Pong,Papadosio
+3291,Pigeons Playing Ping Pong,Keller Williams
+3292,Pigeons Playing Ping Pong,The Floozies
+3293,Pigeons Playing Ping Pong,Tea Leaf Green
+3294,Pigeons Playing Ping Pong,Zach Deputy
+3295,Pigeons Playing Ping Pong,Lettuce
+3296,Pigeons Playing Ping Pong,Trey Anastasio
+3297,Pigeons Playing Ping Pong,STS9
+3298,Pigeons Playing Ping Pong,Phish
+3299,Pigeons Playing Ping Pong,EOTO
+3320,The New Deal,The Pnuma Trio
+3321,The New Deal,Future Rock
+3322,The New Deal,The Disco Biscuits
+3323,The New Deal,Zoogma
+3324,The New Deal,EOTO
+3325,The New Deal,Particle
+3326,The New Deal,Brothers Past
+3327,The New Deal,Umphrey's McGee
+3328,The New Deal,Lotus 
+3329,The New Deal,The String Cheese Incident
+3330,The New Deal,Papadosio
+3331,The New Deal,The Malah
+3332,The New Deal,Toubab Krewe
+3333,The New Deal,Conspirator
+3334,The New Deal,Keller Williams
+3335,The New Deal,STS9
+3336,The New Deal,moe.
+3337,The New Deal,Vida Blue
+3338,The New Deal,Tea Leaf Green
+3339,The New Deal,BoomBox
+3360,BoomBox,Zoogma
+3361,BoomBox,Lotus 
+3362,BoomBox,Papadosio
+3363,BoomBox,The Disco Biscuits
+3364,BoomBox,STS9
+3365,BoomBox,Perpetual Groove
+3366,BoomBox,Umphrey's McGee
+3367,BoomBox,The Floozies
+3368,BoomBox,The String Cheese Incident
+3369,BoomBox,Pretty Lights
+3370,BoomBox,Michal Menert
+3371,BoomBox,Break Science
+3372,BoomBox,Pigeons Playing Ping Pong
+3373,BoomBox,Keller Williams
+3374,BoomBox,EOTO
+3375,BoomBox,The New Deal
+3376,BoomBox,Big Gigantic
+3377,BoomBox,The Motet
+3378,BoomBox,moe.
+3379,BoomBox,Twiddle
+3380,Zoogma,Future Rock
+3381,Zoogma,Papadosio
+3382,Zoogma,Conspirator
+3383,Zoogma,The New Deal
+3384,Zoogma,The Pnuma Trio
+3385,Zoogma,The Disco Biscuits
+3386,Zoogma,The Floozies
+3387,Zoogma,EOTO
+3388,Zoogma,The Werks
+3389,Zoogma,Particle
+3390,Zoogma,BoomBox
+3391,Zoogma,Pigeons Playing Ping Pong
+3392,Zoogma,The Malah
+3393,Zoogma,Break Science
+3394,Zoogma,STS9
+3395,Zoogma,Dopapod
+3396,Zoogma,Pretty Lights
+3397,Zoogma,Umphrey's McGee
+3398,Zoogma,Big Gigantic
+3399,Zoogma,Lotus 
+3400,Lettuce,Galactic
+3401,Lettuce,Soulive
+3402,Lettuce,The Greyboy Allstars
+3403,Lettuce,Karl Denson
+3404,Lettuce,Dumpstaphunk
+3405,Lettuce,Stanton Moore
+3406,Lettuce,The New Mastersounds
+3407,Lettuce,Medeski Scofield Martin & Wood
+3408,Lettuce,The Motet
+3409,Lettuce,Charlie Hunter
+3410,Lettuce,"Medeski, Martin & Wood"
+3411,Lettuce,Orgone
+3412,Lettuce,Addison Groove Project
+3413,Lettuce,Umphrey's McGee
+3414,Lettuce,Papa Grows Funk
+3415,Lettuce,Keller Williams
+3416,Lettuce,Trey Anastasio
+3417,Lettuce,The String Cheese Incident
+3418,Lettuce,Pigeons Playing Ping Pong
+3419,Lettuce,Dopapod
+3420,EOTO,Zoogma
+3421,EOTO,The Pnuma Trio
+3422,EOTO,The Disco Biscuits
+3423,EOTO,The New Deal
+3424,EOTO,Papadosio
+3425,EOTO,The String Cheese Incident
+3426,EOTO,Future Rock
+3427,EOTO,Particle
+3428,EOTO,Lotus 
+3429,EOTO,Umphrey's McGee
+3430,EOTO,Keller Williams
+3431,EOTO,moe.
+3432,EOTO,The Floozies
+3433,EOTO,STS9
+3434,EOTO,Break Science
+3435,EOTO,BoomBox
+3436,EOTO,Toubab Krewe
+3437,EOTO,Pigeons Playing Ping Pong
+3438,EOTO,VibeSquaD
+3439,EOTO,Dopapod
+3720,The Pnuma Trio,Future Rock
+3721,The Pnuma Trio,The Disco Biscuits
+3722,The Pnuma Trio,The New Deal
+3723,The Pnuma Trio,Zoogma
+3724,The Pnuma Trio,EOTO
+3725,The Pnuma Trio,Brothers Past
+3726,The Pnuma Trio,Particle
+3727,The Pnuma Trio,The String Cheese Incident
+3728,The Pnuma Trio,The Malah
+3729,The Pnuma Trio,Umphrey's McGee
+3730,The Pnuma Trio,Addison Groove Project
+3731,The Pnuma Trio,moe.
+3732,The Pnuma Trio,Vida Blue
+3733,The Pnuma Trio,Keller Williams
+3734,The Pnuma Trio,Toubab Krewe
+3735,The Pnuma Trio,Papadosio
+3736,The Pnuma Trio,Tea Leaf Green
+3737,The Pnuma Trio,Lotus 
+3738,The Pnuma Trio,30db
+3739,The Pnuma Trio,Trey Anastasio
+3820,Future Rock,The Pnuma Trio
+3821,Future Rock,Zoogma
+3822,Future Rock,The New Deal
+3823,Future Rock,The Disco Biscuits
+3824,Future Rock,EOTO
+3825,Future Rock,Particle
+3826,Future Rock,The Malah
+3827,Future Rock,Brothers Past
+3828,Future Rock,Umphrey's McGee
+3829,Future Rock,The String Cheese Incident
+3830,Future Rock,Lotus 
+3831,Future Rock,Papadosio
+3832,Future Rock,30db
+3833,Future Rock,moe.
+3834,Future Rock,Keller Williams
+3835,Future Rock,Conspirator
+3836,Future Rock,Eliot Lipp
+3837,Future Rock,STS9
+3838,Future Rock,Tea Leaf Green
+3839,Future Rock,BoomBox
+3840,Particle,The Disco Biscuits
+3841,Particle,Tea Leaf Green
+3842,Particle,The String Cheese Incident
+3843,Particle,Ekoostik Hookah
+3844,Particle,moe.
+3845,Particle,Keller Williams
+3846,Particle,Umphrey's McGee
+3847,Particle,New Monsoon
+3848,Particle,Addison Groove Project
+3849,Particle,Strangefolk
+3850,Particle,The Big Wu
+3851,Particle,Keller & The Keels
+3852,Particle,The New Deal
+3853,Particle,Mike Gordon
+3854,Particle,Trey Anastasio
+3855,Particle,Lotus 
+3856,Particle,Assembly of Dust
+3857,Particle,Leftover Salmon
+3858,Particle,Widespread Panic
+3859,Particle,The Pnuma Trio
+3940,The Floozies,Zoogma
+3941,The Floozies,Pigeons Playing Ping Pong
+3942,The Floozies,Papadosio
+3943,The Floozies,Marvel Years
+3944,The Floozies,Lotus 
+3945,The Floozies,STS9
+3946,The Floozies,EOTO
+3947,The Floozies,The Disco Biscuits
+3948,The Floozies,BoomBox
+3949,The Floozies,Break Science
+3950,The Floozies,Big Gigantic
+3951,The Floozies,Pretty Lights
+3952,The Floozies,SunSquabi
+3953,The Floozies,Michal Menert
+3954,The Floozies,Dopapod
+3955,The Floozies,The String Cheese Incident
+3956,The Floozies,Late Night Radio
+3957,The Floozies,Umphrey's McGee
+3958,The Floozies,Exmag
+3959,The Floozies,Opiuo
+3980,Break Science,Paul Basic
+3981,Break Science,Archnemesis
+3982,Break Science,Michal Menert
+3983,Break Science,Big Gigantic
+3984,Break Science,SuperVision
+3985,Break Science,Paper Diamond
+3986,Break Science,Eliot Lipp
+3987,Break Science,Pretty Lights
+3988,Break Science,Psymbionic
+3989,Break Science,ill-esha
+3990,Break Science,VibeSquaD
+3991,Break Science,PANTyRAiD
+3992,Break Science,Mimosa
+3993,Break Science,Zoogma
+3994,Break Science,Opiuo
+3995,Break Science,ill.gates
+3996,Break Science,An-Ten-Nae
+3997,Break Science,Freddy Todd
+3998,Break Science,GRiZ
+3999,Break Science,Marvel Years
+4020,Toubab Krewe,Keller Williams
+4021,Toubab Krewe,Tea Leaf Green
+4022,Toubab Krewe,The String Cheese Incident
+4023,Toubab Krewe,The Disco Biscuits
+4024,Toubab Krewe,Umphrey's McGee
+4025,Toubab Krewe,moe.
+4026,Toubab Krewe,Keller & The Keels
+4027,Toubab Krewe,Leftover Salmon
+4028,Toubab Krewe,Lotus 
+4029,Toubab Krewe,Trey Anastasio
+4030,Toubab Krewe,Ekoostik Hookah
+4031,Toubab Krewe,Particle
+4032,Toubab Krewe,Perpetual Groove
+4033,Toubab Krewe,Railroad Earth
+4034,Toubab Krewe,Yonder Mountain String Band
+4035,Toubab Krewe,Galactic
+4036,Toubab Krewe,Papadosio
+4037,Toubab Krewe,Widespread Panic
+4038,Toubab Krewe,Mike Gordon
+4039,Toubab Krewe,Spafford
+4060,VibeSquaD,Heyoka
+4061,VibeSquaD,ill.gates
+4062,VibeSquaD,An-Ten-Nae
+4063,VibeSquaD,ill-esha
+4064,VibeSquaD,Opiuo
+4065,VibeSquaD,Spoonbill
+4066,VibeSquaD,Love & Light
+4067,VibeSquaD,PANTyRAiD
+4068,VibeSquaD,Freddy Todd
+4069,VibeSquaD,Eliot Lipp
+4070,VibeSquaD,Eprom
+4071,VibeSquaD,KnowSleep
+4072,VibeSquaD,Tipper
+4073,VibeSquaD,Psymbionic
+4074,VibeSquaD,BreakBeatBuddha
+4075,VibeSquaD,Break Science
+4076,VibeSquaD,Nanda
+4077,VibeSquaD,MartyParty
+4078,VibeSquaD,R/D
+4079,VibeSquaD,Bird of Prey
+4660,The Heavy Pets,Kyle Hollingsworth
+4661,The Heavy Pets,Strangefolk
+4662,The Heavy Pets,Tea Leaf Green
+4663,The Heavy Pets,Raq
+4664,The Heavy Pets,Ekoostik Hookah
+4665,The Heavy Pets,Addison Groove Project
+4666,The Heavy Pets,The Big Wu
+4667,The Heavy Pets,New Monsoon
+4668,The Heavy Pets,Assembly of Dust
+4669,The Heavy Pets,moe.
+4670,The Heavy Pets,The Disco Biscuits
+4671,The Heavy Pets,The String Cheese Incident
+4672,The Heavy Pets,Umphrey's McGee
+4673,The Heavy Pets,Mike Gordon
+4674,The Heavy Pets,Vida Blue
+4675,The Heavy Pets,Particle
+4676,The Heavy Pets,McLovins
+4677,The Heavy Pets,U-Melt
+4678,The Heavy Pets,30db
+4679,The Heavy Pets,The Werks
+4760,Kung Fu,Section Z
+4761,Kung Fu,The Werks
+4762,Kung Fu,Spafford
+4763,Kung Fu,Life Force
+4764,Kung Fu,Dopapod
+4765,Kung Fu,The Heavy Pets
+4766,Kung Fu,Kyle Hollingsworth
+4767,Kung Fu,Rygar
+4768,Kung Fu,Shadowgate
+4769,Kung Fu,Mister F
+4770,Kung Fu,The Magic Beans
+4771,Kung Fu,Octave Cat
+4772,Kung Fu,Ikari Warriors
+4773,Kung Fu,The Disco Biscuits
+4774,Kung Fu,Addison Groove Project
+4775,Kung Fu,Pigeons Playing Ping Pong
+4776,Kung Fu,Particle
+4777,Kung Fu,Mungion
+4778,Kung Fu,Umphrey's McGee
+4779,Kung Fu,moe.
+4860,Jimkata,The Heavy Pets
+4861,Jimkata,Zoogma
+4862,Jimkata,The Mantras
+4863,Jimkata,Dopapod
+4864,Jimkata,Papadosio
+4865,Jimkata,The Malah
+4866,Jimkata,Umphrey's McGee
+4867,Jimkata,Tea Leaf Green
+4868,Jimkata,The Disco Biscuits
+4869,Jimkata,moe.
+4870,Jimkata,Lotus 
+4871,Jimkata,The Werks
+4872,Jimkata,The String Cheese Incident
+4873,Jimkata,The New Deal
+4874,Jimkata,Pigeons Playing Ping Pong
+4875,Jimkata,STS9
+4876,Jimkata,Strangefolk
+4877,Jimkata,Toubab Krewe
+4878,Jimkata,Keller Williams
+4879,Jimkata,Twiddle
