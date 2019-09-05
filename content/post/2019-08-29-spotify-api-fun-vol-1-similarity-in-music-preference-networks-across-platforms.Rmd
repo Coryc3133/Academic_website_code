@@ -1,7 +1,7 @@
 ---
 title: 'Spotify API Fun Vol 1: Similarity in Music Preference Networks across Platforms'
 author: 'Cory K. Costello'
-date: '2019-09-04'
+date: '2019-09-05'
 slug: spotify-api-fun-vol-1-similarity-in-music-preference-networks-across-platforms
 categories: []
 tags: []
@@ -15,6 +15,15 @@ I decided to start my blog off with a short series I'm calling spotify api fun. 
 
 I'll be looking at The Grateful Dead's Recommendation Network and the extent to which the artists artists in that network have followers in common on Twitter. I decided to focus on The Grateful Dead for two reasons. First, I'm a longtime fan. Second, they're a sort of interesting case because they overlap with a lot of different genres, from Outlaw Country to Electronica, which should hopefully result in a pretty interesting network of artists.
 
+[According to Spotify](https://artists.spotify.com/blog/how-fans-also-like-works), their recommendation algorithm is based on:
+
+1. Shared listeners on spotify, which 'carry more weight' in the algorithm.
+2. Similarity in how artists are descrbed on Spotify, and elsehwere on the internet (e.g., Blogs). 
+
+So, we can think of it as *mostly* a co-listener network, or a network describing the extent of artists' shared listeners. 
+
+One quick note: I don't show any of the code below, but a knitted, documented html of the code used in this blog is available [here](../../files/spotify_related_artists_nets_1.html).
+
 # Downloading The Grateful Dead's Recommendation Network
 
 My first step was to download the data through Spotify's API, which I did using the wonderful [spotipy](https://spotipy.readthedocs.io) package for python. I used the tools in that package to search the Grateful Dead's Recommendation Network. My basic idea was to:
@@ -23,7 +32,7 @@ My first step was to download the data through Spotify's API, which I did using 
 2. Get each of those 20 artists' related artists.
 3. Repeat to some pre-specified maximum depth. 
 
-The main decision I had to make was how high to set the maximum depth, which I ended up setting to **10**. This means that the network was limited to artists that are at most 10 steps from the Grateful Dead (1 step = the Dead's 20 recommended artists; 2 steps = the $\leq$ 400 artists in those 20 artists recommendation lists; etc.)
+The main decision I had to make was how high to set the maximum depth, which I ended up setting to **10**. This means that the network was limited to artists that are at most 10 steps from the Grateful Dead (1 step = the Dead's 20 recommended artists; 2 steps = the 400 or fewer unique artists in those 20 artists recommendation lists; etc.)
 
 ```{r setup, echo = FALSE, message = FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
@@ -50,7 +59,7 @@ I wanted to examine artists' distance from the dead (the ego of this network) fo
 
 2. I wanted to do a sanity check: does distance seem to (roughly) track similarity?
 
-The graph below shows the Grateful Dead's Recommendation Network where nodes are colored by their distance from the Grateful Dead. Note that you can select particular nodes by their name (ordered by distance; alphabetically within the same distance) or highlight the collection of nodes a certain distance from the Grateful dead with the drop down options on the graph. The graph is also interactive, so feel free to hover over and drag around the nodes.
+The graph below shows the Grateful Dead's Recommendation Network where nodes are colored by their distance from the Grateful Dead. You can select particular nodes by their name (ordered by distance) or highlight the collection of nodes a certain distance from the Grateful dead with the drop down options on the graph. The graph is also interactive, so feel free to hover over and drag around the nodes.
 
 ```{r}
 dead_relatives %>% 
@@ -142,12 +151,7 @@ The big take-away from this particular graph is that artists related to each oth
 
 So what does this mean?
 
-[According to Spotify](https://artists.spotify.com/blog/how-fans-also-like-works), their recommendation algorithm is based on:
-
-1. Shared listeners on spotify, which 'carry more weight' in the algorithm.
-2. Similarity in how artists are descrbed on Spotify, and elsehwere on the internet (e.g., Blogs). 
-
-With that in mind, the above graph likely indicates that Artists with listeners in common on Spotify tend to have followers in common on Twitter. Put differently, musical preferences as expressed by listening patterns on Spotify correspond to following patterns on Twitter.
+It probably means that Artists with listeners in common on Spotify tend to have followers in common on Twitter, since Spotify says their recommendations are primarily based on shared listeners. Put differently, musical preferences as expressed by listening patterns on Spotify correspond to following patterns on Twitter.
 
 This isn't too surprising, but it does suggest that musical preferences are expressed similarly in these two very different platforms. 
 

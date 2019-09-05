@@ -15,11 +15,21 @@
     <item>
       <title>Spotify API Fun Vol 1: Similarity in Music Preference Networks across Platforms</title>
       <link>/post/spotify-api-fun-vol-1-similarity-in-music-preference-networks-across-platforms/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/spotify-api-fun-vol-1-similarity-in-music-preference-networks-across-platforms/</guid>
       <description>I decided to start my blog off with a short series I’m calling spotify api fun. In it, I’ll be sharing some things I’ve learned while exploring data from Spotify’s API. In this post, I’ll be combining data from Spotify’s and Twitter’s APIs to investigate the extent to which music preferences are expressed similarly across the two platforms.
 I’ll be looking at The Grateful Dead’s Recommendation Network and the extent to which the artists artists in that network have followers in common on Twitter.</description>
+    </item>
+    
+    <item>
+      <title>Spotify API Fun Vol. 2: Communities</title>
+      <link>/post/spotify-api-fun-vol-2-artists-related-to-the-grateful-dead/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/spotify-api-fun-vol-2-artists-related-to-the-grateful-dead/</guid>
+      <description>I decided to start my blog off with a short series I’m calling spotify api fun. In it, I’ll be sharing some things I’ve learned while messing around with data from Spotify’s API. In this post, we’ll be looking at The Grateful Dead’s recommendation network, using some tools from Network Analysis to see what we can learn.
+Downloading The Grateful Dead’s Recommendation NetworkMy first step was to download the data through Spotify’s API, which I did using the wonderful spotipy package for python.</description>
     </item>
     
   </channel>
