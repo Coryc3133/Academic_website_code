@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Cory K. Costello">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="trueGoalsBy the end of this tutorial, you will know:
+Basic R usage (using R as a calculator, creating variables, indexing)Basic types of data in RHow to get values out of the rows and columns in your dataBasic iteration (for loops and functions)The best way to do this tutorial is to walk through it slowly, executing each line and trying to understand what it does.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/rbootcamp2019/r_bootcamp_day_1_with_answers/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/courses/rbootcamp2019/r_bootcamp_day_1_with_answers/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@costellock">
+  <meta property="twitter:creator" content="@costellock">
+  
+  <meta property="og:site_name" content="Cory K. Costello">
+  <meta property="og:url" content="/courses/rbootcamp2019/r_bootcamp_day_1_with_answers/">
+  <meta property="og:title" content="R Bootcamp Day 1: Introduction to R (with answers) | Cory K. Costello">
+  <meta property="og:description" content="trueGoalsBy the end of this tutorial, you will know:
+Basic R usage (using R as a calculator, creating variables, indexing)Basic types of data in RHow to get values out of the rows and columns in your dataBasic iteration (for loops and functions)The best way to do this tutorial is to walk through it slowly, executing each line and trying to understand what it does."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>R Bootcamp Day 1: Introduction to R (with answers) | Cory K. Costello</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Cory K. Costello</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/cv/cv_3.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+  Please define menu items named `menu: RBootcamp2019:` in your courses\RBootcamp2019\r_bootcamp_day_1_with_answers.html front matter or define `[[menu.RBootcamp2019]]` in `config/default/menus.toml`. See https://sourcethemes.com/academic/docs/managing-content/#menus
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>R Bootcamp Day 1: Introduction to R (with answers)</h1>
+
+          <div class="article-style">
+            
+
+<div id="TOC">
+true
+</div>
+
+<div id="goals" class="section level1">
+<h1>Goals</h1>
+<p>By the end of this tutorial, you will know:</p>
+<ul>
+<li>Basic <code>R</code> usage (using <code>R</code> as a calculator, creating variables, indexing)</li>
+<li>Basic types of data in R</li>
+<li>How to get values out of the rows and columns in your data</li>
+<li>Basic iteration (for loops and functions)</li>
+</ul>
+<p>The best way to do this tutorial is to walk through it slowly, executing each line and trying to understand what it does. You can execute a single line by placing your cursor somewhere in that line and hitting CTRL+enter on a PC or CMD+enter on a mac; you can execute a whole chunk at a time by hitting CTRL+shift+enter on a PC.</p>
+</div>
+<div id="basic-r-use" class="section level1">
+<h1>1. Basic R Use</h1>
+<div id="basic-computing" class="section level2">
+<h2>1.1. Basic Computing</h2>
+<p>R can be used as a calculator.</p>
+<p>You can do basic arithmetic:</p>
+<pre class="r"><code># Add
+2 + 3</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code># subtract
+2 - 3</code></pre>
+<pre><code>## [1] -1</code></pre>
+<pre class="r"><code># multiplication
+2 * 3</code></pre>
+<pre><code>## [1] 6</code></pre>
+<pre class="r"><code># Division
+10/2</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code># Exponents
+4^2</code></pre>
+<pre><code>## [1] 16</code></pre>
+<pre class="r"><code># Roots
+4^(1/2)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<p>Thankfully, R follows the order of operations (PEMDAS).</p>
+<pre class="r"><code>(2^3)+4*(5/3)</code></pre>
+<pre><code>## [1] 14.66667</code></pre>
+<p>These values aren’t stored anywhere though.</p>
+</div>
+<div id="storing-values-in-objects" class="section level2">
+<h2>1.2 Storing values in objects</h2>
+<p>To keep a value in memory, we need to assign it to an <strong>object</strong>.</p>
+<p>R has two assignment operators: <code>=</code> &amp; <code>&lt;-</code>. Let’s use these to create an object called x, that is assigned the number 8.</p>
+<pre class="r"><code>x &lt;- 8 
+x = 8</code></pre>
+<p>Now we can call <code>x</code> by name; if we do this, it will print the value.</p>
+<pre class="r"><code>x</code></pre>
+<pre><code>## [1] 8</code></pre>
+<p>Although <code>&lt;-</code> and <code>=</code> both work, we’ll strictly use <code>&lt;-</code> from here on out. This brings up a general coding principal of the day:</p>
+<p><em>Style is important!</em> You want to use a consistent style so that others (including your future self) can easily and quickly read your code. I’ll be using <a href="http://adv-r.had.co.nz/Style.html">Hadley Wickham’s Style Guide</a> from here on out, part of which is assigning variables with <code>&lt;-</code>. Remember, the keyboard shortcut <code>Alt+-</code> or <code>Option+-</code> can be used to insert a <code>&lt;-</code>.</p>
+<p>Now, let’s take a look at the variable <code>y</code>:</p>
+<pre class="r"><code># Call Y
+y </code></pre>
+<p>D’oh! We didn’t assign anything to <code>y</code>. Calling a variable that doesn’t exist leads to an <code>Error</code>,</p>
+<pre class="r"><code># Need to assign something to y!
+y &lt;- 2
+
+y</code></pre>
+<pre><code>## [1] 2</code></pre>
+<p>Now, we can use these variables in calculations</p>
+<pre class="r"><code># add em up:
+x + y</code></pre>
+<pre><code>## [1] 10</code></pre>
+<pre class="r"><code># multiply them
+x * y</code></pre>
+<pre><code>## [1] 16</code></pre>
+<p>But remember, if we want to save <em>those</em> calculations, we need to assign them:</p>
+<pre class="r"><code># define the product as z
+z &lt;- x * y</code></pre>
+</div>
+<div id="naming-variables" class="section level2">
+<h2>1.3 Naming Variables</h2>
+<p>You may be wondering how to name variables in R. Well, there are just a few rules:</p>
+<ol style="list-style-type: decimal">
+<li>object names must start with a letter.</li>
+<li>can contain alphanumeric characters, "_“, and”.".</li>
+<li>R is case sensitive, so <code>R</code> and <code>r</code> would be different variables.</li>
+</ol>
+<p>This is another element of <em>style</em>. Using a consistent style when naming variables makes your life easier.</p>
+<p>Some options include:</p>
+<ul>
+<li>snake_case</li>
+<li>SCREAMING_SNAKE (<em>but why</em>)</li>
+<li>camelCase</li>
+<li>you.can.use.periods (<em>but don’t!</em>)
+<ul>
+<li><code>.</code> should be avoided, because it is used to define methods in R and you could end up conflicting with a method name.</li>
+</ul></li>
+</ul>
+<p>I’ll be using snake_case (again see <a href="http://adv-r.had.co.nz/Style.html">Hadley Wickham’s Style Guide</a>), but you can change to another option if you’d like.</p>
+<pre class="r"><code>this_is_snake_case &lt;- 8 # a_fine_choice
+thisIsCamelCase &lt;- 8 #alsoTotallyWorks
+some.maniacs.use.periods &lt;- 8 # probably.best.avoided
+And_someTimes.People_doSTRANGEtHiNgS &lt;- 8 # PLEASE NEVER DO ANYTHING LIKE THIS!</code></pre>
+<div id="exercise-1.3a." class="section level3">
+<h3>Exercise 1.3a.</h3>
+<blockquote>
+<p>Create a variable called var_1 that is equal to 4. Then create a variable called var_2 that is var_1 raised to the power of 6. Print the results.</p>
+</blockquote>
+<pre class="r"><code>var_1 &lt;- 4
+var_2 &lt;- var_1^6
+var_1</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>var_2</code></pre>
+<pre><code>## [1] 4096</code></pre>
+</div>
+</div>
+</div>
+<div id="types-of-data" class="section level1">
+<h1>2. Types of Data</h1>
+<div id="types-of-values" class="section level2">
+<h2>2.1. Types of Values</h2>
+<p>R has different types of data, and an object’s type affects how it interacts with functions and other objects. So far, we’ve just been working with integers. R has several other types of data:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="48%" />
+<col width="32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Definition</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Integer</td>
+<td>whole numbers from -Inf to +Inf</td>
+<td>1, 2, -1, -10928</td>
+</tr>
+<tr class="even">
+<td>Numeric / Double</td>
+<td>fractions &amp; decimals from -Inf to +Inf</td>
+<td>1.3, .293764, -.1239217, <code>Inf</code>, <code>-Inf</code></td>
+</tr>
+<tr class="odd">
+<td>Character / String</td>
+<td>quoted strings of letters, numbers, and allowed symbols</td>
+<td>“1”, “one”, “o_n_e”, “o-n-e”, “o.n.e”</td>
+</tr>
+<tr class="even">
+<td>Logical / Boolean</td>
+<td>logical constants of True or False</td>
+<td>TRUE, FALSE, T, F</td>
+</tr>
+<tr class="odd">
+<td>factor</td>
+<td>ordered, labelled variable</td>
+<td>variable for year in college labelled “Freshman”, “Sophomore”, etc.</td>
+</tr>
+</tbody>
+</table>
+<p>There are a few special types worth knowing about too:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="50%" />
+<col width="29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Definition</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+<td>Missing value; technically represented as different types but displayed as NA</td>
+<td>NA, NA_character_, NA_integer_</td>
+</tr>
+<tr class="even">
+<td>NaN</td>
+<td>‘not a number’</td>
+<td>0/0</td>
+</tr>
+<tr class="odd">
+<td>+Inf</td>
+<td>positive infinity</td>
+<td>Inf</td>
+</tr>
+<tr class="even">
+<td>-Inf</td>
+<td>negative infinity</td>
+<td>-Inf</td>
+</tr>
+<tr class="odd">
+<td>NULL</td>
+<td>The NULL object; an object that exists but is completely empty</td>
+<td>NULL;</td>
+</tr>
+</tbody>
+</table>
+<p>You can use <code>typeof()</code> to find out the type of a value or object:</p>
+<pre class="r"><code>typeof(1)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(TRUE)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<pre class="r"><code>typeof(1L)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>typeof(NA_character_)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>typeof(NA)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<pre class="r"><code>typeof(NULL)</code></pre>
+<pre><code>## [1] &quot;NULL&quot;</code></pre>
+<pre class="r"><code>typeof(NaN)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(Inf)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(&quot;one&quot;)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+</div>
+<div id="vectors" class="section level2">
+<h2>2.2 Vectors</h2>
+<p>Often, we’re not working with individual values, but with multiple related values or a <em>vector</em> of values.</p>
+<div id="creating-vectors" class="section level3">
+<h3>2.2.1 Creating vectors</h3>
+<p>We can create a vector of ordered numbers using <code>starting_number:ending_number</code>. For example, we could make <code>x</code> a vector with the numbers between 1 and 5:</p>
+<pre class="r"><code>x &lt;- 1:5 # sequence of the form starting_number:ending_number</code></pre>
+<p>You’ll notice that x has changed in the environment pane. Since it’s a vector, it tells us what type of vector it is and it’s length in addition to its contents (which can be abbreviated if the object is larger). In this case, it’s a vector of integers (hence <code>int</code>) and is of length 5 (hence <code>[1:5]</code>).</p>
+<p>We can also create a sequence using the function <code>seq()</code>. <code>seq()</code> is a function that creates a sequence of numbers. Like all R functions, you can learn more about it by accessing the help documentation (<code>?+function_name</code>). Let’s take a look:</p>
+<pre class="r"><code>?seq</code></pre>
+<p>Interpreting R help documention is a skill itself, but a very worthwhile one.</p>
+<p>What happens if we run <code>seq()</code> with no arguments?</p>
+<pre class="r"><code>seq()</code></pre>
+<pre><code>## [1] 1</code></pre>
+</div>
+<div id="q1" class="section level3">
+<h3>2.2.1.Q1</h3>
+<blockquote>
+<p>Why did this happen?**</p>
+</blockquote>
+<p><strong>A: </strong></p>
+<p>To make a sequence from 1 to 5 with this function, we have to set the <code>from =</code> and <code>to =</code> to those boundaries:</p>
+<pre class="r"><code>seq(from = 1, to = 5)</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<p>We can also set one or more of the other arguments. The <code>by =</code> argument allows us to change the increment of the sequence. Let’s say we wanted every other number between 1 and 5. We can do this by setting <code>by = 2</code></p>
+<pre class="r"><code>seq(from = 1, to = 5, by = 2)</code></pre>
+<pre><code>## [1] 1 3 5</code></pre>
+<p>We can also create a vector of any numbers we want using the <code>c()</code> function. You do this by putting numbers seperated by a <code>,</code> within the parentheses.</p>
+<pre class="r"><code># We can also assign a vector of values this way
+x &lt;- c(2L, 8.5, 1, 9)</code></pre>
+<p>Note that it became a numeric vector (hence <code>num</code>), which is different from a vector of integers in that it allows decimal points. This brings us to an important feature of vectors:</p>
+<p>Vectors are just 1-dimensional sequences <strong>of a single type of data</strong>. Because <code>1:5</code> was just integers, R stored the vector as <code>int</code>. Since we have <code>8.5</code>, all of the values will be numbers, even the data that could be integers.</p>
+<p>The general rule R uses is to set the vector to be the most permissive type necessary.</p>
+<p>Note that vectors can also include strings or character values.</p>
+<pre class="r"><code>letters &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;)</code></pre>
+<p>What happens if we put the vectors <code>x</code> and <code>letters</code> together? Let’s take a look:</p>
+<pre class="r"><code>mixed_vec &lt;- c(x, letters)
+mixed_vec</code></pre>
+<pre><code>## [1] &quot;2&quot;   &quot;8.5&quot; &quot;1&quot;   &quot;9&quot;   &quot;a&quot;   &quot;b&quot;   &quot;c&quot;   &quot;d&quot;</code></pre>
+<p>Notice the quotes? R turned all of our numbers into strings, since strings are more permissive than numbers. You can see that by running <code>typeof()</code>:</p>
+<pre class="r"><code>typeof(mixed_vec)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>This is called <em>coercion</em>. R coerces a vector into whichever type will accomodate all of the values. We can also coerce a vector ourselves using the <code>as.</code> family of functions. Let’s coerce mixed_vec into a numeric:</p>
+<pre class="r"><code>as.numeric(mixed_vec)</code></pre>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<pre><code>## [1] 2.0 8.5 1.0 9.0  NA  NA  NA  NA</code></pre>
+</div>
+<div id="exercise-2.2.1a" class="section level3">
+<h3>Exercise 2.2.1a</h3>
+<blockquote>
+<p>Create an object called x that is assigned the number 8. Create an object called y that is a sequence of numbers from 2 to 16, by 2. Add x and y. What happens?</p>
+</blockquote>
+<pre class="r"><code>x &lt;- 8
+y &lt;- seq(from = 2, to = 16, by = 2)
+x + y</code></pre>
+<pre><code>## [1] 10 12 14 16 18 20 22 24</code></pre>
+</div>
+<div id="exercise-2.2.1b" class="section level3">
+<h3>Exercise 2.2.1b</h3>
+<blockquote>
+<p>Create an object called z that is a vector containing the numbers 5 and 10. Create an object called q that is a sequence of numbers from 5 to 25, by 5. Multiply q and z. What happens?</p>
+</blockquote>
+<pre class="r"><code>z &lt;- c(5, 10)
+q &lt;- seq(from = 5, to = 25, by = 5)
+q*z</code></pre>
+<pre><code>## Warning in q * z: longer object length is not a multiple of shorter object
+## length</code></pre>
+<pre><code>## [1]  25 100  75 200 125</code></pre>
+</div>
+<div id="exercise-2.2.1c" class="section level3">
+<h3>Exercise 2.2.1c</h3>
+<blockquote>
+<p>Create an object called a that is just the letter “a”. Add a to x (from above). What happens?</p>
+</blockquote>
+<pre class="r"><code>a &lt;- &quot;a&quot;
+a + x</code></pre>
+</div>
+<div id="exercise-2.2.1d" class="section level3">
+<h3>Exercise 2.2.1d</h3>
+<blockquote>
+<p>Create a vector called b that is just the number 8 in quotes. Add b to x (from above). What happens?</p>
+</blockquote>
+<pre class="r"><code>b &lt;- &quot;8&quot;</code></pre>
+<pre class="r"><code>b+x</code></pre>
+</div>
+<div id="exercise-2.2.1e" class="section level3">
+<h3>Exercise 2.2.1e</h3>
+<blockquote>
+<p>Find the type of each of the objects we just made (x, y, q, z, b)?</p>
+</blockquote>
+<pre class="r"><code>typeof(x)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(y)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(q)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(z)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(b)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+</div>
+<div id="exercise-2.2.1f" class="section level3">
+<h3>Exercise 2.2.1f</h3>
+<blockquote>
+<p>Find some way to add b to x (hint: you may need to be coercive)?</p>
+</blockquote>
+<pre class="r"><code>as.numeric(b) + x</code></pre>
+<pre><code>## [1] 16</code></pre>
+<pre class="r"><code>b &lt;- as.numeric(b)
+b + x</code></pre>
+<pre><code>## [1] 16</code></pre>
+</div>
+<div id="indexing-vectors" class="section level3">
+<h3>2.2.2 Indexing vectors</h3>
+<p>The last thing to mention about vectors is that they are all indexed numerically in R, starting with 1. Since vectors are only 1 dimension, we index them with a single number in <code>[]</code>. Let’s get just the first element of a new vector <code>z</code>:</p>
+<pre class="r"><code>z &lt;- 6:10
+z[1]</code></pre>
+<pre><code>## [1] 6</code></pre>
+<p>What if we wanted the first two elements? We could do this by passing the sequence <code>1:2</code> as our index:</p>
+<pre class="r"><code>z[1:2]</code></pre>
+<pre><code>## [1] 6 7</code></pre>
+<p>Or, we could get the first and third element by passing those indexes as a vector using <code>c()</code>:</p>
+<pre class="r"><code>z[c(1, 3)]</code></pre>
+<pre><code>## [1] 6 8</code></pre>
+<p>We could also say which elements not to give us. Let’s get rid of the first element:</p>
+<pre class="r"><code>z[-1]</code></pre>
+<pre><code>## [1]  7  8  9 10</code></pre>
+<p>Or the first and third:</p>
+<pre class="r"><code>z[-c(1, 3)]</code></pre>
+<pre><code>## [1]  7  9 10</code></pre>
+<p>Finally, if the elements in the vector have names, we can refer to them by name instead of their numerical index. You can see the names of a vector using <code>names()</code></p>
+<pre class="r"><code>names(z)</code></pre>
+<pre><code>## NULL</code></pre>
+<p>Looks like the elements in z have no names. We can change that by assigning them names using a vector of names:</p>
+<pre class="r"><code>names(z) &lt;- c(&quot;first&quot;, &quot;second&quot;, &quot;third&quot;, &quot;fourth&quot;, &quot;fifth&quot;)</code></pre>
+<p>And we can see the names:</p>
+<pre class="r"><code>names(z) </code></pre>
+<pre><code>## [1] &quot;first&quot;  &quot;second&quot; &quot;third&quot;  &quot;fourth&quot; &quot;fifth&quot;</code></pre>
+<pre class="r"><code>z</code></pre>
+<pre><code>##  first second  third fourth  fifth 
+##      6      7      8      9     10</code></pre>
+<p>And use them to subset certain elements</p>
+<pre class="r"><code>z[&quot;first&quot;]</code></pre>
+<pre><code>## first 
+##     6</code></pre>
+<pre class="r"><code>z[1]</code></pre>
+<pre><code>## first 
+##     6</code></pre>
+<div id="manipulating-elements-in-vectors" class="section level4">
+<h4>2.2.2.3 Manipulating elements in vectors</h4>
+<p>One thing that you can do with indexing is change elements within the vector. For example, we could change the first elemenet of <code>z</code> to missing, or <code>NA</code>:</p>
+<pre class="r"><code>z[1] &lt;- NA
+z</code></pre>
+<pre><code>##  first second  third fourth  fifth 
+##     NA      7      8      9     10</code></pre>
+<p>You can also use indexing to transform a single element in a vector. Let’s raise the second element to the power of 2:</p>
+<pre class="r"><code>z[2] &lt;- z[2]^2
+z</code></pre>
+<pre><code>##  first second  third fourth  fifth 
+##     NA     49      8      9     10</code></pre>
+<p>Or use it to add to a vector. Let’s add the number 11 as the sixth element of the vector z</p>
+<pre class="r"><code>z[6] &lt;- 11
+z</code></pre>
+<pre><code>##  first second  third fourth  fifth        
+##     NA     49      8      9     10     11</code></pre>
+<p>And you can add a name for that element by referencing the index for the <code>names</code> attribute of <code>z</code>:</p>
+<pre class="r"><code>names(z)[6] &lt;- &quot;sixth&quot;
+z</code></pre>
+<pre><code>##  first second  third fourth  fifth  sixth 
+##     NA     49      8      9     10     11</code></pre>
+</div>
+</div>
+</div>
+<div id="exercise-2.2.2a." class="section level2">
+<h2>Exercise 2.2.2a.</h2>
+<blockquote>
+<p>Create a vector called <code>named</code> that includes the numbers 1 to 5. Name each value a, b, c, d, and e (in order). Print the first element using numerical indexing and the last element using name indexes.</p>
+</blockquote>
+<pre class="r"><code>named &lt;- c(&quot;a&quot; = 1,
+           &quot;b&quot; = 2,
+           &quot;c&quot; = 3,
+           &quot;d&quot; = 4,
+           &quot;e&quot; = 5)
+named[1]</code></pre>
+<pre><code>## a 
+## 1</code></pre>
+<pre class="r"><code>named[&quot;e&quot;]</code></pre>
+<pre><code>## e 
+## 5</code></pre>
+</div>
+<div id="exercise-2.2.2b." class="section level2">
+<h2>Exercise 2.2.2b.</h2>
+<blockquote>
+<p>Change the third element of <code>named</code> to the value 21 and then show your results.</p>
+</blockquote>
+<pre class="r"><code>named[3] &lt;- named[3]*7</code></pre>
+</div>
+<div id="lists" class="section level2">
+<h2>2.3 Lists</h2>
+<p>Vectors are great for storing a single type of data, but what if we have a variety of different kinds of data we want to store together. For example, let’s say I want to store the year I am in the PhD program (a number), my name ( a string), and my enrollment status (a logical) in a single object that preserved these different types? A vector won’t work, but a <code>list</code> will.</p>
+<p>Lists are like vectors in that they are a 1-dimensional object, but they can contain heterogeneous data.</p>
+<div id="creating-lists" class="section level3">
+<h3>2.3.1 Creating Lists</h3>
+<p>We can create a list with the <code>list()</code> function:</p>
+<pre class="r"><code>cory &lt;- list(6L,
+             &quot;Cory Costello&quot;,
+             TRUE)
+
+cory</code></pre>
+<pre><code>## [[1]]
+## [1] 6
+## 
+## [[2]]
+## [1] &quot;Cory Costello&quot;
+## 
+## [[3]]
+## [1] TRUE</code></pre>
+<p>And, we can give each of these entries names to make things a little easier to keep track of:</p>
+<pre class="r"><code>cory &lt;- list(year = 6L,
+             name = &quot;Cory Costello&quot;,
+             enrollment = TRUE)
+
+cory</code></pre>
+<pre><code>## $year
+## [1] 6
+## 
+## $name
+## [1] &quot;Cory Costello&quot;
+## 
+## $enrollment
+## [1] TRUE</code></pre>
+<p>Notice that the <code>[[1]]</code>, <code>[[2]]</code>, and <code>[[3]]</code>, the element indices, have been replaced by the names <code>year</code>, <code>name</code>, and <code>enrollment</code>. You can see also see the names of a list by running <code>names()</code> on it:</p>
+<pre class="r"><code>names(cory)</code></pre>
+<pre><code>## [1] &quot;year&quot;       &quot;name&quot;       &quot;enrollment&quot;</code></pre>
+<p>Lists are even more flexible than you’ve seen so far. In addition to being of heterogeneous type, each element of a list can be of different dimensions. Let’s add another element to the list about me that contains my favorite types of data, which will be a vector of length 2:</p>
+<pre class="r"><code>cory &lt;- list(year = 6L,
+             name = &quot;Cory Costello&quot;,
+             enrollment = TRUE, 
+             fave_data = c(&quot;strings&quot;, &quot;numbers&quot;)) # note c() to create a vector
+cory</code></pre>
+<pre><code>## $year
+## [1] 6
+## 
+## $name
+## [1] &quot;Cory Costello&quot;
+## 
+## $enrollment
+## [1] TRUE
+## 
+## $fave_data
+## [1] &quot;strings&quot; &quot;numbers&quot;</code></pre>
+</div>
+<div id="indexing-lists" class="section level3">
+<h3>2.3.2 Indexing Lists</h3>
+<p>Like vectors, lists can be indexed by their name or their position (numerically).</p>
+<div id="indexing-lists-numerically" class="section level4">
+<h4>2.3.2.1 Indexing Lists Numerically</h4>
+<p>For example, if we wanted the year variable, we could get it out using its position as the first element of my list:</p>
+<pre class="r"><code>cory[1]</code></pre>
+<pre><code>## $year
+## [1] 6</code></pre>
+<p>Now let’s say we want to know my PhD year in dog years. Let’s see if we can get that by multiplying the <code>year</code> element by 7:</p>
+<pre class="r"><code>cory[1] * 7</code></pre>
+<p>Okay, we get a pretty confusing error that we supplied a non-numeric argument, which in this case is <code>cory[1]</code>. This happened because single bracket indexing on a list produces a list and lists can’t be multiplied by a number (at least not with just <code>*</code>). If we want the actual object stored at the first position instead of a list with that object, we have to use the double-bracket indexing <code>list[[i]]</code>:</p>
+<pre class="r"><code>cory[[1]]</code></pre>
+<pre><code>## [1] 6</code></pre>
+<p>Notice it no longer has the <code>$year</code>; <code>$label</code> is a hint that you’re looking at a list and not the object stored at that position. Now let’s see my PhD year in dog years:</p>
+<pre class="r"><code>cory[[1]] * 7</code></pre>
+<pre><code>## [1] 42</code></pre>
+</div>
+<div id="indexing-lists-by-name" class="section level4">
+<h4>2.3.2.1 Indexing Lists by Name</h4>
+<p>The same applies to name indexing. With lists, you can get a list containing the indexed object with <code>[]</code>:</p>
+<pre class="r"><code>cory[&quot;year&quot;]</code></pre>
+<pre><code>## $year
+## [1] 6</code></pre>
+<p>And double brackets <code>[[]]</code> can be used to get the object stored with that name:</p>
+<pre class="r"><code>cory[[&quot;year&quot;]]</code></pre>
+<pre><code>## [1] 6</code></pre>
+<p>You can also use <code>list$name</code> to get the object stored with a particular name too:</p>
+<pre class="r"><code>cory$year</code></pre>
+<pre><code>## [1] 6</code></pre>
+</div>
+<div id="manipulating-lists-with-indexes" class="section level4">
+<h4>Manipulating Lists with Indexes</h4>
+<p>Just like vectors, we can change or add elements to our list using indexing. For example, let’s save the dog years transformation of the year element as <code>dog_years</code></p>
+<pre class="r"><code>cory[[&quot;dog_years&quot;]] &lt;- cory[[&quot;year&quot;]] * 7
+cory</code></pre>
+<pre><code>## $year
+## [1] 6
+## 
+## $name
+## [1] &quot;Cory Costello&quot;
+## 
+## $enrollment
+## [1] TRUE
+## 
+## $fave_data
+## [1] &quot;strings&quot; &quot;numbers&quot;
+## 
+## $dog_years
+## [1] 42</code></pre>
+<p>This would also work:</p>
+<pre class="r"><code>cory$dog_years &lt;- cory$year*7
+cory</code></pre>
+<pre><code>## $year
+## [1] 6
+## 
+## $name
+## [1] &quot;Cory Costello&quot;
+## 
+## $enrollment
+## [1] TRUE
+## 
+## $fave_data
+## [1] &quot;strings&quot; &quot;numbers&quot;
+## 
+## $dog_years
+## [1] 42</code></pre>
+</div>
+</div>
+<div id="exercise-2.3.2a." class="section level3">
+<h3>Exercise 2.3.2a.</h3>
+<blockquote>
+<p>Create a list like mine that is made up of <code>year</code>, <code>name</code>, <code>enrollment</code>, <code>fave_data</code>, but corresponds to you (professors, or postdocs can use year in position, years since PhD, or make a number up). Make sure you enter two types of favorite data (bc who could choose?!). Make it print your name.</p>
+</blockquote>
+<pre class="r"><code>cory &lt;- list(year = 6L,
+             name = &quot;Cory Costello&quot;,
+             enrollment = TRUE, 
+             fave_data = c(&quot;strings&quot;, &quot;numbers&quot;)) # note c() to create a vector
+cory</code></pre>
+<pre><code>## $year
+## [1] 6
+## 
+## $name
+## [1] &quot;Cory Costello&quot;
+## 
+## $enrollment
+## [1] TRUE
+## 
+## $fave_data
+## [1] &quot;strings&quot; &quot;numbers&quot;</code></pre>
+</div>
+<div id="indexing-objects-within-lists" class="section level3">
+<h3>2.3.3 Indexing Objects within Lists</h3>
+<p>As we saw with the object <code>fave_data</code> stored in the list <code>cory</code>, objects within lists can have different dimensions and length. What if we wanted just one element of an object in a list, such as just the second element of <code>fave_data</code>? We can use indexing on the <code>fave_data</code> vector stored within the <code>cory</code> list by chaining indexes.</p>
+<p>We could do that with numbers:</p>
+<pre class="r"><code>cory[[4]][2]</code></pre>
+<pre><code>## [1] &quot;numbers&quot;</code></pre>
+<p>Or with type of list name indexing:</p>
+<pre class="r"><code>cory[[&quot;fave_data&quot;]][2]</code></pre>
+<pre><code>## [1] &quot;numbers&quot;</code></pre>
+<pre class="r"><code>cory$fave_data[2]</code></pre>
+<pre><code>## [1] &quot;numbers&quot;</code></pre>
+</div>
+<div id="exercise-2.3.3a" class="section level3">
+<h3>Exercise 2.3.3a</h3>
+<blockquote>
+<p>Using the same list, get your PhD year in dog years (<code>*7</code>) and assign it to the 2nd position of the <code>year</code> object. Then show the new <code>year</code> object.</p>
+</blockquote>
+<pre class="r"><code>cory[[&quot;year&quot;]][2] &lt;- cory[[&quot;year&quot;]]*7
+cory$year[2] &lt;- cory$year*7</code></pre>
+<pre><code>## Warning in cory$year[2] &lt;- cory$year * 7: number of items to replace is not
+## a multiple of replacement length</code></pre>
+<pre class="r"><code>cory$year</code></pre>
+<pre><code>## [1]  6 42</code></pre>
+</div>
+</div>
+<div id="matrices-arrays" class="section level2">
+<h2>2.4. Matrices &amp; Arrays</h2>
+<p>Matrices are 2-dimensional objects that store a single type of data, so you can think of them like a 2-dimensional vector.</p>
+<div id="creating-matrices" class="section level3">
+<h3>2.4.1 Creating Matrices</h3>
+<p>We can create matrices using the <code>matrix()</code> function. For example, let’s create a 2 X 2 matrix of the numbers 1 to 4.</p>
+<pre class="r"><code>mat &lt;- matrix(data = c(1, 2, # data in either row-wise or column-wise order
+                       3, 4), # don&#39;t have to do two lines, but it looks nice
+              nrow = 2, # number of rows
+              ncol = 2, # number of columns
+              byrow = TRUE) # tell it the order of data above
+mat</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    2
+## [2,]    3    4</code></pre>
+<p>Or, let’s say we had two columns, c1 and c2. We could put them together into a matrix using <code>cbind()</code> or column-bind:</p>
+<pre class="r"><code>c1 &lt;- c(1, 3)
+c2 &lt;- c(2, 4)
+mat &lt;- cbind(c1, c2)
+mat</code></pre>
+<pre><code>##      c1 c2
+## [1,]  1  2
+## [2,]  3  4</code></pre>
+<p>This accomplishes basically the same thing, except our two columns have names.</p>
+<p>We could do something similar with two rows, called r1 and r2, using the <code>rbind()</code> or row-bind function:</p>
+<pre class="r"><code>r1 &lt;- c(1, 2)
+r2 &lt;- c(3, 4)
+mat &lt;- rbind(r1, r2)
+mat</code></pre>
+<pre><code>##    [,1] [,2]
+## r1    1    2
+## r2    3    4</code></pre>
+<p>This is essentially the same, but it has row names. We can see that by running <code>rownames()</code> on it:</p>
+<pre class="r"><code>rownames(mat)</code></pre>
+<pre><code>## [1] &quot;r1&quot; &quot;r2&quot;</code></pre>
+<p>You’ll notice it doesn’t have column names, which we can check with <code>colnames()</code>:</p>
+<pre class="r"><code>colnames(mat)</code></pre>
+<pre><code>## NULL</code></pre>
+<p>But, we could assign column names using the <code>colnames()</code> function:</p>
+<pre class="r"><code>colnames(mat) &lt;- c(&quot;c1&quot;,  &quot;c2&quot;)
+mat</code></pre>
+<pre><code>##    c1 c2
+## r1  1  2
+## r2  3  4</code></pre>
+<p>Finally, matrices behave a lot like vectors; they can only accomodate homogenous data, and so it will coerce the data into whatever type is most accomodating:</p>
+<pre class="r"><code>mixed_mat &lt;- cbind(mat, 
+                   c3 = c(&quot;a&quot;, &quot;b&quot;))
+mixed_mat</code></pre>
+<pre><code>##    c1  c2  c3 
+## r1 &quot;1&quot; &quot;2&quot; &quot;a&quot;
+## r2 &quot;3&quot; &quot;4&quot; &quot;b&quot;</code></pre>
+<p>Note that it has now turned everything into strings.</p>
+</div>
+<div id="indexing-matrices" class="section level3">
+<h3>2.4.2 Indexing Matrices</h3>
+<p>Indexing matrices is just like indexing vectors, except we have two dimensions, which we use like so:<br />
+[row, column]</p>
+<div id="indexing-matrices-numerically" class="section level4">
+<h4>2.4.2.1 Indexing Matrices Numerically</h4>
+<p>Let’s get the element at row 1 column 1 of the <code>mat</code> object:</p>
+<pre class="r"><code>mat[1, 1]</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p>Or we could get the whole 2nd column by leaving the row index blank:</p>
+<pre class="r"><code>mat[,2]</code></pre>
+<pre><code>## r1 r2 
+##  2  4</code></pre>
+</div>
+<div id="indexing-matrices-by-name" class="section level4">
+<h4>2.4.2.1 Indexing Matrices by Name</h4>
+<p>And, we can use names instead of numbers if we like:</p>
+<pre class="r"><code>mat[&quot;r1&quot;, &quot;c1&quot;]</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p>A mix:</p>
+<pre class="r"><code>mat[&quot;r1&quot;, 2]</code></pre>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="changing-or-adding-to-matrices-with-indexes" class="section level4">
+<h4>Changing or Adding to Matrices with indexes</h4>
+<pre class="r"><code>mat[2, 2] &lt;- mat[2, 2]^2
+mat</code></pre>
+<pre><code>##    c1 c2
+## r1  1  2
+## r2  3 16</code></pre>
+</div>
+</div>
+<div id="exercise-2.4.2a" class="section level3">
+<h3>Exercise 2.4.2a</h3>
+<blockquote>
+<p>Make a matrix called mat2 that is a 3 X 3 matrix with rows 1, 2, 3, 4, 5, 6, 7, 8, 9. Make the column names c1, c2, and c3, and make the row names r1, r2, and r3. Add the first column to the third column.</p>
+</blockquote>
+<pre class="r"><code>mat2 &lt;- matrix(c(1, 2, 3, 
+                 4, 5, 6, 
+                 7, 8, 9),
+               nrow = 3, 
+               byrow = TRUE)
+
+mat2[,1] + mat2[,3]</code></pre>
+<pre><code>## [1]  4 10 16</code></pre>
+</div>
+<div id="exercise-2.4.2b" class="section level3">
+<h3>Exercise 2.4.2b</h3>
+<blockquote>
+<p>Change the third row to be equal to the current third row times 3 and print the matrix.</p>
+</blockquote>
+<pre class="r"><code>mat2[3,] &lt;- mat2[3,]*3
+mat2</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]   21   24   27</code></pre>
+</div>
+<div id="arrays" class="section level3">
+<h3>2.4.3 Arrays</h3>
+<p>Arrays are like matrices, but can have N-dimensions (more than 2).</p>
+<pre class="r"><code>array(c(mat, mat*2, mat*3), dim =c(2, 2, 3))</code></pre>
+<pre><code>## , , 1
+## 
+##      [,1] [,2]
+## [1,]    1    2
+## [2,]    3   16
+## 
+## , , 2
+## 
+##      [,1] [,2]
+## [1,]    2    4
+## [2,]    6   32
+## 
+## , , 3
+## 
+##      [,1] [,2]
+## [1,]    3    6
+## [2,]    9   48</code></pre>
+<p>Most of us don’t have to use arrays that often, so we’ll leave it at that.</p>
+</div>
+</div>
+<div id="data-frames" class="section level2">
+<h2>2.5. Data Frames</h2>
+<p>The <code>data.frame</code> object is like a matrix in that it has 2 dimensions, but it can contain heterogeneous data like a list. The indexing works like a sort of hybrid of the two as you’ll soon see.</p>
+<div id="creating-data-frames" class="section level3">
+<h3>2.5.1 Creating Data Frames</h3>
+<p>Let’s start by making a simple dataframe out of the <code>mixed_mat</code> we created above:</p>
+<pre class="r"><code>df_1 &lt;- data.frame(mixed_mat)
+df_1</code></pre>
+<pre><code>##    c1 c2 c3
+## r1  1  2  a
+## r2  3  4  b</code></pre>
+<p>Note that we can also create a dataframe very similarly to how we made a list, but replacing <code>list()</code> with <code>data.frame()</code>:</p>
+<pre class="r"><code>df_1 &lt;- data.frame(c1 = c(1, 3),
+                   c2 = c(2, 4), 
+                   c3 = c(&quot;a&quot;, &quot;b&quot;),
+                  row.names = c(&quot;r1&quot;, &quot;r2&quot;))
+df_1</code></pre>
+<pre><code>##    c1 c2 c3
+## r1  1  2  a
+## r2  3  4  b</code></pre>
+</div>
+<div id="indexing-data-frames" class="section level3">
+<h3>2.5.2 Indexing Data Frames</h3>
+<p>Indexing dataframes is sort of a hybrid between matrices and lists. Like matrices, you can index using the [row, column] format, using either numerical indexing:</p>
+<pre class="r"><code>df_1[1, 3]</code></pre>
+<pre><code>## [1] a
+## Levels: a b</code></pre>
+<p>or names:</p>
+<pre class="r"><code>df_1[&quot;r1&quot;, &quot;c3&quot;]</code></pre>
+<pre><code>## [1] a
+## Levels: a b</code></pre>
+<p>You can also get an entire row or column by leaving an index blank. Let’s get all rows for column 2:</p>
+<pre class="r"><code>df_1[, &quot;c2&quot;]</code></pre>
+<pre><code>## [1] 2 4</code></pre>
+<p>However, like a list, we can use the <code>$</code> in the form <code>data$column</code> (similar to <code>list$object</code> used for lists). Let’s get the first column:</p>
+<pre class="r"><code>df_1$c1</code></pre>
+<pre><code>## [1] 1 3</code></pre>
+<p>And, like with lists, we can index a column using vector indexing, since a single column is (by definition) a vector (1-dimensional, with a single type of data). Let’s get the first value in column 1:</p>
+<pre class="r"><code>df_1$c1[1]</code></pre>
+<pre><code>## [1] 1</code></pre>
+</div>
+<div id="modifying-a-dataframe-with-indexes" class="section level3">
+<h3>2.5.2.1 Modifying a Dataframe with Indexes</h3>
+<p>Just like lists, vectors, and matrices, you can modify a dataframe and add new elements or change exising elements by referencing indexes.</p>
+<p>We could create c4 as the sum of c1 and c2:</p>
+<pre class="r"><code>df_1$c4 &lt;- df_1$c1 + df_1$c2
+df_1</code></pre>
+<pre><code>##    c1 c2 c3 c4
+## r1  1  2  a  3
+## r2  3  4  b  7</code></pre>
+<p>Or we could replace an element using indexing too. Let’s replace c1 with c1^2:</p>
+<pre class="r"><code>df_1$c1 =df_1$c1^2
+df_1</code></pre>
+<pre><code>##    c1 c2 c3 c4
+## r1  1  2  a  3
+## r2  9  4  b  7</code></pre>
+</div>
+<div id="structure-types-coercion-in-dfs" class="section level3">
+<h3>2.5.3 Structure, Types, &amp; Coercion in Dfs</h3>
+<p>How can we tell what type of data each column stores? We can use the <code>str()</code> function to get the <em>structure</em> of the data:</p>
+<pre class="r"><code>str(df_1)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    2 obs. of  4 variables:
+##  $ c1: num  1 9
+##  $ c2: num  2 4
+##  $ c3: Factor w/ 2 levels &quot;a&quot;,&quot;b&quot;: 1 2
+##  $ c4: num  3 7</code></pre>
+<p>You can also coerce individual columns into other types. For example, we could turn c1 into an integer (from a numeric/double):</p>
+<pre class="r"><code>df_1$c1 &lt;- as.integer(df_1$c1)
+df_1</code></pre>
+<pre><code>##    c1 c2 c3 c4
+## r1  1  2  a  3
+## r2  9  4  b  7</code></pre>
+</div>
+<div id="exercise-2.5.2a" class="section level3">
+<h3>Exercise 2.5.2a</h3>
+<blockquote>
+<p>Make a data frame, called df_2, that has 3 columns.</p>
+</blockquote>
+<p>c1 = 1, 2, 3
+c2 = 2, 4, 6,
+c3 = “a”, “b”, “c”</p>
+<blockquote>
+<p>After you create it, check the structure.</p>
+</blockquote>
+<pre class="r"><code>df_2 &lt;- data.frame(c1 = c(1, 2, 3),
+                   c2 = c(2, 4, 6),
+                   c3 = c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;))
+str(df_2)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    3 obs. of  3 variables:
+##  $ c1: num  1 2 3
+##  $ c2: num  2 4 6
+##  $ c3: Factor w/ 3 levels &quot;a&quot;,&quot;b&quot;,&quot;c&quot;: 1 2 3</code></pre>
+</div>
+<div id="exercise-2.5.2b" class="section level3">
+<h3>Exercise 2.5.2b</h3>
+<blockquote>
+<p>Using df_2, add a fourth column, c4, which is the first and second columns multiplied together.</p>
+</blockquote>
+<pre class="r"><code>df_2$c4 &lt;- df_2$c1 * df_2$c2
+df_2</code></pre>
+<pre><code>##   c1 c2 c3 c4
+## 1  1  2  a  2
+## 2  2  4  b  8
+## 3  3  6  c 18</code></pre>
+</div>
+<div id="exercise-2.5.2c" class="section level3">
+<h3>Exercise 2.5.2c</h3>
+<blockquote>
+<p>Using df_2, try to add the first and second rows together. what happens? Why?</p>
+</blockquote>
+<pre class="r"><code>df_2[1,] + df_2[2, ]</code></pre>
+<pre><code>## Warning in Ops.factor(left, right): &#39;+&#39; not meaningful for factors</code></pre>
+<pre><code>##   c1 c2 c3 c4
+## 1  3  6 NA 10</code></pre>
+</div>
+</div>
+<div id="wrapping-up-data-types" class="section level2">
+<h2>2.6 Wrapping up Data Types</h2>
+<p>Now you know the basics of how R represents data.</p>
+<p>This table from <a href="http://adv-r.had.co.nz/Data-structures.html#data-structures">Advanced R</a> summarizes them:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Homogenous data</th>
+<th>Heterogenous data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1-Dimensional</td>
+<td>Atomic Vector</td>
+<td>List</td>
+</tr>
+<tr class="even">
+<td>2-Dimensional</td>
+<td>Matrix</td>
+<td>Data frame</td>
+</tr>
+<tr class="odd">
+<td>N-Dimensional</td>
+<td>Array</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="functions-iteration" class="section level1">
+<h1>3. Functions &amp; Iteration</h1>
+<div id="basic-functions" class="section level2">
+<h2>3.1. Basic Functions</h2>
+<p>Data (and objects more generally) are one of the building blocks of R. The other is functions. We’ve already used a handful of functions, including <code>seq()</code>, arithmetic functions (<code>+</code>, <code>*</code>, etc.), <code>matrix()</code>, <code>array()</code>, etc.</p>
+<p>Functions take some form of an input, perform some operation, and then return some object(s) as output. Functions are made up of <em>arguments</em>. For example, let’s take a look at the help documentation for <code>seq()</code> by copying ?seq into the console.</p>
+<p>You can see it has the arguments <code>from</code>, <code>to</code>, <code>by</code>, <code>length.out</code>, and <code>along.with</code>. You might also notice that each of the arguments have a value after the <code>=</code> in the documentation. These values are the <em>defaults</em>; they are what the arguments will be set to if you don’t specify them. In fact, since all of the arguments have defaults, we don’t have to specify any to run <code>seq()</code> as we saw earlier today.</p>
+<pre class="r"><code>seq()</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p>Let’s take a look at a new function, <code>mean()</code>. This is used to get the mean of a set of numbers. What happens if we run it without any arguments?</p>
+<pre class="r"><code>?mean()</code></pre>
+<p>We get an error telling us that the argument “x” is missing and has no default. Whenever you see this error, it means you are missing a required argument (i.e., an argument without a default). If we look at the documention, you can see x is the data from which to calculate a mean.</p>
+<p>Let’s see what happens when we run <code>mean()</code> on the matrix <code>mat</code> we created eariler:</p>
+<pre class="r"><code>mean(mat)</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+<p>Note that <code>mean()</code> has two more optional arguments listed: <code>trim</code>, which returns a trimmed mean, and <code>na.rm</code> which takes a logical value indicating if it should remove missing values or not before it calculates the mean (set to <code>FALSE</code> by default). What happens if we don’t remove NAs before calculating the mean? Let’s check it out.</p>
+<pre class="r"><code>vec_w_na &lt;- c(1, 2, 3, 4, 5, 6, NA, 2, 4)
+mean(vec_w_na)</code></pre>
+<pre><code>## [1] NA</code></pre>
+<p>It returns <code>NA</code>. This is important to remember: NAs are contagious! One in a vector will cause many functions to return NA (unless they remove them by default). This sort of makes sense - the mean of <code>vec_w_na</code> in its entirity is unknown, since we don’t know what the <code>NA</code> value is. That’s why you have to remove them by setting <code>na.rm = TRUE</code></p>
+<pre class="r"><code>mean(vec_w_na, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 3.375</code></pre>
+<p><code>sd()</code> can be used to get the standard deviation and is structured very similarly:</p>
+<pre class="r"><code>sd(vec_w_na, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 1.685018</code></pre>
+<p>You can get the length of many objects with <code>length()</code>:</p>
+<pre class="r"><code>length(vec_w_na)</code></pre>
+<pre><code>## [1] 9</code></pre>
+<p><code>nrow()</code> and <code>ncol()</code> can be used to get the number of rows or columns in a matrix or data frame:</p>
+<pre class="r"><code>nrow(df_1)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>ncol(df_1)</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>nrow(mat)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>ncol(mat)</code></pre>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="arguments-are-positional" class="section level2">
+<h2>3.2. Arguments are Positional</h2>
+<p>Take a look at the <code>sd()</code> function documentation (<code>?sd</code>). Notice that there are two arguments and they are in order, <code>x</code> followed by <code>na.rm = FALSE</code>. You can set arguments by name:</p>
+<pre class="r"><code>sd(x = vec_w_na, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 1.685018</code></pre>
+<p>You can also set them positionally:</p>
+<pre class="r"><code>sd(vec_w_na, TRUE)</code></pre>
+<pre><code>## [1] 1.685018</code></pre>
+<p>When using arguments positionally (without their names), you <strong>need to make sure the arguments are in the right order.</strong> If you name the arguments, you can actually put them in a different order:</p>
+<pre class="r"><code>sd(na.rm = TRUE, x = vec_w_na)</code></pre>
+<pre><code>## [1] 1.685018</code></pre>
+<p>Now let’s try the <code>mean()</code> function:</p>
+<pre class="r"><code>mean(vec_w_na, TRUE)</code></pre>
+<div id="q1-1" class="section level3">
+<h3>3.2.Q1:</h3>
+<blockquote>
+<p>What happenned?<br />
+<strong>A: </strong></p>
+</blockquote>
+<pre class="r"><code>mean(vec_w_na, na.rm = TRUE) # or...</code></pre>
+<pre><code>## [1] 3.375</code></pre>
+<pre class="r"><code>mean(vec_w_na, 0, TRUE)</code></pre>
+<pre><code>## [1] 3.375</code></pre>
+</div>
+</div>
+<div id="user-defined-functions" class="section level2">
+<h2>3.3. User-defined functions</h2>
+<p>You can also make your own functions. In fact, that is where most of the R functions we use come from, someone making their own function and then sharing it with everyone. For example, let’s make a function that calculates the mean of a vector, and prints it in the format: "The mean is _", where the blank is filled in with the mean.</p>
+<p>To create a function, you use the <code>function()</code> function. Like anything you make in R, you need to save it to a name with <code>&lt;-</code>.</p>
+<p>Within the parantheses, you put the arguments. Then you define the <em>body</em> of the function in <code>{}</code>:</p>
+<pre class="r"><code>pretty_mean &lt;- function(data){
+  mean &lt;- mean(data, na.rm = TRUE)
+  x &lt;- paste(&quot;The Mean is&quot;, mean)
+  print(x) 
+}</code></pre>
+<p>Now let’s test it out on our <code>vec_w_na</code> object:</p>
+<pre class="r"><code>pretty_mean(vec_w_na)</code></pre>
+<pre><code>## [1] &quot;The Mean is 3.375&quot;</code></pre>
+<p>Notice that it works how we expected it to, and also it didn’t create an object in our global environment called <code>mean</code>. That variables within a function are local; they only exist within that function (they don’t get created in the global environment).</p>
+<pre class="r"><code>pretty_mean &lt;- function(data, excited = TRUE){
+    mean &lt;- mean(data, na.rm = TRUE)
+    if(excited == FALSE){x &lt;- paste(&quot;The Mean is&quot;, mean)}
+    if(excited == TRUE){x &lt;- paste(&quot;The Mean is&quot;, mean, &quot;!&quot;)}
+    print(x)
+}
+
+pretty_mean(vec_w_na)</code></pre>
+<pre><code>## [1] &quot;The Mean is 3.375 !&quot;</code></pre>
+<pre class="r"><code>pretty_mean(vec_w_na, excited = FALSE) # tone it down</code></pre>
+<pre><code>## [1] &quot;The Mean is 3.375&quot;</code></pre>
+<p>Obviously, we can make much more complicated functions, but we will leave it there for now.</p>
+<div id="exercise-3.3a" class="section level3">
+<h3>Exercise 3.3a</h3>
+<blockquote>
+<p>Create a function called <code>pretty_sd</code>, that has a single argument called data and prints out "The SD is _" with the blank filled in with the SD of the data. Run it on the <code>vec_w_na</code> object.</p>
+</blockquote>
+<pre class="r"><code>pretty_mean &lt;- function(data){
+  mean &lt;- sd(data, na.rm = TRUE)
+  paste(&quot;The SD is&quot;, mean)
+}
+
+pretty_mean(vec_w_na)</code></pre>
+<pre><code>## [1] &quot;The SD is 1.68501801601221&quot;</code></pre>
+</div>
+</div>
+<div id="for-loops" class="section level2">
+<h2>3.4 For loops</h2>
+<p>R, like many programming languages, can loop through objects. The most common type of loop is called a <em>for loop</em>, and it iterates through an object performing a specified operation. For example, let’s say we wanted to go through our <code>vec_w_na</code> and print each element and its index. We could do that with a for loop.</p>
+<p>For loops work a little bit like a function. Within the parantheses, you specify what is being iterated through, and you specify the body of the loop in <code>{}</code>:</p>
+<pre class="r"><code>for(i in 1:length(vec_w_na)){
+  print(paste(&quot;The value at index&quot;, i, &quot;is&quot;, vec_w_na[i]))
+}</code></pre>
+<pre><code>## [1] &quot;The value at index 1 is 1&quot;
+## [1] &quot;The value at index 2 is 2&quot;
+## [1] &quot;The value at index 3 is 3&quot;
+## [1] &quot;The value at index 4 is 4&quot;
+## [1] &quot;The value at index 5 is 5&quot;
+## [1] &quot;The value at index 6 is 6&quot;
+## [1] &quot;The value at index 7 is NA&quot;
+## [1] &quot;The value at index 8 is 2&quot;
+## [1] &quot;The value at index 9 is 4&quot;</code></pre>
+<p>Note that with a for loop, we have to tell it to print the result; otherwise, it runs the commands within the scope of the loop and doesn’t display the results.</p>
+<div id="exercise-3.4a." class="section level3">
+<h3>Exercise 3.4a.</h3>
+<blockquote>
+<p>Create a for loop that iterates through our <code>vec_w_na</code> vector, and prints out the result of dividing each value by 5 (hint: remember to print!).</p>
+</blockquote>
+<pre class="r"><code>for(i in 1:length(vec_w_na)){
+  print(vec_w_na[i]/5)
+}</code></pre>
+<pre><code>## [1] 0.2
+## [1] 0.4
+## [1] 0.6
+## [1] 0.8
+## [1] 1
+## [1] 1.2
+## [1] NA
+## [1] 0.4
+## [1] 0.8</code></pre>
+</div>
+</div>
+<div id="packages" class="section level2">
+<h2>3.5. Packages</h2>
+<p>So far, we’ve been working with functions that are already installed and loaded when we open R. However, many of the functions we want to use are not part of the basic R install. They come in <code>packages</code> that other R users make and share.</p>
+<div id="installing-packages" class="section level3">
+<h3>3.5.1 Installing Packages</h3>
+<p>The most common way to get a package is to download it from <a href="https://cran.r-project.org/">CRAN</a> using the code <code>install.packages()</code> function. Packages on CRAN have to pass certain tests, so any package on CRAN should be safe and basically work (there can be bugs).</p>
+<p>One package we’re going to use is the package <code>rio</code>, which has really easy functions for importing and exporting data. To install a package, you want to run <code>install.packages("package_name")</code>.</p>
+<pre class="r"><code>install.packages(&quot;rio&quot;)</code></pre>
+</div>
+<div id="updating-packages" class="section level3">
+<h3>3.5.2 Updating Packages</h3>
+<p>You occassionally need to update packages, which you can do with <code>update.packages()</code>:</p>
+<pre class="r"><code>update.packages(&quot;rio&quot;)</code></pre>
+</div>
+<div id="opening-packages" class="section level3">
+<h3>3.5.3 Opening Packages</h3>
+<p>Installing a package puts a copy of it into our personal library that R has access to. If we want to use it, we have to open the package in our working session. We do this with the <code>library()</code> function:</p>
+<pre class="r"><code>library(rio)
+library(&quot;rio&quot;) # also works</code></pre>
+<p>Now that we’ve opened <code>rio</code>, we have access to its functions like <code>import()</code> and <code>export()</code>.</p>
+<p>What happenes when we open a package? Loading a package basically makes the contents of it searchable by R. This makes it so it can find the functions a particular package has. You can see that by running the <code>search()</code> command:</p>
+<pre class="r"><code>search()</code></pre>
+<pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;package:rio&quot;       &quot;package:stats&quot;    
+##  [4] &quot;package:graphics&quot;  &quot;package:grDevices&quot; &quot;package:utils&quot;    
+##  [7] &quot;package:datasets&quot;  &quot;package:methods&quot;   &quot;Autoloads&quot;        
+## [10] &quot;package:base&quot;</code></pre>
+<p>Let’s install another package we’re going to use quite a bit, which is the <code>tidyverse</code>. The tidyverse isn’t exactly a package, it’s a set of 8 packages and a broader coding framework for R. We’ll get into that a bit at the end of today and for the next two sessions, but let’s get the package downloaded now:</p>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;)</code></pre>
+<p>And let’s load it:</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages -------------------------------------------------- tidyverse 1.2.1 --</code></pre>
+<pre><code>## v ggplot2 3.2.0     v purrr   0.3.2
+## v tibble  2.1.3     v dplyr   0.8.3
+## v tidyr   0.8.3     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.4.0</code></pre>
+<pre><code>## -- Conflicts ----------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div id="conflicts" class="section level3">
+<h3>3.5.4 Conflicts</h3>
+<p>You’ll notice that when we load the tidyverse, it tells us the 8 different packages it loads. It also tells us that we have conflicts with other packages.</p>
+<p>Conflicts occur when the same name is used for different things. For example, the <code>dplyr</code> package and the <code>stats</code> package (preloaded package) both have a function called <code>filter()</code>. When we call <code>filter()</code>, R will only call one of those functions and it might not be the one we want.</p>
+<p>Which one will R choose? R has an order in which it searches. It starts with the Global Environment, then searches packages in the order that they were loaded, searching more recently loaded packages first. You can actually see the order by using the <code>search()</code> command:</p>
+<pre class="r"><code>search()</code></pre>
+<pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;package:forcats&quot;   &quot;package:stringr&quot;  
+##  [4] &quot;package:dplyr&quot;     &quot;package:purrr&quot;     &quot;package:readr&quot;    
+##  [7] &quot;package:tidyr&quot;     &quot;package:tibble&quot;    &quot;package:ggplot2&quot;  
+## [10] &quot;package:tidyverse&quot; &quot;package:rio&quot;       &quot;package:stats&quot;    
+## [13] &quot;package:graphics&quot;  &quot;package:grDevices&quot; &quot;package:utils&quot;    
+## [16] &quot;package:datasets&quot;  &quot;package:methods&quot;   &quot;Autoloads&quot;        
+## [19] &quot;package:base&quot;</code></pre>
+<p>As you can see, the tidyverse packages come before rio, which comes before the pre-loaded packages (rstudio, stats, etc.).</p>
+<p>The last thing I want to mention about packages is that you can tell R explicitly that you want an object from a particular package using the notation <code>package::object</code>, or more commonly <code>package::function()</code>. For example, run the two pieces of code below:</p>
+<pre class="r"><code>?stats::filter
+?dplyr::filter</code></pre>
+<p>This can be useful if you have conflicting packages and want to make sure you’re calling the right function.</p>
+</div>
+</div>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/rbootcamp2019/r_bootcamp_day_1/" rel="next">R Bootcamp Day 1: Introduction to R</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/rbootcamp2019/r_bootcamp_day_2/" rel="prev">R Bootcamp Day 2: Exploring the tidyverse</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+<p class="edit-page">
+  <a href="https://github.com/coryc3133/Academic_website_code.git/edit/master/content/courses%5cRBootcamp2019%5cr_bootcamp_day_1_with_answers.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; 2019 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.6cbefe3f0755301b86cd38317ded9f54.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

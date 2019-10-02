@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>3 on Cory K. Costello</title>
+    <title>3 | Cory K. Costello</title>
     <link>/publication_types/3/</link>
-    <description>Recent content in 3 on Cory K. Costello</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018  Cory K. Costello </copyright>
-    <lastBuildDate>Sun, 03 Feb 2019 00:00:00 -0800</lastBuildDate>
-    
-	<atom:link href="/publication_types/3/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Ethics-Relevant Values in Adulthood: Longitudinal Findings from the Life and Time Study</title>
-      <link>/publication/ethics-relevant-values/</link>
-      <pubDate>Sun, 03 Feb 2019 00:00:00 -0800</pubDate>
-      
-      <guid>/publication/ethics-relevant-values/</guid>
-      <description></description>
-    </item>
+      <atom:link href="/publication_types/3/index.xml" rel="self" type="application/rss+xml" />
+    <description>3</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Tue, 27 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>3</title>
+      <link>/publication_types/3/</link>
+    </image>
     
     <item>
       <title>Stability and Change in the Big Five and Big Six: New Tests of the Maturity and Cumulative Continuity Principles</title>
-      <link>/publication/change-stability-big-six/</link>
-      <pubDate>Fri, 23 Jun 2017 00:00:00 -0700</pubDate>
-      
-      <guid>/publication/change-stability-big-six/</guid>
+      <link>/publication/stability-change-big-6/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>/publication/stability-change-big-6/</guid>
       <description></description>
     </item>
     

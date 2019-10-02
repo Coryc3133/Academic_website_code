@@ -1,0 +1,214 @@
+---
+authors:
+- admin
+categories: []
+date: '2019-'
+draft: true
+featured: true
+image:
+  caption: ""
+  focal_point: ""
+lastMod: "2019-09-05T00:00:00Z"
+projects: []
+subtitle: Communities of Artists
+summary: Comparison of community structure of Spotify recommended artist network & Twitter co-follower network
+tags: [Social Network Analysis, API Data, Music]
+title: "Spotify API Fun Vol. 2"
+---
+
+In this second volume of Spotify API Fun, we'll be looking again at the structure of The Grateful Dead's recommendation network. This time, we'll be focusing on identifying communities of related artists in the Dead's recommendation network, and whether or not those map onto co-follower communities on Twitter.
+
+I'll be working with the same data as last week, so you may want to check out [that post](files/spotify_related_artists_nets_1.html) first if you haven't already. 
+
+```{r setup, echo = FALSE, message = FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(rio)
+library(tidyverse)
+library(tidygraph)
+library(visNetwork)
+library(rtweet)
+library(igraph)
+# Spotify data
+dead_relatives <- import("../spotify-api-vol1/spotify_data_dead/dead_relative_10steps.csv", skip = 1) %>% 
+  select(-V1) %>% 
+  rename(artist = V2,
+         relative = V3)
+
+# Twitter data
+# list the files
+follower_files <- paste0("../spotify-api-vol1/twitter_data_dead/", list.files("../spotify-api-vol1/twitter_data_dead"))
+
+# extract just the artist name
+artists <- str_remove(follower_files, "../spotify-api-vol1/twitter_data_dead/") %>% 
+  str_remove("_followers.csv")
+
+# import the files, and match them
+# with the followers with the artist names
+artist_follower <- follower_files %>% 
+  map(import) %>% 
+  map(mutate, user_id = as.character(user_id)) %>%
+  set_names(artists) %>%
+  enframe() %>% 
+  rename(relative = name) %>% 
+  unnest()
+
+
+dead_relatives_followers <- artist_follower %>% 
+  mutate(relative = fct_relevel(relative,
+                                       "Grateful Dead")) %>% 
+  arrange(relative) %>% 
+  as_tbl_graph(mode = "in") 
+
+dead_twitter_relatives <- dead_relatives_followers %>% 
+  activate(nodes) 
+
+dead_relatives_followers_bip <- dead_relatives_followers %>% 
+  mutate(., type = bipartite_mapping(.)$type) %>% 
+  as.igraph() %>% 
+  bipartite_projection(which = "FALSE") %>% 
+  as_tbl_graph()
+
+
+```
+
+# Visualizing Communities in The Grateful Dead's Recommendation Network
+
+As a first step, I wanted to visualize the Spotify recommendation network and the communities within it. 
+
+## Communities of Related Artists
+
+Next, we'll take a look at how these related artists form communities or groups within the network. I decided to use the [walktrap algorithm](http://arxiv.org/abs/physics/0512106), which basically searches for communities using random walks. The basic idea is to:
+
+1. start at a node 
+2. randomly select an available edge and walk along that edge to a new node
+3. repeat step 2 *k* times
+4. After the *kth* step, start over at step 1.
+
+The algorithm then constructs groups based on how often the random walks lead through the same nodes. For example, if we started our walk at The Allman Brothers Band, we might frequently walk through related acts like the Derek Trucks Band, Dickey Betts and Great Southern, Derek & the Dominoes, etc. If this were the case, these nodes would end up belonging to a group or community. More generally, it defines groups or communities as the nodes that are more densely connected - as evaluated by random walks - than would be expected by chance.
+
+I also want to label the groups to help make sense of them. I decided to label them with the most central artist in that group. I used Eigen Centrality, which quantifies centrality in terms of both the number of connections a node has *and* the relative importance of its connections. So, a node that is both highly connected *and* connected to more central nodes scores higher on this metric. As a bit of foreshadowing, we will be using this measure of centrality again below.
+
+Now let's take a look at the graph:
+
+```{r }
+dead_labs <- dead_relatives %>% 
+  as_tbl_graph() %>% 
+  mutate(group = group_walktrap(),
+         importance = centrality_eigen()) %>% 
+  group_by(group) %>% 
+  top_n(1) %>% 
+  as_tibble() %>% 
+  rename(label = name) %>% 
+  select(group, label) %>% 
+  arrange(group) 
+
+dead_relatives %>% 
+  as_tbl_graph() %>% 
+  activate(nodes) %>% 
+  mutate(group = group_walktrap(),
+         group = factor(group, labels = dead_labs$label),
+         importance = centrality_eigen()) %>% 
+  arrange(name) %>% 
+  visIgraph(physics = TRUE) %>%
+  visOptions(highlightNearest = list(enabled = T, degree = 1, hover = T),
+             selectedBy = "group",
+             nodesIdSelection = TRUE) %>% 
+  visLayout(randomSeed = 23) %>% 
+  visPhysics(forceAtlas2Based = list("avoidOverlap" = 1)) %>% 
+  visLegend(zoom = FALSE)
+```
+
+The graph above shows the Dead's recommendation network where nodes are colored based on group membership. Note that you can again select particular nodes or particular communities using the dropdown options above.
+
+The communities uncovered by walktrap make a fair amount of sense. To highlight a few:
+
+In the middle, in light Blue, we have the largest community, which is basically jam band and Bluegrass music. Fittingly, String Cheese Incident is the most central node in that community.    
+
+In yellow, we have what is basically the electric classic rock community, with bands like Little Feat (most central node), The Band, and The Allman Brothers Band.    
+
+In darker Purple, we have Dickey Betts's neighborhood, which appears to be southern rock that is a little more southern than the bands in yellow.   
+
+The orange community looks like folk rock, and includes a lot of the Crosby, Stills, Nash, & Young related bands, like Stephen Stills (most central node), Buffalo Springfield, & CSNY.    
+
+In dark blue, we have the festival funk neighborhood, with bands like lettuce, Medeski, Martin & Wood,
+
+
+```{r}
+dead_cofollow_labs <- dead_relatives_followers_bip %>% 
+    as_tbl_graph() %>% 
+  mutate(group = group_walktrap(),
+         importance = centrality_eigen()) %>% 
+  group_by(group) %>% 
+  top_n(1) %>% 
+  as_tibble() %>% 
+  rename(label = name) %>% 
+  select(group, label) %>% 
+  arrange(group) 
+
+dead_relatives_followers_bip %>% 
+  as_tbl_graph() %>% 
+  activate(nodes) %>% 
+  mutate(group = group_walktrap(),
+         group = factor(group, labels = dead_cofollow_labs$label),
+         importance = centrality_eigen()) %>% 
+  arrange(name) %>% 
+  visIgraph(physics = TRUE) %>%
+  visIgraphLayout(layout = "layout_in_circle") %>% 
+  visOptions(highlightNearest = list(enabled = T, degree = 1, hover = T),
+             selectedBy = "group",
+             nodesIdSelection = TRUE) 
+```
+
+```{r}
+dead_labs <- dead_relatives %>% 
+  as_tbl_graph() %>% 
+  mutate(group = group_leading_eigen(),
+         importance = centrality_eigen()) %>% 
+  group_by(group) %>% 
+  top_n(1) %>% 
+  as_tibble() %>% 
+  rename(label = name) %>% 
+  select(group, label) %>% 
+  arrange(group) 
+
+dead_relatives %>% 
+  as_tbl_graph() %>% 
+  activate(nodes) %>% 
+  mutate(group = group_leading_eigen(),
+         group = factor(group, labels = dead_labs$label),
+         importance = centrality_eigen()) %>% 
+  arrange(name) %>% 
+  visIgraph(physics = TRUE) %>%
+  visOptions(highlightNearest = list(enabled = T, degree = 1, hover = T),
+             selectedBy = "group",
+             nodesIdSelection = TRUE) %>% 
+  visLayout(randomSeed = 23) %>% 
+  visPhysics(forceAtlas2Based = list("avoidOverlap" = 1)) %>% 
+  visLegend(zoom = FALSE)
+```
+
+```{r}
+dead_cofollow_labs <- dead_relatives_followers_bip %>% 
+    as_tbl_graph() %>% 
+  mutate(group = group_leading_eigen(),
+         importance = centrality_eigen()) %>% 
+  group_by(group) %>% 
+  top_n(1) %>% 
+  as_tibble() %>% 
+  rename(label = name) %>% 
+  select(group, label) %>% 
+  arrange(group) 
+
+dead_relatives_followers_bip %>% 
+  as_tbl_graph() %>% 
+  activate(nodes) %>% 
+  mutate(group = group_leading_eigen(),
+         group = factor(group, labels = dead_cofollow_labs$label),
+         importance = centrality_eigen()) %>% 
+  arrange(name) %>% 
+  visIgraph(physics = TRUE) %>%
+  visIgraphLayout(layout = "layout_in_circle") %>% 
+  visOptions(highlightNearest = list(enabled = T, degree = 1, hover = T),
+             selectedBy = "group",
+             nodesIdSelection = TRUE) 
+```

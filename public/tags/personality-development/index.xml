@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personality Development | Cory K. Costello</title>
+    <link>/tags/personality-development/</link>
+      <atom:link href="/tags/personality-development/index.xml" rel="self" type="application/rss+xml" />
+    <description>Personality Development</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Fri, 08 Feb 2019 10:10:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Personality Development</title>
+      <link>/tags/personality-development/</link>
+    </image>
+    
+    <item>
+      <title>Longitudinal Stability and Change in the Big Six</title>
+      <link>/talk/lsp_spsp2019/</link>
+      <pubDate>Fri, 08 Feb 2019 10:10:00 +0000</pubDate>
+      <guid>/talk/lsp_spsp2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ethics-Relevant Values in Adulthood: Longitudinal Findings from the Life and Time Study</title>
+      <link>/publication/stability-change-values/</link>
+      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/stability-change-values/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stability and Change in the Big Five and Big Six: New Tests of the Maturity and Cumulative Continuity Principles</title>
+      <link>/publication/stability-change-big-6/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>/publication/stability-change-big-6/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

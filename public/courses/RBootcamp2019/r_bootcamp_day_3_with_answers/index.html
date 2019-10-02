@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Cory K. Costello">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="trueGoalsBy the end of this tutorial, you will:
+have a better understanding of tidyverse verbsunderstand the basics of graphing in ggplot2understand the basics of writing in RMarkdown (content in a separate document)The best way to do this tutorial is to walk through it slowly, executing each line and trying to understand what it does. You can execute a single line by placing your cursor somewhere in that line and hitting CMD&#43;enter on mac or CTRL&#43;enter on PC.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/rbootcamp2019/r_bootcamp_day_3_with_answers/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/courses/rbootcamp2019/r_bootcamp_day_3_with_answers/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@costellock">
+  <meta property="twitter:creator" content="@costellock">
+  
+  <meta property="og:site_name" content="Cory K. Costello">
+  <meta property="og:url" content="/courses/rbootcamp2019/r_bootcamp_day_3_with_answers/">
+  <meta property="og:title" content="R Bootcamp Day 3: Tidying &amp; Visualizing Data (with answers) | Cory K. Costello">
+  <meta property="og:description" content="trueGoalsBy the end of this tutorial, you will:
+have a better understanding of tidyverse verbsunderstand the basics of graphing in ggplot2understand the basics of writing in RMarkdown (content in a separate document)The best way to do this tutorial is to walk through it slowly, executing each line and trying to understand what it does. You can execute a single line by placing your cursor somewhere in that line and hitting CMD&#43;enter on mac or CTRL&#43;enter on PC."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>R Bootcamp Day 3: Tidying &amp; Visualizing Data (with answers) | Cory K. Costello</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Cory K. Costello</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/cv/cv_3.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+  Please define menu items named `menu: RBootcamp2019:` in your courses\RBootcamp2019\r_bootcamp_day_3_with_answers.html front matter or define `[[menu.RBootcamp2019]]` in `config/default/menus.toml`. See https://sourcethemes.com/academic/docs/managing-content/#menus
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>R Bootcamp Day 3: Tidying &amp; Visualizing Data (with answers)</h1>
+
+          <div class="article-style">
+            
+
+<div id="TOC">
+true
+</div>
+
+<div id="goals" class="section level1">
+<h1>Goals</h1>
+<p>By the end of this tutorial, you will:</p>
+<ul>
+<li>have a better understanding of tidyverse <code>verbs</code></li>
+<li>understand the basics of graphing in ggplot2</li>
+<li>understand the basics of writing in RMarkdown (content in a separate document)</li>
+</ul>
+<p>The best way to do this tutorial is to walk through it slowly, executing each line and trying to understand what it does. You can execute a single line by placing your cursor somewhere in that line and hitting CMD+enter on mac or CTRL+enter on PC.</p>
+<p>Make sure you load the tidyverse first!</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages -------------------------------------------------- tidyverse 1.2.1 --</code></pre>
+<pre><code>## v ggplot2 3.2.0     v purrr   0.3.2
+## v tibble  2.1.3     v dplyr   0.8.3
+## v tidyr   0.8.3     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.4.0</code></pre>
+<pre><code>## -- Conflicts ----------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div id="data-tidying-with-tidyr-optional-content" class="section level1">
+<h1>1. Data tidying with <code>tidyr</code> (Optional Content)</h1>
+<p>Much of this draws on the <a href="http://r4ds.had.co.nz/tidy-data.html#tidy-data-1">tidy data chapter from ‘R for Data Science’</a></p>
+<p>The two key verbs in <strong>data tidying</strong> are <code>spread</code> and <code>gather</code>. Each of these verbs relies on a key-value pair that contains a <em>key</em> that indicates <em>what</em> the information describes and a <em>value</em> that contains the actual information.</p>
+<p>“Password: 0123456789”" is a key value pair. 0123456789 is the <em>value</em>, and it is associated with the <em>key</em> Password.</p>
+<p>The <code>ps_data</code> we’ve been using is already <em>tidy</em>. Now, we’ll look at some that are not! We’ll use some datasets that are built into the tidyverse package. Each dataset has the same values of four variables, <code>country</code>, <code>year</code>, <code>population</code>, and <code>cases</code>, but each dataset organizes them in different ways.</p>
+<p>Recall the “rules” for tidy data:
++ Each variable must have its own column.
++ Each observation must have it’s own row.
++ Each value must have its own cell.</p>
+<pre class="r"><code>?table1 #let&#39;s learn about the datset
+table1 #this dataset is tidy!</code></pre>
+<div id="gathering-data" class="section level2">
+<h2>1.1. Gathering Data</h2>
+<p>A common problem is a dataset where some column names are not names of variables, but <em>values</em> of a variable. Check out <code>table4a</code>.</p>
+<pre class="r"><code>table4a</code></pre>
+<pre><code>## # A tibble: 3 x 3
+##   country     `1999` `2000`
+## * &lt;chr&gt;        &lt;int&gt;  &lt;int&gt;
+## 1 Afghanistan    745   2666
+## 2 Brazil       37737  80488
+## 3 China       212258 213766</code></pre>
+<p>The column names <code>1999</code> and <code>2000</code> are not variables in our data, instead they represent values of the <code>year</code> variable, and each row represents two observations, not one. We need to <em>gather</em> these columns into a new pair of variables.</p>
+<p><em>gather</em> makes wide tables narrower and longer</p>
+<p>There are three questions we must answer:
+&gt; 1. Which columns do we want to gather?
+&gt; A: <code>1999</code> and <code>2000</code>
+&gt; 2. What is the name of the variable whose values form the column names (the <em>key</em>)?
+&gt; A: year
+&gt; 3. What is the name of the variable that is spread out over the cells (the <em>value</em>)? &gt; A: cases</p>
+<p>We’ll use these answers in the <em>gather</em> function:</p>
+<pre class="r"><code>table4a %&gt;% 
+  gather(`1999`, `2000`, key = &quot;year&quot;, value = &quot;cases&quot;)</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   country     year   cases
+##   &lt;chr&gt;       &lt;chr&gt;  &lt;int&gt;
+## 1 Afghanistan 1999     745
+## 2 Brazil      1999   37737
+## 3 China       1999  212258
+## 4 Afghanistan 2000    2666
+## 5 Brazil      2000   80488
+## 6 China       2000  213766</code></pre>
+<p>Note that we had to wrap 1999 and 2000 in back ticks. This is because they violate column naming rules (remember, they shouldn’t start with numbers), and so we have to tell R more explicitly that these are in fact names with the back tick.</p>
+<div id="exercise-1.1a." class="section level3">
+<h3>Exercise 1.1a.</h3>
+<blockquote>
+<p><code>table4b</code> contains information about the <code>population</code> variable. Let’s <em>gather</em> that table as well. Type <code>table4b</code> to check it out before gathering. Your resulting table should have columns for <code>country</code>, <code>year</code>, and <code>population</code>.</p>
+</blockquote>
+<pre class="r"><code>table4b #check it out</code></pre>
+<pre><code>## # A tibble: 3 x 3
+##   country         `1999`     `2000`
+## * &lt;chr&gt;            &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan   19987071   20595360
+## 2 Brazil       172006362  174504898
+## 3 China       1272915272 1280428583</code></pre>
+<pre class="r"><code>table4b %&gt;% 
+  gather(`1999`, `2000`, key = &quot;year&quot;, value = &quot;population&quot;)</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   country     year  population
+##   &lt;chr&gt;       &lt;chr&gt;      &lt;int&gt;
+## 1 Afghanistan 1999    19987071
+## 2 Brazil      1999   172006362
+## 3 China       1999  1272915272
+## 4 Afghanistan 2000    20595360
+## 5 Brazil      2000   174504898
+## 6 China       2000  1280428583</code></pre>
+</div>
+<div id="gathering-joining" class="section level3">
+<h3>1.1.1 Gathering &amp; Joining</h3>
+<p>Note that table4a contained our <code>cases</code> data while table4b contained our <code>population</code> data. Everything else is the same. Let’s join those two tables together using <code>left_join</code>, which we covered very briefly yesterday (more about joining data frames <a href="http://r4ds.had.co.nz/relational-data.html">here</a>).</p>
+<pre class="r"><code>tidy4a &lt;- table4a %&gt;% 
+  gather(`1999`, `2000`, key = &quot;year&quot;, value = &quot;cases&quot;)
+
+tidy4b &lt;- table4b %&gt;% 
+  gather(`1999`, `2000`, key = &quot;year&quot;, value = &quot;population&quot;)
+
+left_join(tidy4a, tidy4b)</code></pre>
+<pre><code>## Joining, by = c(&quot;country&quot;, &quot;year&quot;)</code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   country     year   cases population
+##   &lt;chr&gt;       &lt;chr&gt;  &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan 1999     745   19987071
+## 2 Brazil      1999   37737  172006362
+## 3 China       1999  212258 1272915272
+## 4 Afghanistan 2000    2666   20595360
+## 5 Brazil      2000   80488  174504898
+## 6 China       2000  213766 1280428583</code></pre>
+<p>Note that it matched on two variables - the *_join() functions automatically match based on every available ‘key’ column.</p>
+</div>
+</div>
+<div id="spreading-data" class="section level2">
+<h2>1.2 Spreading Data</h2>
+<p>In contrast to <em>gather</em>ing, sometimes a single observation is scattered across multiple rows. Then, you’d want to use <em>spread</em> (which is the opposite of <em>gather</em>). Let’s look at table 2:</p>
+<pre class="r"><code>table2</code></pre>
+<pre><code>## # A tibble: 12 x 4
+##    country      year type            count
+##    &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;           &lt;int&gt;
+##  1 Afghanistan  1999 cases             745
+##  2 Afghanistan  1999 population   19987071
+##  3 Afghanistan  2000 cases            2666
+##  4 Afghanistan  2000 population   20595360
+##  5 Brazil       1999 cases           37737
+##  6 Brazil       1999 population  172006362
+##  7 Brazil       2000 cases           80488
+##  8 Brazil       2000 population  174504898
+##  9 China        1999 cases          212258
+## 10 China        1999 population 1272915272
+## 11 China        2000 cases          213766
+## 12 China        2000 population 1280428583</code></pre>
+<p>In table2, a single observation is a country in a year, but each observation is spread across two rows. We would want to <code>spread()</code> the <code>type</code> variable into columns.</p>
+<p><em>spread</em> makes long tables shorter and wider</p>
+<p>Now, there are two questions we must answer:
+&gt; 1. Which column contains the variable names (i.e., the <em>key</em> column)?
+&gt; A: <code>type</code>
+&gt; 2. Which column contains the <em>values</em> (or the data from multiple variables)?
+&gt; A: <code>count</code></p>
+<p>We’ll use these answers in the <em>spread</em> function:</p>
+<pre class="r"><code>table2 %&gt;% 
+  spread(key = type, value = count)</code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   country      year  cases population
+##   &lt;chr&gt;       &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan  1999    745   19987071
+## 2 Afghanistan  2000   2666   20595360
+## 3 Brazil       1999  37737  172006362
+## 4 Brazil       2000  80488  174504898
+## 5 China        1999 212258 1272915272
+## 6 China        2000 213766 1280428583</code></pre>
+<div id="exercise-1.2a." class="section level3">
+<h3>Exercise 1.2a.</h3>
+<blockquote>
+<p>Let’s play around with <code>ps_data</code>. First import it (as ps_data). Then, make each <code>item</code> a unique variable. Use <em>spread</em> to reformat the data so that there is a unique column for each item. The values in each of the four <code>item</code> columns should indicate whether or not the subject got that particular item right or wrong (i.e., <code>correct</code> in ps_data). Hint: what is the <em>key</em>? What is the <em>value</em>? Do not save this as a new object.</p>
+</blockquote>
+<pre class="r"><code>library(rio)
+ps_data &lt;- import(&quot;pragmatic_scales_data.csv&quot;)
+ps_data %&gt;% 
+  spread(item, correct)</code></pre>
+<pre><code>##      subid  age condition beds faces houses pasta
+## 1       C1 4.16     Label    1     1      1     1
+## 2      C10 3.46     Label    1     0      0     1
+## 3      C11 4.22     Label    1     1      0     1
+## 4      C12 3.56     Label    1     1      0     1
+## 5      C13 4.38     Label    1     0      1     0
+## 6      C14 4.57     Label    1     1      1     0
+## 7      C15 3.59     Label    1     1      1     1
+## 8      C16 3.22     Label    1     0      0     1
+## 9      C17 3.25     Label    0     1      0     1
+## 10     C18 4.95     Label    1     0      1     1
+## 11     C19 4.14     Label    1     1      0     0
+## 12      C2 4.60     Label    1     1      1     1
+## 13     C20 3.75     Label    1     1      1     1
+## 14     C21 4.73     Label    1     1      0     1
+## 15     C22 3.92     Label    1     0      0     1
+## 16     C23 4.62     Label    0     0      1     1
+## 17     C24 3.85     Label    1     1      0     0
+## 18      C3 3.46     Label    1     1      0     1
+## 19      C4 4.55     Label    1     1      1     1
+## 20      C5 4.29     Label    1     1      1     1
+## 21      C6 3.26     Label    1     0      1     1
+## 22      C7 3.55     Label    0     0      1     0
+## 23      C8 3.92     Label    1     1      1     1
+## 24      C9 3.82     Label    1     1      1     1
+## 25      M1 3.20     Label    1     0      0     0
+## 26     M10 3.28     Label    1     1      1     1
+## 27     M11 3.82     Label    1     1      0     1
+## 28     M12 2.88     Label    0     1      0     1
+## 29     M13 2.88     Label    1     1      0     0
+## 30     M15 2.98     Label    1     1      1     1
+## 31     M16 3.50     Label    1     0      0     0
+## 32     M17 4.58     Label    1     1      1     1
+## 33     M18 3.46     Label    1     0      1     1
+## 34     M19 4.16     Label    1     0      0     1
+## 35      M2 4.28     Label    1     1      0     1
+## 36     M20 4.64     Label    1     0      0     1
+## 37     M21 4.64     Label    1     1      1     1
+## 38     M22 2.00     Label    0     1      1     0
+## 39     M23 3.52     Label    1     1      0     1
+## 40     M24 4.82     Label    1     1      1     1
+## 41     M25 4.96     Label    1     1      1     1
+## 42     M26 2.59     Label    1     1      1     0
+## 43     M29 3.72     Label    1     0      1     1
+## 44      M3 2.38     Label    1     0      1     1
+## 45     M30 4.33     Label    1     1      0     1
+## 46     M31 3.30     Label    1     0      1     1
+## 47     M32 3.19     Label    1     1      0     1
+## 48      M4 3.96     Label    1     1      1     1
+## 49      M5 4.84     Label    1     0      0     0
+## 50      M6 4.50     Label    0     0      1     1
+## 51      M7 4.89     Label    0     1      1     1
+## 52      M8 4.89     Label    1     1      1     1
+## 53      M9 4.26     Label    1     1      1     1
+## 54  MSCH38 2.59  No Label    0     0      0     1
+## 55  MSCH39 3.93  No Label    1    NA     NA     0
+## 56  MSCH39 3.94  No Label   NA     0      0    NA
+## 57  MSCH40 3.02  No Label    1     0      1     0
+## 58  MSCH41 3.18  No Label    0     0      0     0
+## 59  MSCH42 2.93  No Label    0     1      0     0
+## 60  MSCH43 2.71  No Label    0     0      0     0
+## 61  MSCH44 2.25  No Label    0     0      0     0
+## 62  MSCH45 2.90  No Label    1     0      0     0
+## 63  MSCH46 3.76  No Label    0     0      0     1
+## 64  MSCH47 2.01  No Label    0     1      0     1
+## 65  MSCH48 3.50  No Label    0     0      1     0
+## 66  MSCH49 2.88  No Label    0     0      0     0
+## 67  MSCH50 2.03  No Label    0     0      0     0
+## 68  MSCH51 2.07  No Label    0     0      0     0
+## 69  MSCH52 2.50  No Label    1     0      1     0
+## 70  MSCH53 2.99  No Label    0     1      1     0
+## 71  MSCH66 3.50  No Label    0     0      0     1
+## 72  MSCH67 3.24  No Label    1     0      1     0
+## 73  MSCH68 3.94  No Label    0     0      0     0
+## 74  MSCH69 2.72  No Label    0     0      1     1
+## 75  MSCH70 2.31  No Label    1     0      0     0
+## 76  MSCH71 3.14  No Label    0     1      1     1
+## 77  MSCH72 3.72  No Label    0     1      1     0
+## 78  MSCH73 3.10  No Label    0     0      0     0
+## 79  MSCH74 2.34  No Label    1     1      0     0
+## 80  MSCH75 3.66  No Label    0    NA     NA    NA
+## 81  MSCH75 3.67  No Label   NA     0      0     0
+## 82  MSCH76 2.58  No Label    0     0      0     0
+## 83  MSCH77 2.55  No Label    1     0      0     0
+## 84  MSCH78 2.43  No Label    1     0      0     0
+## 85  MSCH79 2.70  No Label    1     0      1     0
+## 86  MSCH80 2.76  No Label    0     0      0     0
+## 87  MSCH81 2.84  No Label    0     1      0     0
+## 88  MSCH82 2.46  No Label    0     1      0     1
+## 89  MSCH83 2.37  No Label    0     0      0     1
+## 90  MSCH84 2.83  No Label    0     0      0     1
+## 91  MSCH85 2.69  No Label    0     0      0     0
+## 92    SCH1 4.82  No Label    0     0      0     0
+## 93   SCH10 4.32  No Label    1     0      0     0
+## 94   SCH11 3.41  No Label    0    NA     NA    NA
+## 95   SCH11 3.82  No Label   NA     1      1     1
+## 96   SCH12 3.41  No Label    0     0      0     0
+## 97   SCH13 4.75  No Label    0     0      0     0
+## 98   SCH14 4.58  No Label    1     0      0     0
+## 99   SCH15 4.42  No Label    0     1      0     0
+## 100  SCH16 4.55  No Label    1     0      0     0
+## 101  SCH17 4.25  No Label    0     0      0     1
+## 102  SCH18 3.45  No Label    0     0      0     0
+## 103  SCH19 4.79  No Label    1     0      0     0
+## 104   SCH2 4.61  No Label    0     0      0     0
+## 105  SCH20 4.39  No Label    0     0      0     0
+## 106  SCH21 4.76  No Label    0     0      0     0
+## 107  SCH22 4.02  No Label    1     0      0     0
+## 108  SCH23 4.82  No Label    0     0      0     0
+## 109  SCH24 4.07  No Label    0     0      0     1
+## 110  SCH25 3.54  No Label    0     0      1     1
+## 111  SCH26 4.47  No Label    0     0      0     1
+## 112  SCH27 4.09  No Label    0     0      0     1
+## 113  SCH28 4.02  No Label    0     0      0     0
+## 114  SCH29 3.83  No Label    0     0      0     0
+## 115   SCH3 4.47  No Label    0     0      0     0
+## 116  SCH30 4.44  No Label    0     0      0     1
+## 117  SCH31 3.71  No Label    0     0      0     0
+## 118  SCH32 3.27  No Label    0     1      0     0
+## 119  SCH33 3.06  No Label    0     0      0     0
+## 120  SCH34 3.06  No Label    0     0      0     0
+## 121  SCH35 3.02  No Label    0     0      0     0
+## 122  SCH36 3.33  No Label    0     0      1     1
+## 123  SCH37 3.27  No Label    0     1      0     1
+## 124   SCH5 4.61  No Label    0     0      0     0
+## 125   SCH6 4.41  No Label    0     0      0     0
+## 126   SCH7 4.41  No Label    0     1      0     0
+## 127   SCH8 4.52  No Label    0     0      0     0
+## 128   SCH9 4.37  No Label    0     0      0     0
+## 129     T1 2.95     Label    1     1      0     0
+## 130    T10 3.00     Label    1     0      1     1
+## 131    T11 2.99     Label    1     1      0     1
+## 132    T12 2.72     Label    0     0      1     0
+## 133    T13 2.89     Label    0     0      1     1
+## 134    T14 2.83     Label    1     1      1     0
+## 135    T15 2.85     Label    0     0      0     1
+## 136    T16 2.73     Label    1     1      0     1
+## 137    T17 2.32     Label    0     0      0     0
+## 138    T18 2.61     Label    0     1      0     1
+## 139    T19 2.47     Label    1     0      0     1
+## 140     T2 2.83     Label    1     0      0     1
+## 141    T20 2.50     Label    1     1      1     0
+## 142    T21 2.58     Label    0     1      1     1
+## 143    T22 2.13     Label    0     0      1     1
+## 144     T3 3.09     Label    1     1      1     1
+## 145     T4 3.24     Label    1     1      0     0
+## 146     T5 2.80     Label    1     1      1     0
+## 147     T6 3.10     Label    1     1      1     1
+## 148     T7 2.74     Label    0     1      0     0
+## 149     T8 2.91     Label    1     1      0     1
+## 150     T9 2.79     Label    1     1      0     0</code></pre>
+</div>
+</div>
+<div id="uniting-and-separating-columns" class="section level2">
+<h2>1.3 Uniting and separating columns</h2>
+<p>In addition to making datasets longer (with <code>gather()</code>) and wider (with <code>spread()</code>), we can also <code>unite()</code> multiple columns into one, or <code>separate()</code> columns into multiple new columns.</p>
+<div id="separate" class="section level3">
+<h3>1.3.1 <code>separate()</code></h3>
+<p>You can <code>separate()</code> one column into multiple columns using the <code>tidyr</code> function <code>separate()</code>. It takes data as its first argument, then the column you want to separate (<code>col =</code>), then a vector of quoted names for the new columns (<code>into =</code>), and then what character to split values by (<code>sep =</code>).</p>
+<p>Let’s use the starwars data and split each character’s <code>name</code> into <code>first_name</code> and <code>last_name</code>. Let’s start without setting the <code>sep =</code> argument to see what it does by default:</p>
+<pre class="r"><code>starwars %&gt;% 
+  separate(col = name, into = c(&quot;first_name&quot;, &quot;last_name&quot;))</code></pre>
+<pre><code>## Warning: Expected 2 pieces. Additional pieces discarded in 10 rows [7, 10,
+## 16, 18, 29, 31, 34, 49, 60, 65].</code></pre>
+<pre><code>## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 18 rows [13,
+## 15, 19, 20, 23, 25, 26, 38, 39, 46, 58, 63, 64, 77, 78, 82, 83, 85].</code></pre>
+<pre><code>## # A tibble: 87 x 14
+##    first_name last_name height  mass hair_color skin_color eye_color
+##    &lt;chr&gt;      &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;    
+##  1 Luke       Skywalker    172    77 blond      fair       blue     
+##  2 C          3PO          167    75 &lt;NA&gt;       gold       yellow   
+##  3 R2         D2            96    32 &lt;NA&gt;       white, bl~ red      
+##  4 Darth      Vader        202   136 none       white      yellow   
+##  5 Leia       Organa       150    49 brown      light      brown    
+##  6 Owen       Lars         178   120 brown, gr~ light      blue     
+##  7 Beru       Whitesun     165    75 brown      light      blue     
+##  8 R5         D4            97    32 &lt;NA&gt;       white, red red      
+##  9 Biggs      Darkligh~    183    84 black      light      brown    
+## 10 Obi        Wan          182    77 auburn, w~ fair       blue-gray
+## # ... with 77 more rows, and 7 more variables: birth_year &lt;dbl&gt;,
+## #   gender &lt;chr&gt;, homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+## #   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+<p>You might notice that it separated based on different characters, such as white space (luke &amp; skywalker were separated) and by hyphens (C and 3PO were separated). By default, it separate looks for common separators (space, hyphen, underscore, periods, etc.) and uses all of them. This can be useful, but it has undesirable effects as you can see above. Let’s fix this by telling separate to use white space to separate first from last names using the <code>sep =</code> argument:</p>
+<pre class="r"><code>starwars_sep_names &lt;- starwars %&gt;% 
+  separate(name, c(&quot;first_name&quot;, &quot;last_name&quot;), sep = &quot; &quot;)</code></pre>
+<pre><code>## Warning: Expected 2 pieces. Additional pieces discarded in 7 rows [7, 16,
+## 18, 29, 34, 60, 65].</code></pre>
+<pre><code>## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 24 rows
+## [2, 3, 8, 13, 15, 19, 20, 22, 23, 25, 26, 38, 39, 46, 49, 58, 63, 64, 73,
+## 77, ...].</code></pre>
+<pre class="r"><code>starwars_sep_names</code></pre>
+<pre><code>## # A tibble: 87 x 14
+##    first_name last_name height  mass hair_color skin_color eye_color
+##    &lt;chr&gt;      &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;    
+##  1 Luke       Skywalker    172    77 blond      fair       blue     
+##  2 C-3PO      &lt;NA&gt;         167    75 &lt;NA&gt;       gold       yellow   
+##  3 R2-D2      &lt;NA&gt;          96    32 &lt;NA&gt;       white, bl~ red      
+##  4 Darth      Vader        202   136 none       white      yellow   
+##  5 Leia       Organa       150    49 brown      light      brown    
+##  6 Owen       Lars         178   120 brown, gr~ light      blue     
+##  7 Beru       Whitesun     165    75 brown      light      blue     
+##  8 R5-D4      &lt;NA&gt;          97    32 &lt;NA&gt;       white, red red      
+##  9 Biggs      Darkligh~    183    84 black      light      brown    
+## 10 Obi-Wan    Kenobi       182    77 auburn, w~ fair       blue-gray
+## # ... with 77 more rows, and 7 more variables: birth_year &lt;dbl&gt;,
+## #   gender &lt;chr&gt;, homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+## #   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+<div id="unite" class="section level3">
+<h3>1.3.2 <code>unite()</code></h3>
+<p><code>unite()</code> is the complement of <code>separate()</code> and used to join the contents or values of different columns into one new column. It requires data as its first argument, then the unquoted name of the new column name, followed by unquoted names of columns you wish to unite. Let’s try to put the first and last names of starwars characters back together with <code>unite()</code>:</p>
+<pre class="r"><code>starwars_sep_names %&gt;% 
+  unite(col = name, first_name, last_name)</code></pre>
+<pre><code>## # A tibble: 87 x 13
+##    name  height  mass hair_color skin_color eye_color birth_year gender
+##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
+##  1 Luke~    172    77 blond      fair       blue            19   male  
+##  2 C-3P~    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
+##  3 R2-D~     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
+##  8 R5-D~     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;,
+## #   species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+<p>Okay, so a couple of things went wrong:</p>
+<ol style="list-style-type: decimal">
+<li><p>It put an "_" between first and last names; we can easily change this to whitespace using <code>sep = " "</code>.</p></li>
+<li><p>It merged in the NAs for characters without last names. This is more challenging and requires tools from other libraries.</p></li>
+</ol>
+<p>Let’s go ahead and fix that! We’ll use another <code>stringr</code> function to remove the NAs form the names called <code>str_remove_all()</code>, which strips a pattern from a string</p>
+<pre class="r"><code>starwars_sep_names %&gt;% 
+  unite(col = name, first_name, last_name, sep = &quot; &quot;) %&gt;% 
+  mutate(name = str_remove_all(string = name, pattern = &quot;NA&quot;)) # overwrite name with </code></pre>
+<pre><code>## # A tibble: 87 x 13
+##    name  height  mass hair_color skin_color eye_color birth_year gender
+##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
+##  1 Luke~    172    77 blond      fair       blue            19   male  
+##  2 &quot;C-3~    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
+##  3 &quot;R2-~     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
+##  8 &quot;R5-~     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;,
+## #   species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+<pre class="r"><code>                                            # name with NAs removed</code></pre>
+</div>
+</div>
+</div>
+<div id="graphing-in-ggplot2" class="section level1">
+<h1>2. Graphing in ggplot2</h1>
+<p>Now let’s talk about one of the best parts of the tidyverse and R more generally: ggplot2.</p>
+<p>ggplot2 is the <em>grammar of graphics</em>, and is the tidyverse package for creating plots. Even with just a few of its commands, it can make beautiful, publication-ready plots. Its more advanced features add even more versatility. And, people make companion packages for it to do even more (e.g., <code>ggpubr</code> to add statistics to your plot).</p>
+<p>Note, what we’ll cover today is just the beginning! There are <a href="https://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/331924275X/ref=as_li_ss_tl?ie=UTF8&amp;linkCode=sl1&amp;tag=ggplot2-20&amp;linkId=4b4de5146fdafd09b8035e8aa656f300">entire books on graphing in ggplot2!</a>.</p>
+<p>Last note, I’m borrowing heavily from <a href="https://uodatascience.github.io/R_Guide/plotting.html">this guide</a> that Jonny Saunders put together.</p>
+<p>For this section we’re going to use another dataset that is built into R. It is called <code>iris</code> and it is the canonical ggplpot2 dataset. Let’s start by making a scatter plot of the relationship between Sepal.Length and Petal.Length.</p>
+<pre class="r"><code>?iris # first, let&#39;s learn about the dataset
+head(iris)</code></pre>
+<p>When creating a plot in ggplot2, the first thing you have to do is call the <code>ggplot()</code> function. It takes data as its first argument. Let’s start there:</p>
+<pre class="r"><code>ggplot(data = iris)</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>And, nothing happened. To understand why, let’s back up to the philosophy of ggplot:</p>
+<div id="philosophy-of-ggplot" class="section level2">
+<h2>2.1 Philosophy of ggplot</h2>
+<p>What is a statistical graphic? According to <a href="http://www.tandfonline.com/doi/abs/10.1198/jcgs.2009.07098">Wickham</a>, we can think of statistical graphics as:</p>
+<ul>
+<li><strong>Mappings</strong> from data to aesthetic attributes (color, shape, size)</li>
+<li>Of <strong>geometric objects</strong> (points, lines, bars)</li>
+<li>On a particular <strong>coordinate system</strong> (or scale)</li>
+<li>Sometimes after a statistical <strong>transformation</strong></li>
+</ul>
+<p>In ggplot, that combination of things forms a <em>layer</em>. The terminology in ggplot is</p>
+<ul>
+<li><strong>aes</strong> - aesthetic mappings</li>
+<li><strong>geom</strong> - geometric objects</li>
+<li><strong>scale</strong> - …scales</li>
+<li><strong>stat</strong> - statistical transformations</li>
+</ul>
+<p>Reordered, the flow of information in ggplot2 is:</p>
+<ul>
+<li><code>data</code> is attached to the ggplot call,</li>
+<li>mapped by <code>aes()</code>, and</li>
+<li>transformed by <code>stat</code> before being passed to a</li>
+<li><code>geom()</code>,</li>
+<li>which is placed, sized, and colored according to its relevant <code>scale</code></li>
+<li>then ta-da! rendered plot.</li>
+</ul>
+<p>We already did step 1 above, by providing our iris dataset to <code>ggplot()</code>. Let’s move onto aesthetic mapping.</p>
+</div>
+<div id="aesthetic-mapping" class="section level2">
+<h2>2.1 Aesthetic Mapping</h2>
+<p>The basic idea is that we want to take our data and <em>map</em> it onto physical space using geometric objects or geoms. For ggplot to place a geom, it needs to know how the data map onto the aesthetics of the graph. Each <code>geom()</code> function in ggplot takes a <code>mapping</code> argument. Let’s start with a basic geom, <code>geom_histogram()</code>.</p>
+<div id="mapping-with-geoms" class="section level3">
+<h3>2.1.1 Mapping with geoms</h3>
+<p>We’re going to call ggplot()<code>again, and this time add the</code>geom_histogram()<code>*layer*, telling it to map the variable</code>Sepal.Length` to the x axis aesthetic:</p>
+<pre class="r"><code>ggplot(data = iris) + # attach data
+    geom_histogram(mapping = aes(x = Sepal.Length)) # add geom w/ aesthetic map</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><code>geom_histogram()</code> only requires one <em>aesthetic mapping</em>, the x aesthetic, which tells it what variable it should map to the x axis. You can add additional arguments to the <code>geom()</code>. For example, we could change the number of bins:</p>
+<pre class="r"><code>ggplot(data = iris) + # attach data
+    geom_histogram(mapping = aes(x = Sepal.Length), # add geom to aesthetic mapping
+                   bins = 9) # change bins to 9</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>Or make them a different color. We can change the color of 2-d objects with the fill aesthetic:</p>
+<pre class="r"><code>ggplot(data = iris) + # attach data
+    geom_histogram(mapping = aes(x = Sepal.Length), 
+                   fill = &quot;red&quot;) # fill, bc hist bars are 2-d</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>Let’s look at something just a tiny but more complicated: we’ll add a layer of points to our plot (creating a scatterplot) using geom_point(). geom_point() is another <em>geom function</em>, each of which adds a different type of layer to a plot. Let’s see what happens if we just give it an x variable to map:</p>
+<pre class="r"><code>ggplot(data = iris) + # attach data
+    geom_point(mapping = aes(x = Sepal.Length)) # add geom w/ aesthetic map</code></pre>
+<p>We get an error, telling us that <code>geom_point</code> requires the y aesthetic to be defined. This makes sense - we need an x and y axis to define where points belong on a scatter plot. Let’s add <code>Petal.Length</code> as the y axis:</p>
+<pre class="r"><code>ggplot(data = iris) + # attach data
+    geom_point(mapping = aes(x = Sepal.Length, y = Petal.Length)) # add geom w/ aesthetic map</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>Let’s find out if the relationship between <code>Sepal.Length</code> &amp; <code>Petal.Length</code> relates to the <code>Species</code> of iris. To visualize this, we are going to map <code>Species</code> to an <em>aesthetic</em> too. We’ll use the color aesthetic, which is like fill but for 1-d objects (e.g., points, lines, etc.).</p>
+<pre class="r"><code>ggplot(data = iris) + # attach data
+  geom_point(mapping = aes(x = Sepal.Length, # geom w/ aesthetic mapping
+                           y = Petal.Length, 
+                           color = Species)) # color including in aes()</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>Notice that we included color in our aesthetic mapping call (<code>mapping = aes()</code>) here, but not when we filled our histogram with the color red. This is the difference between aesthetically mapping data and just setting an aesthetic to some value (e.g., “red”).</p>
+<p>This is a fairly common mistake, so let’s take a look at what happens if we tell it to make our points red but accidentally include that in the <code>aes()</code> call:</p>
+<pre class="r"><code>ggplot(data = iris) + # attach data
+  geom_point(mapping = aes(x = Sepal.Length, # geom w/ aesthetic mapping
+                           y = Petal.Length, 
+                           color = &quot;red&quot;)) # color including in aes()</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+</div>
+<div id="exercise-2.1a." class="section level3">
+<h3>Exercise 2.1a.</h3>
+<blockquote>
+<p>Options for <em>aesthetics</em> include color, shape, size, and alpha. Create a scatter plot to visualize the relationship between <code>Sepal.Width</code> and <code>Petal.Width</code>. Add an aesthetic to visualize the effect of <code>Species</code>. Choose any aesthetic you’d like or play around with a few. What do they do? How might you use more than one aesthetic?</p>
+</blockquote>
+<pre class="r"><code>ggplot(data = iris) + # attach data
+  geom_point(mapping = aes(x = Sepal.Length, # geom w/ aesthetic mapping
+                           y = Petal.Length, 
+                           color = &quot;red&quot;)) # color including in aes()</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p>We could also make separate graphs for each <code>Species</code> using <code>facet_wrap</code>. By passing a formula to <code>facet_wrap()</code>.</p>
+<p>Here’s how:</p>
+<pre class="r"><code>ggplot(data = iris) +
+  geom_point(mapping = aes(x = Sepal.Length, y = Petal.Length)) +
+  facet_wrap(~ Species)</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>One thing we often want to do is add a line over our scatterplot to describe the correlation between variables. We can do this by adding another <em>geom layer</em> to our plot.</p>
+<p>Let’s make the same plot, using the <code>geom_smooth()</code> which fits a smoothed line to the data.</p>
+<pre class="r"><code>ggplot(data = iris) +
+  geom_point(mapping = aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
+  geom_smooth(mapping = aes(x = Sepal.Length, y = Petal.Length), color = &quot;black&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-25-1.png" width="672" />
+Note that loess is the default function for geom_smooth(); learn more <a href="http://www.statisticshowto.com/lowess-smoothing/">here</a>.</p>
+<p>You can change that by setting the <code>method</code> argument in <code>geom_smooth()</code>, Let’s change it to our old friend linear regression or “lm”:</p>
+<pre class="r"><code>ggplot(data = iris) +
+  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
+  geom_smooth(aes(x = Sepal.Length, y = Petal.Length), 
+              color = &quot;black&quot;,
+              method = &quot;lm&quot;)</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+</div>
+<div id="global-aesthetic-mapping" class="section level3">
+<h3>2.1.2 Global Aesthetic Mapping</h3>
+<p>That looks pretty good, but this code is getting inefficient, because we’re specifying the x and y axis for each <code>geom_*</code> call. Instead, we can use <em>global</em> aesthetic mappings, which are specified in the <code>ggplot()</code> call. Global mappings are inherited by each layer unless they’re overwritten.</p>
+<p>Let’s re-make our plot using global aesthetic mapping:</p>
+<pre class="r"><code>ggplot(data = iris, aes(x = Sepal.Length, y = Petal.Length)) +
+  geom_point(aes(color = Species)) +
+  geom_smooth(color = &quot;black&quot;, method = &quot;lm&quot;)</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>You might be wondering, what do we put in global aesthetic mapping and what do we put in the aesthetic mapping of specific geoms? Basically, you want to put anything in the global mapping that you want <em>every layer to inherit</em> or at least the majority of them. In the above, I defined x and y globally, because I want those the same in every geom. I didn’t with color, since I wanted a single black line for the smooth line. Let’s take a look at it with color in the global aesthetic:</p>
+<pre class="r"><code>ggplot(data = iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
+  geom_point() +
+  geom_smooth()</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>As you can see, global aesthetic mapping gets <em>inherited</em> by every layer. We <em>can</em> override this by providing a different aesthetic mapping in the <code>geom()</code> call</p>
+<pre class="r"><code>ggplot(data = iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
+  geom_point() +
+  geom_smooth(color = &quot;black&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>And, you can sort of mix and match. For example, if you want a smooth line for each species and a general one, you can just make 2 <code>geom_smooth()</code> calls, and provide different aesthetic mappings</p>
+<pre class="r"><code>ggplot(data = iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
+  geom_point() + # inhereit global
+  geom_smooth() + # inherit global
+  geom_smooth(color = &quot;black&quot;) # change color to constant</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;
+## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>There are lots of other <em>geoms</em> we can map data onto. <code>geom_bar()</code> is another very common one to display group differences. Let’s take a look at each species average petal length:</p>
+<pre class="r"><code>ggplot(data = iris, aes(x = Species, y = Petal.Length)) +
+  geom_bar() # inhereit global</code></pre>
+<p>Hmmm, <code>stat_count()</code> must not be used with y aesthetic. What does this mean? Let’s take a look at the help documentation:</p>
+<pre class="r"><code>?geom_bar</code></pre>
+<p>The help documentation says that the default is <code>stat = "count"</code>, which counts the number of classes. We want <code>stat = "identity"</code>, which leaves the data as is. Let’s give it another go:</p>
+<pre class="r"><code>ggplot(data = iris, aes(x = Species, y = Petal.Length)) +
+  geom_bar(stat = &quot;identity&quot;) # inhereit global</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p>And we could add a little color if we wanted:</p>
+<pre class="r"><code>ggplot(data = iris, aes(x = Species, y = Petal.Length, fill = Species)) +
+  geom_bar(stat = &quot;identity&quot;) # inhereit global</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+</div>
+<div id="exercise-2.1b" class="section level3">
+<h3>Exercise 2.1b</h3>
+<blockquote>
+<p>I want you to re-create this plot:
+<img src="exercise_2.1b_plot.png" /></p>
+</blockquote>
+<pre class="r"><code>ggplot(ps_data, aes(x = item, y = correct, fill = item)) + 
+  geom_bar(stat = &quot;identity&quot;) + 
+  facet_wrap(~condition)</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+</div>
+</div>
+<div id="geom-level-data" class="section level2">
+<h2>2.2 geom-level Data</h2>
+<p>So far, we’ve seen that aesthetic mappings can be local to a geom or global and inherited by all geoms by default. In ggplot2, data is the same way. We can have data defined globally in the <code>ggplot()</code> call, which is what we’ve been doing so far. Or, we can have it defined within a geom.</p>
+<p>For example, if we’re interested in group differences, we may want to include group-level (summary) data and individual data in the same plot. Let’s make a plot of human vs. droid mass, where the average of each group is a bar and individual characters’ data is shown as individual points.</p>
+<pre class="r"><code># get summary data
+starwars_means &lt;- starwars %&gt;% 
+  filter(species == &quot;Human&quot; | species == &quot;Droid&quot;) %&gt;% 
+  group_by(species) %&gt;% 
+  summarize(mean_mass = mean(mass, na.rm = TRUE))
+
+# uisng the summary data as the global data
+ggplot(starwars_means, aes(x = species, y = mean_mass, fill = species)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  geom_point(data = filter(starwars, species == &quot;Human&quot; | 
+                             species == &quot;Droid&quot;), # using individual
+                                                  # data as geom specific data
+                           aes(x = species, y = mass))</code></pre>
+<pre><code>## Warning: Removed 14 rows containing missing values (geom_point).</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p>This is pretty good, but it’s a little hard to read because points might be overlapping. We have a few options to change the aesthetics to make this plot easier to read.</p>
+<p>First, we could artificially add noise to the points so that they don’t overlap using the <em>jitter</em> option in the <code>position</code> aesthetic. There are multiple ways to do this, but one is to provide the function <code>position_jitter()</code> to the <code>position</code> argument:</p>
+<pre class="r"><code># uisng the summary data as the global data
+ggplot(starwars_means, aes(x = species, y = mean_mass, fill = species)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  geom_point(data = filter(starwars, species == &quot;Human&quot; | 
+                             species == &quot;Droid&quot;), # using individual
+                                                  # data as geom specific data
+                           aes(x = species, y = mass),
+             position = position_jitter())</code></pre>
+<pre><code>## Warning: Removed 14 rows containing missing values (geom_point).</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>Then, we can add argumnts to <code>position_jitter()</code> to customize it more. For example, I just want to points to <em>jitter</em> on the x-axis and not the y-axis. That way, they don’t overlap but they still retain their true value of mass. We can do this by setting the <code>height</code> argument to 0 within <code>position_jitter()</code>. While we’re at it, let’s constrain things a bit more by setting the width argument to a smaller value:</p>
+<pre class="r"><code># uisng the summary data as the global data
+ggplot(starwars_means, aes(x = species, y = mean_mass, fill = species)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  geom_point(data = filter(starwars, species == &quot;Human&quot; | 
+                             species == &quot;Droid&quot;), # using individual
+                                                  # data as geom specific data
+                           aes(x = species, y = mass),
+             position = position_jitter(height = 0, width = .1))</code></pre>
+<pre><code>## Warning: Removed 14 rows containing missing values (geom_point).</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p>A second option I want to draw your attention to is the <code>alpha</code> aesthetic, which controls the shading of a geom. It defaults to 1, which is full saturation, but you can map it onto data with aesthetic mapping or set it to a constant.</p>
+<p>I often do this when I want to keep the position of the data (i.e., not jitter), but want to more easily see overlapping points. To change it, we just set alpha to some number betweeen 0 and 1.</p>
+<pre class="r"><code># uisng the summary data as the global data
+ggplot(starwars_means, aes(x = species, y = mean_mass, fill = species)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  geom_point(data = filter(starwars, species == &quot;Human&quot; | 
+                             species == &quot;Droid&quot;), # using individual
+                                                  # data as geom specific data
+                           aes(x = species, y = mass),
+             alpha = .3)</code></pre>
+<pre><code>## Warning: Removed 14 rows containing missing values (geom_point).</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<div id="exercise-2.2a" class="section level3">
+<h3>Exercise 2.2a</h3>
+<blockquote>
+<p>Use what we’ve learned so far to plot the average age of kids in each condition of <code>ps_data</code> <strong>and</strong> include each kid’s age (hint: you’ll need to create 2 new datasets; one with averages per condition and one with just individual kids’). Try to make sure you can see each point using either position or alpha.</p>
+</blockquote>
+<pre class="r"><code># Mean Data:
+ps_mean_age &lt;- ps_data %&gt;% 
+  group_by(condition) %&gt;% 
+  summarize(mean_age = mean(age, na.rm = TRUE))
+
+# distinct kids data
+ps_distinct_age &lt;- ps_data %&gt;% 
+  distinct(subid, condition, age)
+
+# jitter option for plot:
+ggplot(ps_mean_age, aes(x = condition, y = mean_age, fill = condition)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  geom_point(data = ps_distinct_age, aes(x = condition, y = age),
+             position = position_jitter(height = 0, width = .2))</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<pre class="r"><code># alpha option for plot:
+ggplot(ps_mean_age, aes(x = condition, y = mean_age, fill = condition)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  geom_point(data = ps_distinct_age, aes(x = condition, y = age),
+             alpha = .3)</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-40-2.png" width="672" /></p>
+</div>
+</div>
+<div id="labels-themes" class="section level2">
+<h2>2.3 Labels &amp; Themes</h2>
+<div id="labels" class="section level3">
+<h3>2.3.1 Labels</h3>
+<p>The plots we just made are pretty close to what we might include in a publication or talk. But, we might want a little more control over things. For example, we might want to change <code>mean_age</code> on the Y-axis to a prettier label (e.g., Mean Age). We also might want to add a title. We can do both with the <code>labs</code> argument.</p>
+<pre class="r"><code># Mean Data:
+ps_mean_age &lt;- ps_data %&gt;% 
+  group_by(condition) %&gt;% 
+  summarize(mean_age = mean(age, na.rm = TRUE))
+
+# distinct kids data
+ps_distinct_age &lt;- ps_data %&gt;% 
+  distinct(subid, condition, age)
+
+ggplot(ps_mean_age, aes(x = condition, y = mean_age, fill = condition)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  geom_point(data = ps_distinct_age, aes(x = condition, y = age),
+             position = position_jitter(height = 0, width = .2)) +
+  # change labels with labs:
+  labs(title = &quot;Age by Condition:&quot;, # add a title with title
+       subtitle = &quot;Group- and Kid-level age&quot;, # you can even add a subtitle
+       x = &quot;Condition&quot;,
+       y = &quot;Mean Age&quot;)</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+</div>
+<div id="themes" class="section level3">
+<h3>2.3.2 Themes</h3>
+<p>Beautiful! We could also change the way things look by chaging the <code>theme()</code>.</p>
+<div id="customizing-theme" class="section level4">
+<h4>2.3.2.1 Customizing <code>theme()</code></h4>
+<p>You can set arguments within <code>theme()</code> manually. For example, let’s change the <code>axis.text</code> to be 30 pt size. To do this, we set the <code>axis.text</code> argument to a size by setting the size argument of the <code>element_text()</code> function.</p>
+<pre class="r"><code>ggplot(ps_mean_age, aes(x = condition, y = mean_age, fill = condition)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  geom_point(data = ps_distinct_age, aes(x = condition, y = age),
+             position = position_jitter(height = 0, width = .2)) +
+  # change labels with labs:
+  labs(title = &quot;Age by Condition:&quot;, # add a title with title
+       subtitle = &quot;Group- and Kid-level age&quot;, # you can even add a subtitle
+       x = &quot;Condition&quot;,
+       y = &quot;Mean Age&quot;) +
+  theme(axis.text = # axis.title argument of theme
+          element_text(size = 30)) # size element of element_text</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
+<p><code>element_blank()</code> can be used to remove basically any element. For example, let’s get rid of all of our axis labels:</p>
+<pre class="r"><code>ggplot(ps_mean_age, aes(x = condition, y = mean_age, fill = condition)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  geom_point(data = ps_distinct_age, aes(x = condition, y = age),
+             position = position_jitter(height = 0, width = .2)) +
+  # change labels with labs:
+  labs(title = &quot;Age by Condition:&quot;, # add a title with title
+       subtitle = &quot;Group- and Kid-level age&quot;, # you can even add a subtitle
+       x = &quot;Condition&quot;,
+       y = &quot;Mean Age&quot;) +
+  theme(axis.text = # axis.title argument of theme
+          element_blank()) # set to element_blank</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<p>You can do <strong>so</strong> much more with customizing themes. And, you can save your theme and use it for other plots too! Let’s save out crazy axis label theme and use it for a couple of plots.</p>
+<p>To save a theme, you just assign it to a name like any R object. Let’s do that now:</p>
+<pre class="r"><code>label_madness_theme &lt;- theme(axis.text = # axis.title argument of theme
+          element_text(size = 30)) # size element of element_text</code></pre>
+<p>And then we just add our custom theme as a layer of our plot:</p>
+<pre class="r"><code>ggplot(ps_data, aes(x = item, y = correct, fill = item)) + 
+  geom_bar(stat = &quot;identity&quot;) + 
+  facet_wrap(~condition) + 
+  label_madness_theme # add in the custom theme</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<p>Ooof, that looks wild. This example is a little silly, buy I use custom themes often to make the same plot scale well for a manuscript (where smaller text &amp; geoms usually work) and PPTs (where larger text &amp; geoms are usually better). Here’s an example from my own work:</p>
+<pre class="r"><code># Custom theme for the reputation manuscript
+theme_rep_manuscript &lt;-  theme(panel.background = element_blank(),
+                         panel.grid.major.x = element_line(size=.4, color=&quot;gray90&quot;))+
+  theme(axis.line.x = element_line(color=&quot;black&quot;, size = 1),
+        axis.line.y = element_line(color=&quot;black&quot;, size = 1))+
+  theme(axis.title = element_text(size = rel(1), color=&quot;black&quot;), 
+        axis.text = element_text(size = rel(1), color=&quot;black&quot;))+
+  theme(plot.title= element_text(size=rel(1), hjust = .5))
+
+# Custom theme for the reputation manuscript
+theme_rep_ppt &lt;-  theme(panel.background = element_blank(),
+                         panel.grid.major.x = element_line(size=1, color=&quot;gray90&quot;))+
+  theme(axis.line.x = element_line(color=&quot;black&quot;, size = 2),
+        axis.line.y = element_line(color=&quot;black&quot;, size = 2))+
+  theme(axis.title = element_text(size = rel(2), color=&quot;black&quot;), 
+        axis.text = element_text(size = rel(2), color=&quot;black&quot;))+
+  theme(plot.title= element_text(size=rel(2), hjust = .5))</code></pre>
+<pre class="r"><code>ggplot(ps_data, aes(x = item, y = correct, fill = item)) + 
+  geom_bar(stat = &quot;identity&quot;) + 
+  facet_wrap(~condition) + 
+  theme_rep_manuscript </code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(ps_data, aes(x = item, y = correct, fill = item)) + 
+  geom_bar(stat = &quot;identity&quot;) + 
+  facet_wrap(~condition) + 
+  theme_rep_ppt +
+  coord_flip() # flip the coordinates to accomodate size of text</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+</div>
+<div id="using-built-in-themes" class="section level4">
+<h4>2.3.2.2 Using built-in themes</h4>
+<p><code>ggplot2</code> also comes with a number of themes you can use. This can be a great thing to explore if you’re not comfortable customizing your theme yourself quite yet, but do want to change the way your plots look.</p>
+<p>All of the themes start with <code>theme_</code>, so you can see what’s available by typing that in and looking at the autocomplete options:</p>
+<pre class="r"><code>?theme_</code></pre>
+<p>Let’s change the theme of the correct by condition &amp; item plot to <code>theme_minimal()</code>. To do this, we just add it as a layer just like a custom theme. The only difference is that it must be followed by (), since it’s technically a function:</p>
+<pre class="r"><code>ggplot(ps_data, aes(x = item, y = correct, fill = item)) + 
+  geom_bar(stat = &quot;identity&quot;) + 
+  facet_wrap(~condition) + 
+  theme_minimal()</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<p>Or we could just as easily change it to <code>theme_linedraw()</code>:</p>
+<pre class="r"><code>ggplot(ps_data, aes(x = item, y = correct, fill = item)) + 
+  geom_bar(stat = &quot;identity&quot;) + 
+  facet_wrap(~condition) + 
+  theme_linedraw()</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
+</div>
+</div>
+<div id="exercise-2.3a" class="section level3">
+<h3>Exercise 2.3a</h3>
+<blockquote>
+<p>Now I want you to explore the themes in ggplot2. Recreate whichever plot from today you want - or try to make a new one if you like - and try out different themes and find a favorite.</p>
+</blockquote>
+<pre class="r"><code>ggplot(ps_mean_age, aes(x = condition, y = mean_age, fill = condition)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  geom_point(data = ps_distinct_age, aes(x = condition, y = age),
+             position = position_jitter(height = 0, width = .2)) +
+  # change labels with labs:
+  labs(title = &quot;Age by Condition:&quot;, # add a title with title
+       subtitle = &quot;Group- and Kid-level age&quot;, # you can even add a subtitle
+       x = &quot;Condition&quot;,
+       y = &quot;Mean Age&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+</div>
+</div>
+<div id="changing-scales" class="section level2">
+<h2>2.4 Changing Scales</h2>
+<p>The last thing we’ll touch on in ggplot are scales. Scale set the parameters for how geoms are sized, colored, place, etc. Let’s take a look at one more dataset, the <code>diamonds</code> dataset:</p>
+<p><code>{ eval = FALSE} ?diamonds</code></p>
+<p>As we see, it has 50,000 cases. We’re going to create a new <code>diamonds</code> that’s a little smaller to keep things running quickly using the <code>sample_n</code> function:</p>
+<pre class="r"><code>diamonds &lt;- diamonds %&gt;% 
+  sample_n(1000)</code></pre>
+<p>Let’s take a look at the relationship between a diamonds’ carat and its price. But first, let’s see how each is distributed:</p>
+<pre class="r"><code>ggplot(diamonds, aes(x = carat)) +
+  geom_histogram()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(diamonds, aes(x = price)) +
+  geom_histogram()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<p>Looks like both variables are positively (right-) skewed. One solution is to log transform them, and we can do that pretty easily for our plot by changing the scale.</p>
+<p><code>ggplot2</code> has a number of scale options for all of its aesthetics. We’ll re-scale x and y using <code>scale_x_log10</code> and <code>scale_y_log10</code>:</p>
+<pre class="r"><code>ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point() +
+  theme_minimal() + 
+  scale_x_log10() + 
+  scale_y_log10()</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+<p>You can also change the scale of other aesthetics too. For example, let’s color points by diamonds’ cut:</p>
+<pre class="r"><code>ggplot(diamonds, aes(x = carat, y = price, color = cut)) +
+  geom_point(alpha = .5) + # changing alpha bc of overlap
+  theme_minimal() + 
+  scale_x_log10() + 
+  scale_y_log10()</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
+<p>And then we could change that using <code>scale_color_brewer()</code> and setting the pallete to something else. We can see its options by checking out the help documentation:</p>
+<pre class="r"><code>?scale_color_brewer</code></pre>
+<p>Let’s set it to set1:</p>
+<pre class="r"><code>ggplot(diamonds, aes(x = carat, y = price, color = cut)) +
+  geom_point(alpha = .5) + # changing alpha bc of overlap
+  theme_minimal() + 
+  scale_x_log10() + 
+  scale_y_log10() +
+  scale_color_brewer(palette=&quot;Set1&quot;)</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+<p>Or we could change it to another palette:</p>
+<pre class="r"><code>ggplot(diamonds, aes(x = carat, y = price, color = cut)) +
+  geom_point(alpha = .5) + # changing alpha bc of overlap
+  theme_minimal() + 
+  scale_x_log10() + 
+  scale_y_log10() +
+  scale_color_brewer(palette=&quot;Dark2&quot;)</code></pre>
+<p><img src="/courses/RBootcamp2019/r_bootcamp_day_3_with_answers_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+</div>
+</div>
+<div id="final-exercise" class="section level1">
+<h1>Final Exercise!</h1>
+<blockquote>
+<p>For our last exercise, we’ll do something a little more fun. I want you to use the tools we’ve covered today to make the ugliest plot possible. Some things that might help:</p>
+<ul>
+<li>Mixing unrelated datasets together using geom-level data</li>
+<li>Using aesthetics in a weird way (e.g., aesthetically mapping size)</li>
+<li>altering the theme</li>
+</ul>
+<p>Get creative and have fun with it! This is a great way to find out more about ggplot, and maybe find out some things you shouldn’t do (hint: try using geom_line()).</p>
+</blockquote>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/rbootcamp2019/r_bootcamp_day_3/" rel="next">R Bootcamp Day 3: Tidying &amp; Visualizing Data</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+<p class="edit-page">
+  <a href="https://github.com/coryc3133/Academic_website_code.git/edit/master/content/courses%5cRBootcamp2019%5cr_bootcamp_day_3_with_answers.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; 2019 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.6cbefe3f0755301b86cd38317ded9f54.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

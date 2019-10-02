@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assesment | Cory K. Costello</title>
+    <link>/tags/assesment/</link>
+      <atom:link href="/tags/assesment/index.xml" rel="self" type="application/rss+xml" />
+    <description>Assesment</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 20 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Assesment</title>
+      <link>/tags/assesment/</link>
+    </image>
+    
+    <item>
+      <title>Twitter Project</title>
+      <link>/project/twitter-project/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/project/twitter-project/</guid>
+      <description>&lt;p&gt;The twitter project consists of NIH- (Grant # MH106879) and NSF-funded (GRANT #
+1551817; PI: Sanjay Srivastava) research examining how mental health, personality, and reputation are manifest on Twitter and recoverable from corresponding digital records of behavior (i.e., followed accounts, tweets, etc.).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

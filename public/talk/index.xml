@@ -1,42 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Talks on Cory K. Costello</title>
+    <title>Recent &amp; Upcoming Talks | Cory K. Costello</title>
     <link>/talk/</link>
-    <description>Recent content in Recent &amp; Upcoming Talks on Cory K. Costello</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018  Cory K. Costello </copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
-    
-	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent &amp; Upcoming Talks</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Sat, 29 Jun 2019 15:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>/talk/</link>
+    </image>
     
     <item>
       <title>Do You Feel Like Who You Follow? A Network Approach to Predicting Individual Differences in Mental Health on Twitter</title>
-      <link>/talk/twitter_friends_mh_arp_2019/</link>
-      <pubDate>Sat, 29 Jun 2019 15:00:00 -0700</pubDate>
-      
-      <guid>/talk/twitter_friends_mh_arp_2019/</guid>
-      <description>Costello, C. K. &amp;amp; Srivastava S. (2019). Do You Feel Like Who You Follow? A Network Approach to Predicting Individual Differences in Mental Health on Twitter. In Costello, C. K. &amp;amp; Srivastava S. (Chairs), The Difference Engine: Advancing Personality Science With Digital Records of Language, Networks, and Behavior. Symposium conducted at the 2019 Biennial Meeting of the Association for Research in Personality (Grand Rapids, MI.)</description>
+      <link>/talk/arp2019/</link>
+      <pubDate>Sat, 29 Jun 2019 15:00:00 +0000</pubDate>
+      <guid>/talk/arp2019/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Longitudinal Stability and Change in the Big Six</title>
-      <link>/talk/big_six_development_lsp_spsp_2019/</link>
-      <pubDate>Fri, 08 Feb 2019 10:10:00 -0800</pubDate>
-      
-      <guid>/talk/big_six_development_lsp_spsp_2019/</guid>
-      <description>Costello, C. K. &amp;amp; Srivastava, S. (2019). Longitudinal stability and change in the Big Six. In G. Saucier &amp;amp; S. Srivastava (Chairs), Longitudinal Stability/Change in Personality Understood Broadly: Beyond the Big Five. Symposium to be conducted at the 2019 Lifespan Social-Personality Preconference, part of the 20th annual meeting of the Society of Personality and Social Psychology (Portland, OR).</description>
+      <link>/talk/lsp_spsp2019/</link>
+      <pubDate>Fri, 08 Feb 2019 10:10:00 +0000</pubDate>
+      <guid>/talk/lsp_spsp2019/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Consensus, Accuracy, and Consequences of Hearsay Reputations</title>
-      <link>/talk/consensus_accuracy_consequences_hearsay_reputations_ecp2019/</link>
-      <pubDate>Tue, 25 Sep 2018 11:06:00 -0700</pubDate>
-      
-      <guid>/talk/consensus_accuracy_consequences_hearsay_reputations_ecp2019/</guid>
-      <description>Costello, C. K. &amp;amp; Srivastava, S. (2018). Consensus, Accuracy, and Consequences of Hearsay Reputations. In R. Rau (Chair), Making good impressions: On the antecedents and consequences of peer reputations. Symposium conducted at the 19th European Conference on Personality (Zadar, Croatia).</description>
+      <link>/talk/ecp2018/</link>
+      <pubDate>Fri, 20 Jul 2018 17:00:00 +0000</pubDate>
+      <guid>/talk/ecp2018/</guid>
+      <description></description>
     </item>
     
   </channel>

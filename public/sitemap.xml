@@ -1,199 +1,286 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-    
-    
-    <url>
-    
-      <loc>/post/spotify-api-fun-vol-1-similarity-in-music-preference-networks-across-platforms/</loc>
-      <lastmod>2019-09-05T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/rbootcamp/r_bootcamp_day_1/</loc>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/post/spotify-api-fun-vol-2-artists-related-to-the-grateful-dead/</loc>
-      <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/rbootcamp/</loc>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/twitter_friends_mh_arp_2019/</loc>
-      <lastmod>2019-06-29T15:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/rbootcamp/r_bootcamp_day_1_with_answers/</loc>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/big_six_development_lsp_spsp_2019/</loc>
-      <lastmod>2019-02-08T10:10:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/rbootcamp/r_bootcamp_day_2/</loc>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication/ethics-relevant-values/</loc>
-      <lastmod>2019-02-03T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/rbootcamp/r_bootcamp_day_2_with_answers/</loc>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/consensus_accuracy_consequences_hearsay_reputations_ecp2019/</loc>
-      <lastmod>2018-09-25T11:06:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/rbootcamp/r_bootcamp_day_3/</loc>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication/revealed-traits/</loc>
-      <lastmod>2018-06-13T00:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/rbootcamp/r_bootcamp_day_3_with_answers/</loc>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication/change-stability-big-six/</loc>
-      <lastmod>2017-06-23T00:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/authors/admin/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/tags/academic/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/publication_types/2/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/authors/maureen-zalewski/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/project/twitter_friends_predicting_mh/</loc>
-      <lastmod>2016-04-27T00:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tags/measurement/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/project/reputation/</loc>
-      <lastmod>2016-04-27T00:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tags/mental-health/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication_types/2/</loc>
-      <lastmod>2018-06-13T00:00:00-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/tags/online-social-networks/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication_types/3/</loc>
-      <lastmod>2019-02-03T00:00:00-08:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/publication/followed-acct-predict-mh/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/categories/</loc>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/tags/predictive-modeling/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/</loc>
-      <lastmod>2017-10-15T00:00:00-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/project/</loc>
-      <lastmod>2016-04-27T00:00:00-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication_types/</loc>
-      <lastmod>2018-06-13T00:00:00-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/reza-rejaie/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/tags/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/sanjay-srivastava/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/api-data/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/music/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/social-network-analysis/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/spotify-api-vol1/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/spotify-api-vol2/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/arp2019/</loc>
+    <lastmod>2019-06-29T15:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
+    <lastmod>2019-06-29T15:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/gerard-saucier/</loc>
+    <lastmod>2019-02-08T10:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/longitudinal-modeling/</loc>
+    <lastmod>2019-02-08T10:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/lsp_spsp2019/</loc>
+    <lastmod>2019-02-08T10:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/personality/</loc>
+    <lastmod>2019-02-08T10:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/personality-development/</loc>
+    <lastmod>2019-02-08T10:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/amber-gayle-thalmayer/</loc>
+    <lastmod>2019-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/stability-change-values/</loc>
+    <lastmod>2019-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/john-c.-flournoy/</loc>
+    <lastmod>2019-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/ecp2018/</loc>
+    <lastmod>2018-07-20T17:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/reputation/</loc>
+    <lastmod>2018-07-20T17:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/terms/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/corss-cultural-psychology/</loc>
+    <lastmod>2018-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/dustin-wood/</loc>
+    <lastmod>2018-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/revealed-traits/</loc>
+    <lastmod>2018-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/william-tov/</loc>
+    <lastmod>2018-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/3/</loc>
+    <lastmod>2017-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/stability-change-big-6/</loc>
+    <lastmod>2017-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/assesment/</loc>
+    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/reputation-project/</loc>
+    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/lifentime-project/</loc>
+    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/twitter-project/</loc>
+    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/what-a-thing-to-do/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/courses/</loc>
+  </url>
   
 </urlset>

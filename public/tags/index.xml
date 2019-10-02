@@ -1,24 +1,119 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Cory K. Costello</title>
+    <title>Tags | Cory K. Costello</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on Cory K. Costello</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018  Cory K. Costello </copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Tue, 10 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Tags</title>
+      <link>/tags/</link>
+    </image>
     
     <item>
-      <title>Content tagged as &#39;Academic&#39;</title>
-      <link>/tags/academic/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 -0800</pubDate>
-      
-      <guid>/tags/academic/</guid>
-      <description>Here is a list of all the content that has been tagged as academic.</description>
+      <title>Measurement</title>
+      <link>/tags/measurement/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/measurement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mental Health</title>
+      <link>/tags/mental-health/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/mental-health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Online Social Networks</title>
+      <link>/tags/online-social-networks/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/online-social-networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Predictive Modeling</title>
+      <link>/tags/predictive-modeling/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/predictive-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>API Data</title>
+      <link>/tags/api-data/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/api-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Music</title>
+      <link>/tags/music/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Social Network Analysis</title>
+      <link>/tags/social-network-analysis/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/social-network-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Longitudinal Modeling</title>
+      <link>/tags/longitudinal-modeling/</link>
+      <pubDate>Fri, 08 Feb 2019 10:10:00 +0000</pubDate>
+      <guid>/tags/longitudinal-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personality</title>
+      <link>/tags/personality/</link>
+      <pubDate>Fri, 08 Feb 2019 10:10:00 +0000</pubDate>
+      <guid>/tags/personality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personality Development</title>
+      <link>/tags/personality-development/</link>
+      <pubDate>Fri, 08 Feb 2019 10:10:00 +0000</pubDate>
+      <guid>/tags/personality-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reputation</title>
+      <link>/tags/reputation/</link>
+      <pubDate>Fri, 20 Jul 2018 17:00:00 +0000</pubDate>
+      <guid>/tags/reputation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Corss-Cultural Psychology</title>
+      <link>/tags/corss-cultural-psychology/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/corss-cultural-psychology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assesment</title>
+      <link>/tags/assesment/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/assesment/</guid>
+      <description></description>
     </item>
     
   </channel>

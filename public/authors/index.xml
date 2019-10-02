@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Cory K. Costello</title>
+    <link>/authors/</link>
+      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Tue, 10 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>/authors/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;Cory Costello is a PhD candidate in psychology at the University of Oregon. He is a member of the &lt;a href=&#34;https://psdlab.uoregon.edu/&#34; target=&#34;_blank&#34;&gt;Personality and Social Dynamics Lab&lt;/a&gt; (PI: Sanjay Srivastava). His research interests include &lt;strong&gt;Personality&lt;/strong&gt; (&lt;em&gt;who we are&lt;/em&gt;), &lt;strong&gt;Interpersonal Perception&lt;/strong&gt; (&lt;em&gt;what people think about us&lt;/em&gt;), &lt;strong&gt;Reputations&lt;/strong&gt; (&lt;em&gt;what people say and hear about us&lt;/em&gt;), how these are manifest in online environments, and the extent to which they&amp;rsquo;re recoverable from digital footprints. He combines survey, experimental, and data scientific methods in pursuit of these interests. He is an open science and R enthusiast. His methodological interests include social network analysis, predictive modelling / machine learning, text analysis, structural equation modelling, hierarchical linear modelling.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Maureen Zalewski</title>
+      <link>/authors/maureen-zalewski/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/maureen-zalewski/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reza Rejaie</title>
+      <link>/authors/reza-rejaie/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/reza-rejaie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sanjay Srivastava</title>
+      <link>/authors/sanjay-srivastava/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/sanjay-srivastava/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gerard Saucier</title>
+      <link>/authors/gerard-saucier/</link>
+      <pubDate>Fri, 08 Feb 2019 10:10:00 +0000</pubDate>
+      <guid>/authors/gerard-saucier/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Amber Gayle Thalmayer</title>
+      <link>/authors/amber-gayle-thalmayer/</link>
+      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/amber-gayle-thalmayer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>John C. Flournoy</title>
+      <link>/authors/john-c.-flournoy/</link>
+      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/john-c.-flournoy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dustin Wood</title>
+      <link>/authors/dustin-wood/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/dustin-wood/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>William Tov</title>
+      <link>/authors/william-tov/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/william-tov/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
