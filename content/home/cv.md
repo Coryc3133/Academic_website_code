@@ -8,6 +8,5 @@ weight = 50
 
 +++
 Download my...    
-{{% staticref "cv/cv_1.pdf" %}}1-page CV (Resume){{% /staticref %}}    
-{{% staticref "cv/cv_3.pdf" %}}3-page CV{{% /staticref %}}    
-{{% staticref "cv/cv_5.pdf" %}}5-page (Full) CV{{% /staticref %}}    
+{{% staticref "cv/cv_1.pdf" %}}Resume{{% /staticref %}}      
+{{% staticref "cv/cv_5.pdf" %}}CV{{% /staticref %}}    
