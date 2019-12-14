@@ -5,12 +5,20 @@
     <link>/tags/personality/</link>
       <atom:link href="/tags/personality/index.xml" rel="self" type="application/rss+xml" />
     <description>Personality</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Fri, 08 Feb 2019 10:10:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Fri, 09 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Personality</title>
       <link>/tags/personality/</link>
     </image>
+    
+    <item>
+      <title>Perceiving Personality Through the Grapevine: A Network Approach to Reputations</title>
+      <link>/publication/personality-through-grapevine/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/personality-through-grapevine/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Longitudinal Stability and Change in the Big Six</title>

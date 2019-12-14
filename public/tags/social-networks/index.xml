@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Social Networks | Cory K. Costello</title>
+    <link>/tags/social-networks/</link>
+      <atom:link href="/tags/social-networks/index.xml" rel="self" type="application/rss+xml" />
+    <description>Social Networks</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Fri, 09 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Social Networks</title>
+      <link>/tags/social-networks/</link>
+    </image>
+    
+    <item>
+      <title>Perceiving Personality Through the Grapevine: A Network Approach to Reputations</title>
+      <link>/publication/personality-through-grapevine/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/personality-through-grapevine/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
