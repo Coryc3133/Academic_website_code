@@ -32,7 +32,7 @@ tags:
 title: Predicting Mental Health from Followed Accounts on Twitter
 url_code: "https://osf.io/54qdm/"
 url_dataset: ""
-url_pdf: 
+url_pdf: "files/MHTwitterFriends_S1RR_revision1.pdf"
 #url_poster: ""
 url_project: "https://osf.io/54qdm/"
 #url_slides: ""
