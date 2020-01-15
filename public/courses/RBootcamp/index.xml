@@ -938,12 +938,14 @@ library(&amp;quot;rio&amp;quot;) # also works&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And let’s load it:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------- tidyverse 1.2.1 --&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.2
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------------- tidyverse 1.3.0 --&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.3
 ## &amp;lt;U+2713&amp;gt; tibble  2.1.3     &amp;lt;U+2713&amp;gt; dplyr   0.8.3
 ## &amp;lt;U+2713&amp;gt; tidyr   1.0.0     &amp;lt;U+2713&amp;gt; stringr 1.4.0
 ## &amp;lt;U+2713&amp;gt; readr   1.3.1     &amp;lt;U+2713&amp;gt; forcats 0.4.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------- tidyverse_conflicts() --
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1561,8 +1563,8 @@ cory&lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cory[[&amp;quot;year&amp;quot;]][2] &amp;lt;- cory[[&amp;quot;year&amp;quot;]]*7
 cory$year[2] &amp;lt;- cory$year*7&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in cory$year[2] &amp;lt;- cory$year * 7: number of items to replace is not
-## a multiple of replacement length&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in cory$year[2] &amp;lt;- cory$year * 7: number of items to replace is not a
+## multiple of replacement length&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cory$year&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1]  6 42&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -2019,12 +2021,14 @@ library(&amp;quot;rio&amp;quot;) # also works&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And let’s load it:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------- tidyverse 1.2.1 --&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.2
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------------- tidyverse 1.3.0 --&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.3
 ## &amp;lt;U+2713&amp;gt; tibble  2.1.3     &amp;lt;U+2713&amp;gt; dplyr   0.8.3
 ## &amp;lt;U+2713&amp;gt; tidyr   1.0.0     &amp;lt;U+2713&amp;gt; stringr 1.4.0
 ## &amp;lt;U+2713&amp;gt; readr   1.3.1     &amp;lt;U+2713&amp;gt; forcats 0.4.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------- tidyverse_conflicts() --
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -2083,12 +2087,14 @@ true
 &lt;/blockquote&gt;
 &lt;p&gt;Last time, we ended by installing two packages, the &lt;code&gt;rio&lt;/code&gt; package and the &lt;code&gt;tidyverse&lt;/code&gt; package. This time, we’re going to learn how to use them to get our data into R, manipulate it, and visualize it. We’ll load them both now:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------- tidyverse 1.2.1 --&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.2
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------------- tidyverse 1.3.0 --&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.3
 ## &amp;lt;U+2713&amp;gt; tibble  2.1.3     &amp;lt;U+2713&amp;gt; dplyr   0.8.3
 ## &amp;lt;U+2713&amp;gt; tidyr   1.0.0     &amp;lt;U+2713&amp;gt; stringr 1.4.0
 ## &amp;lt;U+2713&amp;gt; readr   1.3.1     &amp;lt;U+2713&amp;gt; forcats 0.4.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------- tidyverse_conflicts() --
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rio)&lt;/code&gt;&lt;/pre&gt;
@@ -2141,7 +2147,6 @@ ps_data &amp;lt;- import(&amp;quot;pragmatic_scales_data.csv&amp;quot;)&lt;/code
 &lt;p&gt;You can also use rio to export your data, saving it in any of the formats that it works with. This is really simple and works just like &lt;code&gt;import()&lt;/code&gt;, but is called &lt;code&gt;export()&lt;/code&gt;. For &lt;code&gt;export()&lt;/code&gt;, you provide the R dataframe object you want to export, and the path/name for the new file. For example, let’s say I want to export &lt;code&gt;ps_data&lt;/code&gt; as an xlsx file and put it into the &lt;code&gt;/data&lt;/code&gt; subdirectory. I could do that with export:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;export(ps_data,
        &amp;quot;data/ps_data.xlsx&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Note: zip::zip() is deprecated, please use zip::zipr() instead&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exercise-1.2a&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exercise 1.2a&lt;/h3&gt;
@@ -2509,24 +2514,23 @@ ps_data &amp;lt;- import(&amp;quot;pragmatic_scales_data.csv&amp;quot;)&lt;/code
 &lt;/table&gt;
 &lt;p&gt;Let’s put this to use and get all of the indices where condition is equal to label:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;which(ps_data$condition == &amp;quot;Label&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
-##  [18]  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34
-##  [35]  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51
-##  [52]  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68
-##  [69]  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85
-##  [86]  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100 101 102
-## [103] 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119
-## [120] 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136
-## [137] 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153
-## [154] 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170
-## [171] 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187
-## [188] 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204
-## [205] 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221
-## [222] 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238
-## [239] 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255
-## [256] 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272
-## [273] 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289
-## [290] 290 291 292 293 294 295 296 297 298 299 300&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18
+##  [19]  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36
+##  [37]  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54
+##  [55]  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72
+##  [73]  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90
+##  [91]  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107 108
+## [109] 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126
+## [127] 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144
+## [145] 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162
+## [163] 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180
+## [181] 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198
+## [199] 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216
+## [217] 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234
+## [235] 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252
+## [253] 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270
+## [271] 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288
+## [289] 289 290 291 292 293 294 295 296 297 298 299 300&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We can combine this with &lt;code&gt;[]&lt;/code&gt; indexing to do even more powerful subsetting. For example, we can put this &lt;code&gt;which()&lt;/code&gt; call within the row position to extract the rows for subjects in the “Label” condition.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ps_data[which(ps_data$condition == &amp;quot;Label&amp;quot;),]&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##     subid   item correct  age condition
@@ -13356,32 +13360,32 @@ unique(data_subset_age_ids)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(height &amp;lt; 100)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 R2-D2     96    32 &amp;lt;NA&amp;gt;       white, bl… red               33 &amp;lt;NA&amp;gt;  
-## 2 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red               NA &amp;lt;NA&amp;gt;  
-## 3 Yoda      66    17 white      green      brown            896 male  
-## 4 Wick…     88    20 brown      brown      brown              8 male  
-## 5 Dud …     94    45 none       blue, grey yellow            NA male  
-## 6 Ratt…     79    15 none       grey, blue unknown           NA male  
-## 7 R4-P…     96    NA none       silver, r… red, blue         NA female
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 R2-D2     96    32 &amp;lt;NA&amp;gt;       white, bl… red               33 &amp;lt;NA&amp;gt;   Naboo    
+## 2 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red               NA &amp;lt;NA&amp;gt;   Tatooine 
+## 3 Yoda      66    17 white      green      brown            896 male   &amp;lt;NA&amp;gt;     
+## 4 Wick…     88    20 brown      brown      brown              8 male   Endor    
+## 5 Dud …     94    45 none       blue, grey yellow            NA male   Vulpter  
+## 6 Ratt…     79    15 none       grey, blue unknown           NA male   Aleen Mi…
+## 7 R4-P…     96    NA none       silver, r… red, blue         NA female &amp;lt;NA&amp;gt;     
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Or we could do even more advanced filtering, such as by filter for observations 1 SD above the average height:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(height &amp;gt; mean(height, na.rm = TRUE) + sd(height, na.rm = TRUE)) # don&amp;#39;t forget na.rm!&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 Chew…    228   112 brown      unknown    blue             200 male  
-## 2 Roos…    224    82 none       grey       orange            NA male  
-## 3 Yara…    264    NA none       white      yellow            NA male  
-## 4 Lama…    229    88 none       grey       black             NA male  
-## 5 Taun…    213    NA none       grey       black             NA female
-## 6 Grie…    216   159 none       brown, wh… green, y…         NA male  
-## 7 Tarf…    234   136 brown      brown      blue              NA male  
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 Chew…    228   112 brown      unknown    blue             200 male   Kashyyyk 
+## 2 Roos…    224    82 none       grey       orange            NA male   Naboo    
+## 3 Yara…    264    NA none       white      yellow            NA male   Quermia  
+## 4 Lama…    229    88 none       grey       black             NA male   Kamino   
+## 5 Taun…    213    NA none       grey       black             NA female Kamino   
+## 6 Grie…    216   159 none       brown, wh… green, y…         NA male   Kalee    
+## 7 Tarf…    234   136 brown      brown      blue              NA male   Kashyyyk 
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Speaking of NAs, let’s see which characters have missing mass by filtering for rows where mass is NA.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(mass == NA)&lt;/code&gt;&lt;/pre&gt;
@@ -13402,8 +13406,8 @@ unique(data_subset_age_ids)&lt;/code&gt;&lt;/pre&gt;
 ##  8 Quar…    183    NA black      dark       brown             62 male  
 ##  9 Shmi…    163    NA black      fair       brown             72 female
 ## 10 Bib …    180    NA none       pale       pink              NA male  
-## # … with 18 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 18 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To get the values that aren’t missing, you have to put a &lt;code&gt;!&lt;/code&gt; before &lt;code&gt;is.na()&lt;/code&gt;, so it looks like &lt;code&gt;!is.na(variable)&lt;/code&gt;. Let’s get every observation that isn’t mising on mass:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(!is.na(mass))&lt;/code&gt;&lt;/pre&gt;
@@ -13420,8 +13424,8 @@ unique(data_subset_age_ids)&lt;/code&gt;&lt;/pre&gt;
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 49 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 49 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This works because &lt;code&gt;!&lt;/code&gt; converts a logical value to its opposite:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;!TRUE&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
@@ -13439,12 +13443,12 @@ unique(data_subset_age_ids)&lt;/code&gt;&lt;/pre&gt;
   filter(height &amp;gt; mean(height, na.rm = TRUE) + sd(height, na.rm = TRUE) &amp;amp;
          mass &amp;lt; mean(mass, na.rm = TRUE))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 Roos…    224    82 none       grey       orange            NA male  
-## 2 Lama…    229    88 none       grey       black             NA male  
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 Roos…    224    82 none       grey       orange            NA male   Naboo    
+## 2 Lama…    229    88 none       grey       black             NA male   Kamino   
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We could get observations either 1 SD above &lt;em&gt;or&lt;/em&gt; below the mean of height too:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  starwars %&amp;gt;% 
   filter(height &amp;gt; mean(height, na.rm = TRUE) + sd(height, na.rm = TRUE) |
@@ -13462,17 +13466,17 @@ unique(data_subset_age_ids)&lt;/code&gt;&lt;/pre&gt;
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 71 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 71 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can also filter based on character variables. For example, we could get ever character grey hair:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(hair_color == &amp;quot;grey&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 Palp…    170    75 grey       pale       yellow            82 male  
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 Palp…    170    75 grey       pale       yellow            82 male   Naboo    
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Or characters that have grey or brown hair:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(hair_color == &amp;quot;grey&amp;quot; |
@@ -13517,20 +13521,20 @@ unique(data_subset_age_ids)&lt;/code&gt;&lt;/pre&gt;
 ##  8 Yoda      66  17   white      green      brown          896   male  
 ##  9 Palp…    170  75   grey       pale       yellow          82   male  
 ## 10 Boba…    183  78.2 black      fair       brown           31.5 male  
-## # … with 54 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 54 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You may be wandering if there is some way to extract those observations that have “grey” listed as one of several colors.&lt;/p&gt;
 &lt;p&gt;It’s a little tricky, but it can be done by using the &lt;code&gt;stringr&lt;/code&gt; function &lt;code&gt;str_detect()&lt;/code&gt;. Time permitting, we’ll cover &lt;code&gt;stringr&lt;/code&gt; in a bit more detail tomorrow, but &lt;code&gt;str_detect()&lt;/code&gt; can be used to look for a string in an object; it returns a logical (TRUE or FALSE) based on whether or not the string is found in that object. It is a lot like &lt;code&gt;grep()&lt;/code&gt; which we saw earlier, but has the string/data as its first argument (a la tidyverse convention). Let’s use it in combination with &lt;code&gt;filter()&lt;/code&gt; to get these salt &amp;amp; pepper starwars characters:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(str_detect(hair_color, &amp;quot;grey&amp;quot;)) # first argument is string var,&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 Owen…    178   120 brown, gr… light      blue              52 male  
-## 2 Wilh…    180    NA auburn, g… fair       blue              64 male  
-## 3 Palp…    170    75 grey       pale       yellow            82 male  
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 Owen…    178   120 brown, gr… light      blue              52 male   Tatooine 
+## 2 Wilh…    180    NA auburn, g… fair       blue              64 male   Eriadu   
+## 3 Palp…    170    75 grey       pale       yellow            82 male   Naboo    
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;                       # followed by pattern it looks for&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Since &lt;code&gt;str_detect()&lt;/code&gt; returns a logical, we can negate it with &lt;code&gt;!&lt;/code&gt; to get the opposite (observations that don’t contain the string &lt;code&gt;&#34;grey&#34;&lt;/code&gt; in &lt;code&gt;hair_color&lt;/code&gt;):&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
@@ -13548,8 +13552,8 @@ unique(data_subset_age_ids)&lt;/code&gt;&lt;/pre&gt;
 ##  8 Chew…    228   112 brown      unknown    blue           200   male  
 ##  9 Han …    180    80 brown      fair       brown           29   male  
 ## 10 Wedg…    170    77 brown      fair       hazel           21   male  
-## # … with 69 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 69 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exercise-4.2a-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exercise 4.2a&lt;/h3&gt;
@@ -13592,9 +13596,8 @@ starwars &lt;/code&gt;&lt;/pre&gt;
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 6 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 6 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# cleaning it back up
 starwars &amp;lt;- starwars %&amp;gt;% 
   select(-height_in_m)&lt;/code&gt;&lt;/pre&gt;
@@ -13620,10 +13623,10 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 10 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;, height_z[,1] &amp;lt;dbl&amp;gt;,
-## #   mass_z[,1] &amp;lt;dbl&amp;gt;, height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 10 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;, height_z[,1] &amp;lt;dbl&amp;gt;, mass_z[,1] &amp;lt;dbl&amp;gt;,
+## #   height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;As you can see, getting row means (i.e., mean for each row across a set of columns) can be a little clunky in &lt;code&gt;mutate()&lt;/code&gt;. The &lt;code&gt;rowwise()&lt;/code&gt; function is designed to make this easier. To use it, we call it before a &lt;code&gt;mutate()&lt;/code&gt; call. Let’s try it&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   rowwise() %&amp;gt;% 
@@ -13646,10 +13649,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 10 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;, height_z &amp;lt;dbl&amp;gt;, mass_z &amp;lt;dbl&amp;gt;,
-## #   height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 10 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;, height_z &amp;lt;dbl&amp;gt;, mass_z &amp;lt;dbl&amp;gt;, height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Oops, as you can see we got &lt;code&gt;NaN&lt;/code&gt;, because it’s trying to get z scores for each row, which are not defined. We would need to do two &lt;code&gt;mutate&lt;/code&gt; calls and use the &lt;code&gt;rowwise()&lt;/code&gt; function between them:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   mutate(height_z = scale(height),
@@ -13672,10 +13674,10 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 10 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;, height_z[,1] &amp;lt;dbl&amp;gt;,
-## #   mass_z[,1] &amp;lt;dbl&amp;gt;, height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 10 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;, height_z[,1] &amp;lt;dbl&amp;gt;, mass_z[,1] &amp;lt;dbl&amp;gt;,
+## #   height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can overwrite columns with &lt;code&gt;mutate()&lt;/code&gt;. For example, gender is currently a character, but we could turn it using mutate to overwrite it:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;%
   mutate(gender = factor(gender))&lt;/code&gt;&lt;/pre&gt;
@@ -13692,9 +13694,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;transmute&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;4.3.2 &lt;code&gt;transmute()&lt;/code&gt;&lt;/h3&gt;
@@ -13751,9 +13753,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Okay, by the looks of it, nothing happened. But, if we paste it into the console, you can see that it did change something. It adds some meta-data saying that &lt;code&gt;homeworld&lt;/code&gt; is a grouping factor, but that is it.&lt;/p&gt;
 &lt;p&gt;But, it has powerful effects on how other functions interact with our grouped dataset. Let’s see what happens when we take the mean mass with and without grouping:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
@@ -13772,9 +13774,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Tatooine       97.3 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red      
 ##  9 Tatooine       97.3 Bigg…    183    84 black      light      brown    
 ## 10 Stewjon        97.3 Obi-…    182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 8 more variables: birth_year &amp;lt;dbl&amp;gt;,
-## #   gender &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
-## #   starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 8 more variables: birth_year &amp;lt;dbl&amp;gt;, gender &amp;lt;chr&amp;gt;,
+## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
+## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now, let’s see what happens if we &lt;code&gt;group_by()&lt;/code&gt; first:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   group_by(homeworld) %&amp;gt;% 
@@ -13794,9 +13796,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Tatooine       85.4 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red      
 ##  9 Tatooine       85.4 Bigg…    183    84 black      light      brown    
 ## 10 Stewjon        77   Obi-…    182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 8 more variables: birth_year &amp;lt;dbl&amp;gt;,
-## #   gender &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
-## #   starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 8 more variables: birth_year &amp;lt;dbl&amp;gt;, gender &amp;lt;chr&amp;gt;,
+## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
+## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can also group by multiple factors, which you can just add as comma-separated unquoted variable names. For example, let’s group by homeworld and species and get the average mass:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   group_by(homeworld, species) %&amp;gt;% 
@@ -13816,9 +13818,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Tatooine       53.5 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red      
 ##  9 Tatooine       96   Bigg…    183    84 black      light      brown    
 ## 10 Stewjon        77   Obi-…    182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 8 more variables: birth_year &amp;lt;dbl&amp;gt;,
-## #   gender &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
-## #   starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 8 more variables: birth_year &amp;lt;dbl&amp;gt;, gender &amp;lt;chr&amp;gt;,
+## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
+## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;exercise-4.4a&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exercise 4.4a&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -13939,9 +13941,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Padm…    165    45 brown      light      brown             46 female
 ##  9 Wat …    193    48 none       green, gr… unknown           NA male  
 ## 10 Sly …    178    48 none       pale       white             NA female
-## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can make it descending order by wrapping the variable in &lt;code&gt;desc()&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   arrange(desc(mass))&lt;/code&gt;&lt;/pre&gt;
@@ -13958,9 +13960,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Chew…    228   112 brown      unknown    blue           200   male  
 ##  9 Jek …    180   110 brown      fair       blue            NA   male  
 ## 10 Dext…    198   102 none       brown      yellow          NA   male  
-## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And, you can provide multiple variables to sort on, and it will do each in order:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   arrange(height, mass)&lt;/code&gt;&lt;/pre&gt;
@@ -13977,9 +13979,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Sebu…    112    40 none       grey, red  orange            NA male  
 ##  9 Gasg…    122    NA none       white, bl… black             NA male  
 ## 10 Watto    137    NA black      blue, grey yellow            NA male  
-## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you tell it to arrange by a character variable, it will order them alphabetically:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   arrange(name)&lt;/code&gt;&lt;/pre&gt;
@@ -13996,9 +13998,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 BB8       NA    NA none       none       black           NA   none  
 ##  9 Ben …    163    65 none       grey, gre… orange          NA   male  
 ## 10 Beru…    165    75 brown      light      blue            47   female
-## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;rename&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;4.6.2 rename()&lt;/h3&gt;
@@ -14018,30 +14020,30 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4         97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Biggs Da…    183    84 black      light      brown           24   male  
 ## 10 Obi-Wan …    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And, you can provide multiple renames:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   rename(char_name = name,
          height_cm = height,
          mass_kg = mass)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 87 x 15
-##    char_name height_cm mass_kg hair_color skin_color eye_color birth_year
-##    &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
-##  1 Luke Sky…       172      77 blond      fair       blue            19  
-##  2 C-3PO           167      75 &amp;lt;NA&amp;gt;       gold       yellow         112  
-##  3 R2-D2            96      32 &amp;lt;NA&amp;gt;       white, bl… red             33  
-##  4 Darth Va…       202     136 none       white      yellow          41.9
-##  5 Leia Org…       150      49 brown      light      brown           19  
-##  6 Owen Lars       178     120 brown, gr… light      blue            52  
-##  7 Beru Whi…       165      75 brown      light      blue            47  
-##  8 R5-D4            97      32 &amp;lt;NA&amp;gt;       white, red red             NA  
-##  9 Biggs Da…       183      84 black      light      brown           24  
-## 10 Obi-Wan …       182      77 auburn, w… fair       blue-gray       57  
-## # … with 77 more rows, and 8 more variables: gender &amp;lt;chr&amp;gt;,
-## #   homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
-## #   starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##    char_name height_cm mass_kg hair_color skin_color eye_color birth_year gender
+##    &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
+##  1 Luke Sky…       172      77 blond      fair       blue            19   male  
+##  2 C-3PO           167      75 &amp;lt;NA&amp;gt;       gold       yellow         112   &amp;lt;NA&amp;gt;  
+##  3 R2-D2            96      32 &amp;lt;NA&amp;gt;       white, bl… red             33   &amp;lt;NA&amp;gt;  
+##  4 Darth Va…       202     136 none       white      yellow          41.9 male  
+##  5 Leia Org…       150      49 brown      light      brown           19   female
+##  6 Owen Lars       178     120 brown, gr… light      blue            52   male  
+##  7 Beru Whi…       165      75 brown      light      blue            47   female
+##  8 R5-D4            97      32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
+##  9 Biggs Da…       183      84 black      light      brown           24   male  
+## 10 Obi-Wan …       182      77 auburn, w… fair       blue-gray       57   male  
+## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;join&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;4.6.3 *_join()&lt;/h3&gt;
@@ -14073,9 +14075,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 8 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;, lightsaber_color &amp;lt;fct&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 8 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;, lightsaber_color &amp;lt;fct&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And let’s see what happens if we reverse the order:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;left_join(lightsabers,
           starwars)&lt;/code&gt;&lt;/pre&gt;
@@ -14166,9 +14168,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Han …    180    80 brown      fair       brown             29 male  
 ##  9 Gree…    173    74 &amp;lt;NA&amp;gt;       green      black             44 male  
 ## 10 Jabb…    175  1358 &amp;lt;NA&amp;gt;       green-tan… orange           600 herma…
-## # … with 48 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 48 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;count&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;4.6.5 count()&lt;/h3&gt;
@@ -14253,12 +14255,14 @@ true
 x[3:4] &amp;lt;- x[3:4]*5&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Last time, we ended by installing two packages, the &lt;code&gt;rio&lt;/code&gt; package and the &lt;code&gt;tidyverse&lt;/code&gt; package. This time, we’re going to learn how to use them to get our data into R, manipulate it, and visualize it. We’ll load them both now:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------- tidyverse 1.2.1 --&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.2
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------------- tidyverse 1.3.0 --&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.3
 ## &amp;lt;U+2713&amp;gt; tibble  2.1.3     &amp;lt;U+2713&amp;gt; dplyr   0.8.3
 ## &amp;lt;U+2713&amp;gt; tidyr   1.0.0     &amp;lt;U+2713&amp;gt; stringr 1.4.0
 ## &amp;lt;U+2713&amp;gt; readr   1.3.1     &amp;lt;U+2713&amp;gt; forcats 0.4.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------- tidyverse_conflicts() --
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rio)&lt;/code&gt;&lt;/pre&gt;
@@ -14311,7 +14315,6 @@ ps_data &amp;lt;- import(&amp;quot;pragmatic_scales_data.csv&amp;quot;)&lt;/code
 &lt;p&gt;You can also use rio to export your data, saving it in any of the formats that it works with. This is really simple and works just like &lt;code&gt;import()&lt;/code&gt;, but is called &lt;code&gt;export()&lt;/code&gt;. For &lt;code&gt;export()&lt;/code&gt;, you provide the R dataframe object you want to export, and the path/name for the new file. For example, let’s say I want to export &lt;code&gt;ps_data&lt;/code&gt; as an xlsx file and put it into the &lt;code&gt;/data&lt;/code&gt; subdirectory. I could do that with export:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;export(ps_data,
        &amp;quot;data/ps_data.xlsx&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Note: zip::zip() is deprecated, please use zip::zipr() instead&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exercise-1.2a&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exercise 1.2a&lt;/h3&gt;
@@ -14685,24 +14688,23 @@ ps_data &amp;lt;- import(&amp;quot;pragmatic_scales_data.csv&amp;quot;)&lt;/code
 &lt;/table&gt;
 &lt;p&gt;Let’s put this to use and get all of the indices where condition is equal to label:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;which(ps_data$condition == &amp;quot;Label&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
-##  [18]  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34
-##  [35]  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51
-##  [52]  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68
-##  [69]  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85
-##  [86]  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100 101 102
-## [103] 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119
-## [120] 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136
-## [137] 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153
-## [154] 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170
-## [171] 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187
-## [188] 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204
-## [205] 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221
-## [222] 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238
-## [239] 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255
-## [256] 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272
-## [273] 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289
-## [290] 290 291 292 293 294 295 296 297 298 299 300&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18
+##  [19]  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36
+##  [37]  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54
+##  [55]  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72
+##  [73]  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90
+##  [91]  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107 108
+## [109] 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126
+## [127] 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144
+## [145] 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162
+## [163] 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180
+## [181] 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198
+## [199] 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216
+## [217] 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234
+## [235] 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252
+## [253] 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270
+## [271] 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288
+## [289] 289 290 291 292 293 294 295 296 297 298 299 300&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We can combine this with &lt;code&gt;[]&lt;/code&gt; indexing to do even more powerful subsetting. For example, we can put this &lt;code&gt;which()&lt;/code&gt; call within the row position to extract the rows for subjects in the “Label” condition.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ps_data[which(ps_data$condition == &amp;quot;Label&amp;quot;),]&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##     subid   item correct  age condition
@@ -16534,8 +16536,8 @@ ps_data &amp;lt;- import(&amp;quot;pragmatic_scales_data.csv&amp;quot;)&lt;/code
 &lt;p&gt;Get the first 10 rows of the item column from the &lt;code&gt;ps_data&lt;/code&gt; df.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ps_data[1:10, &amp;quot;item&amp;quot;]&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;faces&amp;quot;  &amp;quot;houses&amp;quot; &amp;quot;pasta&amp;quot;  &amp;quot;beds&amp;quot;   &amp;quot;beds&amp;quot;   &amp;quot;faces&amp;quot;  &amp;quot;houses&amp;quot;
-##  [8] &amp;quot;pasta&amp;quot;  &amp;quot;pasta&amp;quot;  &amp;quot;faces&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;faces&amp;quot;  &amp;quot;houses&amp;quot; &amp;quot;pasta&amp;quot;  &amp;quot;beds&amp;quot;   &amp;quot;beds&amp;quot;   &amp;quot;faces&amp;quot;  &amp;quot;houses&amp;quot; &amp;quot;pasta&amp;quot; 
+##  [9] &amp;quot;pasta&amp;quot;  &amp;quot;faces&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exercise-2.1b&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exercise 2.1b&lt;/h3&gt;
@@ -27262,32 +27264,32 @@ starwars %&amp;gt;%
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(height &amp;lt; 100)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 R2-D2     96    32 &amp;lt;NA&amp;gt;       white, bl… red               33 &amp;lt;NA&amp;gt;  
-## 2 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red               NA &amp;lt;NA&amp;gt;  
-## 3 Yoda      66    17 white      green      brown            896 male  
-## 4 Wick…     88    20 brown      brown      brown              8 male  
-## 5 Dud …     94    45 none       blue, grey yellow            NA male  
-## 6 Ratt…     79    15 none       grey, blue unknown           NA male  
-## 7 R4-P…     96    NA none       silver, r… red, blue         NA female
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 R2-D2     96    32 &amp;lt;NA&amp;gt;       white, bl… red               33 &amp;lt;NA&amp;gt;   Naboo    
+## 2 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red               NA &amp;lt;NA&amp;gt;   Tatooine 
+## 3 Yoda      66    17 white      green      brown            896 male   &amp;lt;NA&amp;gt;     
+## 4 Wick…     88    20 brown      brown      brown              8 male   Endor    
+## 5 Dud …     94    45 none       blue, grey yellow            NA male   Vulpter  
+## 6 Ratt…     79    15 none       grey, blue unknown           NA male   Aleen Mi…
+## 7 R4-P…     96    NA none       silver, r… red, blue         NA female &amp;lt;NA&amp;gt;     
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Or we could do even more advanced filtering, such as by filter for observations 1 SD above the average height:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(height &amp;gt; mean(height, na.rm = TRUE) + sd(height, na.rm = TRUE)) # don&amp;#39;t forget na.rm!&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 Chew…    228   112 brown      unknown    blue             200 male  
-## 2 Roos…    224    82 none       grey       orange            NA male  
-## 3 Yara…    264    NA none       white      yellow            NA male  
-## 4 Lama…    229    88 none       grey       black             NA male  
-## 5 Taun…    213    NA none       grey       black             NA female
-## 6 Grie…    216   159 none       brown, wh… green, y…         NA male  
-## 7 Tarf…    234   136 brown      brown      blue              NA male  
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 Chew…    228   112 brown      unknown    blue             200 male   Kashyyyk 
+## 2 Roos…    224    82 none       grey       orange            NA male   Naboo    
+## 3 Yara…    264    NA none       white      yellow            NA male   Quermia  
+## 4 Lama…    229    88 none       grey       black             NA male   Kamino   
+## 5 Taun…    213    NA none       grey       black             NA female Kamino   
+## 6 Grie…    216   159 none       brown, wh… green, y…         NA male   Kalee    
+## 7 Tarf…    234   136 brown      brown      blue              NA male   Kashyyyk 
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Speaking of NAs, let’s see which characters have missing mass by filtering for rows where mass is NA.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(mass == NA)&lt;/code&gt;&lt;/pre&gt;
@@ -27308,8 +27310,8 @@ starwars %&amp;gt;%
 ##  8 Quar…    183    NA black      dark       brown             62 male  
 ##  9 Shmi…    163    NA black      fair       brown             72 female
 ## 10 Bib …    180    NA none       pale       pink              NA male  
-## # … with 18 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 18 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To get the values that aren’t missing, you have to put a &lt;code&gt;!&lt;/code&gt; before &lt;code&gt;is.na()&lt;/code&gt;, so it looks like &lt;code&gt;!is.na(variable)&lt;/code&gt;. Let’s get every observation that isn’t mising on mass:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(!is.na(mass))&lt;/code&gt;&lt;/pre&gt;
@@ -27326,8 +27328,8 @@ starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 49 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 49 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This works because &lt;code&gt;!&lt;/code&gt; converts a logical value to its opposite:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;!TRUE&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
@@ -27345,12 +27347,12 @@ starwars %&amp;gt;%
   filter(height &amp;gt; mean(height, na.rm = TRUE) + sd(height, na.rm = TRUE) &amp;amp;
          mass &amp;lt; mean(mass, na.rm = TRUE))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 Roos…    224    82 none       grey       orange            NA male  
-## 2 Lama…    229    88 none       grey       black             NA male  
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 Roos…    224    82 none       grey       orange            NA male   Naboo    
+## 2 Lama…    229    88 none       grey       black             NA male   Kamino   
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We could get observations either 1 SD above &lt;em&gt;or&lt;/em&gt; below the mean of height too:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  starwars %&amp;gt;% 
   filter(height &amp;gt; mean(height, na.rm = TRUE) + sd(height, na.rm = TRUE) |
@@ -27368,17 +27370,17 @@ starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 71 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 71 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can also filter based on character variables. For example, we could get ever character grey hair:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(hair_color == &amp;quot;grey&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 Palp…    170    75 grey       pale       yellow            82 male  
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 Palp…    170    75 grey       pale       yellow            82 male   Naboo    
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Or characters that have grey or brown hair:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(hair_color == &amp;quot;grey&amp;quot; |
@@ -27423,20 +27425,20 @@ starwars %&amp;gt;%
 ##  8 Yoda      66  17   white      green      brown          896   male  
 ##  9 Palp…    170  75   grey       pale       yellow          82   male  
 ## 10 Boba…    183  78.2 black      fair       brown           31.5 male  
-## # … with 54 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 54 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You may be wandering if there is some way to extract those observations that have “grey” listed as one of several colors.&lt;/p&gt;
 &lt;p&gt;It’s a little tricky, but it can be done by using the &lt;code&gt;stringr&lt;/code&gt; function &lt;code&gt;str_detect()&lt;/code&gt;. Time permitting, we’ll cover &lt;code&gt;stringr&lt;/code&gt; in a bit more detail tomorrow, but &lt;code&gt;str_detect()&lt;/code&gt; can be used to look for a string in an object; it returns a logical (TRUE or FALSE) based on whether or not the string is found in that object. It is a lot like &lt;code&gt;grep()&lt;/code&gt; which we saw earlier, but has the string/data as its first argument (a la tidyverse convention). Let’s use it in combination with &lt;code&gt;filter()&lt;/code&gt; to get these salt &amp;amp; pepper starwars characters:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(str_detect(hair_color, &amp;quot;grey&amp;quot;)) # first argument is string var,&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 Owen…    178   120 brown, gr… light      blue              52 male  
-## 2 Wilh…    180    NA auburn, g… fair       blue              64 male  
-## 3 Palp…    170    75 grey       pale       yellow            82 male  
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 Owen…    178   120 brown, gr… light      blue              52 male   Tatooine 
+## 2 Wilh…    180    NA auburn, g… fair       blue              64 male   Eriadu   
+## 3 Palp…    170    75 grey       pale       yellow            82 male   Naboo    
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;                       # followed by pattern it looks for&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Since &lt;code&gt;str_detect()&lt;/code&gt; returns a logical, we can negate it with &lt;code&gt;!&lt;/code&gt; to get the opposite (observations that don’t contain the string &lt;code&gt;&#34;grey&#34;&lt;/code&gt; in &lt;code&gt;hair_color&lt;/code&gt;):&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
@@ -27454,8 +27456,8 @@ starwars %&amp;gt;%
 ##  8 Chew…    228   112 brown      unknown    blue           200   male  
 ##  9 Han …    180    80 brown      fair       brown           29   male  
 ## 10 Wedg…    170    77 brown      fair       hazel           21   male  
-## # … with 69 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 69 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exercise-4.2a-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exercise 4.2a&lt;/h3&gt;
@@ -27465,13 +27467,13 @@ starwars %&amp;gt;%
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   filter(birth_year &amp;gt;= 200)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 13
-##   name  height  mass hair_color skin_color eye_color birth_year gender
-##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-## 1 Chew…    228   112 brown      unknown    blue             200 male  
-## 2 Jabb…    175  1358 &amp;lt;NA&amp;gt;       green-tan… orange           600 herma…
-## 3 Yoda      66    17 white      green      brown            896 male  
-## # … with 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 Chew…    228   112 brown      unknown    blue             200 male   Kashyyyk 
+## 2 Jabb…    175  1358 &amp;lt;NA&amp;gt;       green-tan… orange           600 herma… Nal Hutta
+## 3 Yoda      66    17 white      green      brown            896 male   &amp;lt;NA&amp;gt;     
+## # … with 4 more variables: species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
+## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exercise-4.2b&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exercise 4.2b&lt;/h3&gt;
@@ -27539,9 +27541,8 @@ starwars &lt;/code&gt;&lt;/pre&gt;
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 6 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 6 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# cleaning it back up
 starwars &amp;lt;- starwars %&amp;gt;% 
   select(-height_in_m)&lt;/code&gt;&lt;/pre&gt;
@@ -27562,9 +27563,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_mm &amp;lt;dbl&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_mm &amp;lt;dbl&amp;gt;,
+## #   height_in_m &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt; performs each calculation in order, so you can use variables created earlier within the same &lt;code&gt;mutate&lt;/code&gt; call in later operations. For example, let’s z score height and mass (using the base R function &lt;code&gt;scale()&lt;/code&gt;) and then average them together using the base R function &lt;code&gt;rowMeans()&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   mutate(height_z = scale(height),
@@ -27583,9 +27584,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 8 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_z[,1] &amp;lt;dbl&amp;gt;, mass_z[,1] &amp;lt;dbl&amp;gt;, height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 8 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_z[,1] &amp;lt;dbl&amp;gt;,
+## #   mass_z[,1] &amp;lt;dbl&amp;gt;, height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;As you can see, getting row means (i.e., mean for each row across a set of columns) can be a little clunky in &lt;code&gt;mutate()&lt;/code&gt;. The &lt;code&gt;rowwise()&lt;/code&gt; function is designed to make this easier. To use it, we call it before a &lt;code&gt;mutate()&lt;/code&gt; call. Let’s try it&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   rowwise() %&amp;gt;% 
@@ -27608,9 +27609,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 8 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_z &amp;lt;dbl&amp;gt;, mass_z &amp;lt;dbl&amp;gt;, height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 8 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_z &amp;lt;dbl&amp;gt;,
+## #   mass_z &amp;lt;dbl&amp;gt;, height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Oops, as you can see we got &lt;code&gt;NaN&lt;/code&gt;, because it’s trying to get z scores for each row, which are not defined. We would need to do two &lt;code&gt;mutate&lt;/code&gt; calls and use the &lt;code&gt;rowwise()&lt;/code&gt; function between them:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   mutate(height_z = scale(height),
@@ -27633,9 +27634,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 8 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_z[,1] &amp;lt;dbl&amp;gt;, mass_z[,1] &amp;lt;dbl&amp;gt;, height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 8 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_z[,1] &amp;lt;dbl&amp;gt;,
+## #   mass_z[,1] &amp;lt;dbl&amp;gt;, height_mass_z &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can overwrite columns with &lt;code&gt;mutate()&lt;/code&gt;. For example, gender is currently a character, but we could turn it using mutate to overwrite it:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;%
   mutate(gender = factor(gender))&lt;/code&gt;&lt;/pre&gt;
@@ -27652,8 +27653,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;transmute&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;4.3.2 &lt;code&gt;transmute()&lt;/code&gt;&lt;/h3&gt;
@@ -27698,9 +27699,9 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   height_in_m &amp;lt;dbl&amp;gt;, bmi &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 7 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, height_in_m &amp;lt;dbl&amp;gt;,
+## #   bmi &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exercise-4.3b&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exercise 4.3b&lt;/h3&gt;
@@ -27748,8 +27749,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Okay, by the looks of it, nothing happened. But, if we paste it into the console, you can see that it did change something. It adds some meta-data saying that &lt;code&gt;homeworld&lt;/code&gt; is a grouping factor, but that is it.&lt;/p&gt;
 &lt;p&gt;But, it has powerful effects on how other functions interact with our grouped dataset. Let’s see what happens when we take the mean mass with and without grouping:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
@@ -27768,9 +27769,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Tatooine       97.3 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red      
 ##  9 Tatooine       97.3 Bigg…    183    84 black      light      brown    
 ## 10 Stewjon        97.3 Obi-…    182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 6 more variables: birth_year &amp;lt;dbl&amp;gt;,
-## #   gender &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
-## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 6 more variables: birth_year &amp;lt;dbl&amp;gt;, gender &amp;lt;chr&amp;gt;,
+## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now, let’s see what happens if we &lt;code&gt;group_by()&lt;/code&gt; first:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   group_by(homeworld) %&amp;gt;% 
@@ -27790,9 +27790,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Tatooine       85.4 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red      
 ##  9 Tatooine       85.4 Bigg…    183    84 black      light      brown    
 ## 10 Stewjon        77   Obi-…    182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 6 more variables: birth_year &amp;lt;dbl&amp;gt;,
-## #   gender &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
-## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 6 more variables: birth_year &amp;lt;dbl&amp;gt;, gender &amp;lt;chr&amp;gt;,
+## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can also group by multiple factors, which you can just add as comma-separated unquoted variable names. For example, let’s group by homeworld and species and get the average mass:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   group_by(homeworld, species) %&amp;gt;% 
@@ -27812,9 +27811,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Tatooine       53.5 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red      
 ##  9 Tatooine       96   Bigg…    183    84 black      light      brown    
 ## 10 Stewjon        77   Obi-…    182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 6 more variables: birth_year &amp;lt;dbl&amp;gt;,
-## #   gender &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
-## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 6 more variables: birth_year &amp;lt;dbl&amp;gt;, gender &amp;lt;chr&amp;gt;,
+## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;exercise-4.4a&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exercise 4.4a&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -27972,8 +27970,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Padm…    165    45 brown      light      brown             46 female
 ##  9 Wat …    193    48 none       green, gr… unknown           NA male  
 ## 10 Sly …    178    48 none       pale       white             NA female
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can make it descending order by wrapping the variable in &lt;code&gt;desc()&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   arrange(desc(mass))&lt;/code&gt;&lt;/pre&gt;
@@ -27990,8 +27988,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Chew…    228   112 brown      unknown    blue           200   male  
 ##  9 Jek …    180   110 brown      fair       blue            NA   male  
 ## 10 Dext…    198   102 none       brown      yellow          NA   male  
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And, you can provide multiple variables to sort on, and it will do each in order:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   arrange(height, mass)&lt;/code&gt;&lt;/pre&gt;
@@ -28008,8 +28006,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Sebu…    112    40 none       grey, red  orange            NA male  
 ##  9 Gasg…    122    NA none       white, bl… black             NA male  
 ## 10 Watto    137    NA black      blue, grey yellow            NA male  
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you tell it to arrange by a character variable, it will order them alphabetically:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   arrange(name)&lt;/code&gt;&lt;/pre&gt;
@@ -28026,8 +28024,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 BB8       NA    NA none       none       black           NA   none  
 ##  9 Ben …    163    65 none       grey, gre… orange          NA   male  
 ## 10 Beru…    165    75 brown      light      blue            47   female
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;rename&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;4.6.2 rename()&lt;/h3&gt;
@@ -28047,29 +28045,28 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4         97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Biggs Da…    183    84 black      light      brown           24   male  
 ## 10 Obi-Wan …    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And, you can provide multiple renames:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   rename(char_name = name,
          height_cm = height,
          mass_kg = mass)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 87 x 13
-##    char_name height_cm mass_kg hair_color skin_color eye_color birth_year
-##    &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
-##  1 Luke Sky…       172      77 blond      fair       blue            19  
-##  2 C-3PO           167      75 &amp;lt;NA&amp;gt;       gold       yellow         112  
-##  3 R2-D2            96      32 &amp;lt;NA&amp;gt;       white, bl… red             33  
-##  4 Darth Va…       202     136 none       white      yellow          41.9
-##  5 Leia Org…       150      49 brown      light      brown           19  
-##  6 Owen Lars       178     120 brown, gr… light      blue            52  
-##  7 Beru Whi…       165      75 brown      light      blue            47  
-##  8 R5-D4            97      32 &amp;lt;NA&amp;gt;       white, red red             NA  
-##  9 Biggs Da…       183      84 black      light      brown           24  
-## 10 Obi-Wan …       182      77 auburn, w… fair       blue-gray       57  
-## # … with 77 more rows, and 6 more variables: gender &amp;lt;chr&amp;gt;,
-## #   homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;,
-## #   starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##    char_name height_cm mass_kg hair_color skin_color eye_color birth_year gender
+##    &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
+##  1 Luke Sky…       172      77 blond      fair       blue            19   male  
+##  2 C-3PO           167      75 &amp;lt;NA&amp;gt;       gold       yellow         112   &amp;lt;NA&amp;gt;  
+##  3 R2-D2            96      32 &amp;lt;NA&amp;gt;       white, bl… red             33   &amp;lt;NA&amp;gt;  
+##  4 Darth Va…       202     136 none       white      yellow          41.9 male  
+##  5 Leia Org…       150      49 brown      light      brown           19   female
+##  6 Owen Lars       178     120 brown, gr… light      blue            52   male  
+##  7 Beru Whi…       165      75 brown      light      blue            47   female
+##  8 R5-D4            97      32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
+##  9 Biggs Da…       183      84 black      light      brown           24   male  
+## 10 Obi-Wan …       182      77 auburn, w… fair       blue-gray       57   male  
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;join&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;4.6.3 *_join()&lt;/h3&gt;
@@ -28101,9 +28098,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 R5-D4     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 6 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;,
-## #   lightsaber_color &amp;lt;fct&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 6 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;, lightsaber_color &amp;lt;fct&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And let’s see what happens if we reverse the order:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;left_join(lightsabers,
           starwars)&lt;/code&gt;&lt;/pre&gt;
@@ -28189,8 +28185,8 @@ starwars &amp;lt;- starwars %&amp;gt;%
 ##  8 Han …    180    80 brown      fair       brown             29 male  
 ##  9 Gree…    173    74 &amp;lt;NA&amp;gt;       green      black             44 male  
 ## 10 Jabb…    175  1358 &amp;lt;NA&amp;gt;       green-tan… orange           600 herma…
-## # … with 48 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 48 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;count&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;4.6.5 count()&lt;/h3&gt;
@@ -28282,12 +28278,14 @@ true
 &lt;p&gt;Make sure you load the tidyverse first!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rio)
 library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------- tidyverse 1.2.1 --&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.2
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------------- tidyverse 1.3.0 --&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.3
 ## &amp;lt;U+2713&amp;gt; tibble  2.1.3     &amp;lt;U+2713&amp;gt; dplyr   0.8.3
 ## &amp;lt;U+2713&amp;gt; tidyr   1.0.0     &amp;lt;U+2713&amp;gt; stringr 1.4.0
 ## &amp;lt;U+2713&amp;gt; readr   1.3.1     &amp;lt;U+2713&amp;gt; forcats 0.4.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------- tidyverse_conflicts() --
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -28417,51 +28415,48 @@ left_join(tidy4a, tidy4b)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Let’s use the starwars data and split each character’s &lt;code&gt;name&lt;/code&gt; into &lt;code&gt;first_name&lt;/code&gt; and &lt;code&gt;last_name&lt;/code&gt;. Let’s start without setting the &lt;code&gt;sep =&lt;/code&gt; argument to see what it does by default:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   separate(col = name, into = c(&amp;quot;first_name&amp;quot;, &amp;quot;last_name&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Additional pieces discarded in 10 rows [7, 10,
-## 16, 18, 29, 31, 34, 49, 60, 65].&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 18 rows [13,
-## 15, 19, 20, 23, 25, 26, 38, 39, 46, 58, 63, 64, 77, 78, 82, 83, 85].&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Additional pieces discarded in 10 rows [7, 10, 16,
+## 18, 29, 31, 34, 49, 60, 65].&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 18 rows [13, 15,
+## 19, 20, 23, 25, 26, 38, 39, 46, 58, 63, 64, 77, 78, 82, 83, 85].&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 87 x 14
-##    first_name last_name height  mass hair_color skin_color eye_color
-##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;    
-##  1 Luke       Skywalker    172    77 blond      fair       blue     
-##  2 C          3PO          167    75 &amp;lt;NA&amp;gt;       gold       yellow   
-##  3 R2         D2            96    32 &amp;lt;NA&amp;gt;       white, bl… red      
-##  4 Darth      Vader        202   136 none       white      yellow   
-##  5 Leia       Organa       150    49 brown      light      brown    
-##  6 Owen       Lars         178   120 brown, gr… light      blue     
-##  7 Beru       Whitesun     165    75 brown      light      blue     
-##  8 R5         D4            97    32 &amp;lt;NA&amp;gt;       white, red red      
-##  9 Biggs      Darkligh…    183    84 black      light      brown    
-## 10 Obi        Wan          182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 7 more variables: birth_year &amp;lt;dbl&amp;gt;,
-## #   gender &amp;lt;chr&amp;gt;, homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##    first_name last_name height  mass hair_color skin_color eye_color birth_year
+##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+##  1 Luke       Skywalker    172    77 blond      fair       blue            19  
+##  2 C          3PO          167    75 &amp;lt;NA&amp;gt;       gold       yellow         112  
+##  3 R2         D2            96    32 &amp;lt;NA&amp;gt;       white, bl… red             33  
+##  4 Darth      Vader        202   136 none       white      yellow          41.9
+##  5 Leia       Organa       150    49 brown      light      brown           19  
+##  6 Owen       Lars         178   120 brown, gr… light      blue            52  
+##  7 Beru       Whitesun     165    75 brown      light      blue            47  
+##  8 R5         D4            97    32 &amp;lt;NA&amp;gt;       white, red red             NA  
+##  9 Biggs      Darkligh…    183    84 black      light      brown           24  
+## 10 Obi        Wan          182    77 auburn, w… fair       blue-gray       57  
+## # … with 77 more rows, and 6 more variables: gender &amp;lt;chr&amp;gt;, homeworld &amp;lt;chr&amp;gt;,
+## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You might notice that it separated based on different characters, such as white space (luke &amp;amp; skywalker were separated) and by hyphens (C and 3PO were separated). By default, it separate looks for common separators (space, hyphen, underscore, periods, etc.) and uses all of them. This can be useful, but it has undesirable effects as you can see above. Let’s fix this by telling separate to use white space to separate first from last names using the &lt;code&gt;sep =&lt;/code&gt; argument:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars_sep_names &amp;lt;- starwars %&amp;gt;% 
   separate(name, c(&amp;quot;first_name&amp;quot;, &amp;quot;last_name&amp;quot;), sep = &amp;quot; &amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Additional pieces discarded in 7 rows [7, 16,
-## 18, 29, 34, 60, 65].&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 24 rows
-## [2, 3, 8, 13, 15, 19, 20, 22, 23, 25, 26, 38, 39, 46, 49, 58, 63, 64, 73,
-## 77, ...].&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Additional pieces discarded in 7 rows [7, 16, 18,
+## 29, 34, 60, 65].&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 24 rows [2, 3, 8,
+## 13, 15, 19, 20, 22, 23, 25, 26, 38, 39, 46, 49, 58, 63, 64, 73, 77, ...].&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars_sep_names&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 87 x 14
-##    first_name last_name height  mass hair_color skin_color eye_color
-##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;    
-##  1 Luke       Skywalker    172    77 blond      fair       blue     
-##  2 C-3PO      &amp;lt;NA&amp;gt;         167    75 &amp;lt;NA&amp;gt;       gold       yellow   
-##  3 R2-D2      &amp;lt;NA&amp;gt;          96    32 &amp;lt;NA&amp;gt;       white, bl… red      
-##  4 Darth      Vader        202   136 none       white      yellow   
-##  5 Leia       Organa       150    49 brown      light      brown    
-##  6 Owen       Lars         178   120 brown, gr… light      blue     
-##  7 Beru       Whitesun     165    75 brown      light      blue     
-##  8 R5-D4      &amp;lt;NA&amp;gt;          97    32 &amp;lt;NA&amp;gt;       white, red red      
-##  9 Biggs      Darkligh…    183    84 black      light      brown    
-## 10 Obi-Wan    Kenobi       182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 7 more variables: birth_year &amp;lt;dbl&amp;gt;,
-## #   gender &amp;lt;chr&amp;gt;, homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##    first_name last_name height  mass hair_color skin_color eye_color birth_year
+##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+##  1 Luke       Skywalker    172    77 blond      fair       blue            19  
+##  2 C-3PO      &amp;lt;NA&amp;gt;         167    75 &amp;lt;NA&amp;gt;       gold       yellow         112  
+##  3 R2-D2      &amp;lt;NA&amp;gt;          96    32 &amp;lt;NA&amp;gt;       white, bl… red             33  
+##  4 Darth      Vader        202   136 none       white      yellow          41.9
+##  5 Leia       Organa       150    49 brown      light      brown           19  
+##  6 Owen       Lars         178   120 brown, gr… light      blue            52  
+##  7 Beru       Whitesun     165    75 brown      light      blue            47  
+##  8 R5-D4      &amp;lt;NA&amp;gt;          97    32 &amp;lt;NA&amp;gt;       white, red red             NA  
+##  9 Biggs      Darkligh…    183    84 black      light      brown           24  
+## 10 Obi-Wan    Kenobi       182    77 auburn, w… fair       blue-gray       57  
+## # … with 77 more rows, and 6 more variables: gender &amp;lt;chr&amp;gt;, homeworld &amp;lt;chr&amp;gt;,
+## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;unite&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;1.3.2 &lt;code&gt;unite()&lt;/code&gt;&lt;/h3&gt;
@@ -28481,8 +28476,8 @@ left_join(tidy4a, tidy4b)&lt;/code&gt;&lt;/pre&gt;
 ##  8 R5-D…     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Okay, so a couple of things went wrong:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;It put an &#34;_&#34; between first and last names; we can easily change this to whitespace using &lt;code&gt;sep = &#34; &#34;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
@@ -28495,18 +28490,18 @@ left_join(tidy4a, tidy4b)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 87 x 13
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 &amp;quot;Luk…    172    77 blond      fair       blue            19   male  
 ##  2 &amp;quot;C-3…    167    75 &amp;lt;NA&amp;gt;       gold       yellow         112   &amp;lt;NA&amp;gt;  
 ##  3 &amp;quot;R2-…     96    32 &amp;lt;NA&amp;gt;       white, bl… red             33   &amp;lt;NA&amp;gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  4 &amp;quot;Dar…    202   136 none       white      yellow          41.9 male  
+##  5 &amp;quot;Lei…    150    49 brown      light      brown           19   female
+##  6 &amp;quot;Owe…    178   120 brown, gr… light      blue            52   male  
+##  7 &amp;quot;Ber…    165    75 brown      light      blue            47   female
 ##  8 &amp;quot;R5-…     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##  9 &amp;quot;Big…    183    84 black      light      brown           24   male  
+## 10 &amp;quot;Obi…    182    77 auburn, w… fair       blue-gray       57   male  
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;                                            # name with NAs removed&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -28953,12 +28948,14 @@ true
 &lt;p&gt;The best way to do this tutorial is to walk through it slowly, executing each line and trying to understand what it does. You can execute a single line by placing your cursor somewhere in that line and hitting CMD+enter on mac or CTRL+enter on PC.&lt;/p&gt;
 &lt;p&gt;Make sure you load the tidyverse first!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------- tidyverse 1.2.1 --&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.2
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Attaching packages -------------------------------------------------------------------------------- tidyverse 1.3.0 --&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;U+2713&amp;gt; ggplot2 3.2.1     &amp;lt;U+2713&amp;gt; purrr   0.3.3
 ## &amp;lt;U+2713&amp;gt; tibble  2.1.3     &amp;lt;U+2713&amp;gt; dplyr   0.8.3
 ## &amp;lt;U+2713&amp;gt; tidyr   1.0.0     &amp;lt;U+2713&amp;gt; stringr 1.4.0
 ## &amp;lt;U+2713&amp;gt; readr   1.3.1     &amp;lt;U+2713&amp;gt; forcats 0.4.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------- tidyverse_conflicts() --
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.6.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Conflicts ----------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -29261,51 +29258,48 @@ ps_data %&amp;gt;%
 &lt;p&gt;Let’s use the starwars data and split each character’s &lt;code&gt;name&lt;/code&gt; into &lt;code&gt;first_name&lt;/code&gt; and &lt;code&gt;last_name&lt;/code&gt;. Let’s start without setting the &lt;code&gt;sep =&lt;/code&gt; argument to see what it does by default:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars %&amp;gt;% 
   separate(col = name, into = c(&amp;quot;first_name&amp;quot;, &amp;quot;last_name&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Additional pieces discarded in 10 rows [7, 10,
-## 16, 18, 29, 31, 34, 49, 60, 65].&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 18 rows [13,
-## 15, 19, 20, 23, 25, 26, 38, 39, 46, 58, 63, 64, 77, 78, 82, 83, 85].&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Additional pieces discarded in 10 rows [7, 10, 16,
+## 18, 29, 31, 34, 49, 60, 65].&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 18 rows [13, 15,
+## 19, 20, 23, 25, 26, 38, 39, 46, 58, 63, 64, 77, 78, 82, 83, 85].&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 87 x 14
-##    first_name last_name height  mass hair_color skin_color eye_color
-##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;    
-##  1 Luke       Skywalker    172    77 blond      fair       blue     
-##  2 C          3PO          167    75 &amp;lt;NA&amp;gt;       gold       yellow   
-##  3 R2         D2            96    32 &amp;lt;NA&amp;gt;       white, bl… red      
-##  4 Darth      Vader        202   136 none       white      yellow   
-##  5 Leia       Organa       150    49 brown      light      brown    
-##  6 Owen       Lars         178   120 brown, gr… light      blue     
-##  7 Beru       Whitesun     165    75 brown      light      blue     
-##  8 R5         D4            97    32 &amp;lt;NA&amp;gt;       white, red red      
-##  9 Biggs      Darkligh…    183    84 black      light      brown    
-## 10 Obi        Wan          182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 7 more variables: birth_year &amp;lt;dbl&amp;gt;,
-## #   gender &amp;lt;chr&amp;gt;, homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##    first_name last_name height  mass hair_color skin_color eye_color birth_year
+##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+##  1 Luke       Skywalker    172    77 blond      fair       blue            19  
+##  2 C          3PO          167    75 &amp;lt;NA&amp;gt;       gold       yellow         112  
+##  3 R2         D2            96    32 &amp;lt;NA&amp;gt;       white, bl… red             33  
+##  4 Darth      Vader        202   136 none       white      yellow          41.9
+##  5 Leia       Organa       150    49 brown      light      brown           19  
+##  6 Owen       Lars         178   120 brown, gr… light      blue            52  
+##  7 Beru       Whitesun     165    75 brown      light      blue            47  
+##  8 R5         D4            97    32 &amp;lt;NA&amp;gt;       white, red red             NA  
+##  9 Biggs      Darkligh…    183    84 black      light      brown           24  
+## 10 Obi        Wan          182    77 auburn, w… fair       blue-gray       57  
+## # … with 77 more rows, and 6 more variables: gender &amp;lt;chr&amp;gt;, homeworld &amp;lt;chr&amp;gt;,
+## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You might notice that it separated based on different characters, such as white space (luke &amp;amp; skywalker were separated) and by hyphens (C and 3PO were separated). By default, it separate looks for common separators (space, hyphen, underscore, periods, etc.) and uses all of them. This can be useful, but it has undesirable effects as you can see above. Let’s fix this by telling separate to use white space to separate first from last names using the &lt;code&gt;sep =&lt;/code&gt; argument:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars_sep_names &amp;lt;- starwars %&amp;gt;% 
   separate(name, c(&amp;quot;first_name&amp;quot;, &amp;quot;last_name&amp;quot;), sep = &amp;quot; &amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Additional pieces discarded in 7 rows [7, 16,
-## 18, 29, 34, 60, 65].&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 24 rows
-## [2, 3, 8, 13, 15, 19, 20, 22, 23, 25, 26, 38, 39, 46, 49, 58, 63, 64, 73,
-## 77, ...].&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Additional pieces discarded in 7 rows [7, 16, 18,
+## 29, 34, 60, 65].&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 24 rows [2, 3, 8,
+## 13, 15, 19, 20, 22, 23, 25, 26, 38, 39, 46, 49, 58, 63, 64, 73, 77, ...].&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars_sep_names&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 87 x 14
-##    first_name last_name height  mass hair_color skin_color eye_color
-##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;    
-##  1 Luke       Skywalker    172    77 blond      fair       blue     
-##  2 C-3PO      &amp;lt;NA&amp;gt;         167    75 &amp;lt;NA&amp;gt;       gold       yellow   
-##  3 R2-D2      &amp;lt;NA&amp;gt;          96    32 &amp;lt;NA&amp;gt;       white, bl… red      
-##  4 Darth      Vader        202   136 none       white      yellow   
-##  5 Leia       Organa       150    49 brown      light      brown    
-##  6 Owen       Lars         178   120 brown, gr… light      blue     
-##  7 Beru       Whitesun     165    75 brown      light      blue     
-##  8 R5-D4      &amp;lt;NA&amp;gt;          97    32 &amp;lt;NA&amp;gt;       white, red red      
-##  9 Biggs      Darkligh…    183    84 black      light      brown    
-## 10 Obi-Wan    Kenobi       182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 7 more variables: birth_year &amp;lt;dbl&amp;gt;,
-## #   gender &amp;lt;chr&amp;gt;, homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;,
-## #   vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##    first_name last_name height  mass hair_color skin_color eye_color birth_year
+##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+##  1 Luke       Skywalker    172    77 blond      fair       blue            19  
+##  2 C-3PO      &amp;lt;NA&amp;gt;         167    75 &amp;lt;NA&amp;gt;       gold       yellow         112  
+##  3 R2-D2      &amp;lt;NA&amp;gt;          96    32 &amp;lt;NA&amp;gt;       white, bl… red             33  
+##  4 Darth      Vader        202   136 none       white      yellow          41.9
+##  5 Leia       Organa       150    49 brown      light      brown           19  
+##  6 Owen       Lars         178   120 brown, gr… light      blue            52  
+##  7 Beru       Whitesun     165    75 brown      light      blue            47  
+##  8 R5-D4      &amp;lt;NA&amp;gt;          97    32 &amp;lt;NA&amp;gt;       white, red red             NA  
+##  9 Biggs      Darkligh…    183    84 black      light      brown           24  
+## 10 Obi-Wan    Kenobi       182    77 auburn, w… fair       blue-gray       57  
+## # … with 77 more rows, and 6 more variables: gender &amp;lt;chr&amp;gt;, homeworld &amp;lt;chr&amp;gt;,
+## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;unite&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;1.3.2 &lt;code&gt;unite()&lt;/code&gt;&lt;/h3&gt;
@@ -29325,8 +29319,8 @@ ps_data %&amp;gt;%
 ##  8 R5-D…     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
 ##  9 Bigg…    183    84 black      light      brown           24   male  
 ## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Okay, so a couple of things went wrong:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;It put an &#34;_&#34; between first and last names; we can easily change this to whitespace using &lt;code&gt;sep = &#34; &#34;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
@@ -29339,18 +29333,18 @@ ps_data %&amp;gt;%
 &lt;pre&gt;&lt;code&gt;## # A tibble: 87 x 13
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 &amp;quot;Luk…    172    77 blond      fair       blue            19   male  
 ##  2 &amp;quot;C-3…    167    75 &amp;lt;NA&amp;gt;       gold       yellow         112   &amp;lt;NA&amp;gt;  
 ##  3 &amp;quot;R2-…     96    32 &amp;lt;NA&amp;gt;       white, bl… red             33   &amp;lt;NA&amp;gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  4 &amp;quot;Dar…    202   136 none       white      yellow          41.9 male  
+##  5 &amp;quot;Lei…    150    49 brown      light      brown           19   female
+##  6 &amp;quot;Owe…    178   120 brown, gr… light      blue            52   male  
+##  7 &amp;quot;Ber…    165    75 brown      light      blue            47   female
 ##  8 &amp;quot;R5-…     97    32 &amp;lt;NA&amp;gt;       white, red red             NA   &amp;lt;NA&amp;gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;,
-## #   species &amp;lt;chr&amp;gt;, films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##  9 &amp;quot;Big…    183    84 black      light      brown           24   male  
+## 10 &amp;quot;Obi…    182    77 auburn, w… fair       blue-gray       57   male  
+## # … with 77 more rows, and 5 more variables: homeworld &amp;lt;chr&amp;gt;, species &amp;lt;chr&amp;gt;,
+## #   films &amp;lt;list&amp;gt;, vehicles &amp;lt;list&amp;gt;, starships &amp;lt;list&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;                                            # name with NAs removed&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
