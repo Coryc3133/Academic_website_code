@@ -19,12 +19,23 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
+  title = "Postdoctoral Fellow"
+  company = "University of Michigan"
+  company_url = "https://lsa.umich.edu/psych"
+  location = "Ann Arbor, MI"
+  date_start = "2020-08-01"
+  date_end = ""
+  description = """
+  + **Postdoctoral Fellow** in Emotion and Self-Control Lab (PI: Ethan Kross)
+  """
+
+[[experience]]
   title = "Graduate Employee"
   company = "University of Oregon"
   company_url = "https://psychology.uoregon.edu"
   location = "Eugene, OR"
   date_start = "2014-10-01"
-  date_end = ""
+  date_end = "2020-07-31"
   description = """
   + **Teaching Fellow**, with experience teaching data analysis and R. 
   + **Research Fellow**, with experience working on NSF- & NIH-funded grants on Personality, Mental Health, and Digital Footprints (PI: Sanjay Srivastava).

@@ -1,9 +1,9 @@
 {
-    "path" : "C:/Users/coryc3133/OneDrive - University Of Oregon/Work/Costello-academic-site-2",
-    "sortOrder" : [
+    "path": "~",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "columnIndex": 2,
+            "ascending": true
         }
     ]
 }

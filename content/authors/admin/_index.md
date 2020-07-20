@@ -1,12 +1,12 @@
 ---
 authors:
 - admin
-bio: Personality/Social Psychology PhD candidate interested personality, reputation, and social networks in offline and online environments.
+bio: Personality/Social Psychology PhD interested personality, reputation, and social networks in offline and online environments.
 education:
   courses:
   - course: PhD in Personality/Social Psychology
     institution: University of Oregon
-    year: 2020 (expected)
+    year: 2020
   - course: MA in Psychology
     institution: Wake Forest University
     year: 2014
@@ -21,9 +21,9 @@ interests:
 
 name: Cory K. Costello
 organizations:
-- name: University of Oregon
-  url: "https://psychology.uoregon.edu/"
-role: PhD Candidate in Personality/Social Psychology
+- name: University of Michigan
+  url: "https://lsa.umich.edu/psych"
+role: Postdoctoral Fellow in Emotion and Self-Control Lab
 social:
 - icon: envelope
   icon_pack: fas
@@ -47,4 +47,4 @@ user_groups:
 - Visitors
 ---
 
-Cory Costello is a PhD candidate in psychology at the University of Oregon. He is a member of the [Personality and Social Dynamics Lab](https://psdlab.uoregon.edu/) (PI: Sanjay Srivastava). His research interests include **Personality** (*who we are*), **Interpersonal Perception** (*what people think about us*), **Reputations** (*what people say and hear about us*), how these are manifest in online environments, and the extent to which they're recoverable from digital footprints. He combines survey, experimental, and data scientific methods in pursuit of these interests. He is an open science and R enthusiast. His methodological interests include social network analysis, predictive modelling / machine learning, text analysis, structural equation modelling, hierarchical linear modelling.
+Cory Costello is a postdoctoral fellow in the [Emotion and Self-Control Lab](http://selfcontrol.psych.lsa.umich.edu/) (PI: Ethan Kross) at University of Michigan, Department of Psychology. His research interests include **Personality** (*who we are*), **Interpersonal Perception** (*what people think about us*), **Reputations** (*what people say and hear about us*), how these are manifest in online environments, and the extent to which they're recoverable from digital footprints. He combines survey, experimental, and data scientific methods in pursuit of these interests. He is an open science and R enthusiast. His methodological interests include social network analysis, predictive modelling / machine learning, text analysis, structural equation modelling, hierarchical linear modelling.

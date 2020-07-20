@@ -11,8 +11,8 @@ image:
   focal_point: ""
   preview_only: false
 links:
-- name: Preprint
-  url: "files/Perceiving_personality_through_grapevine_08.09.2019.pdf"
+- name: Preprint (Pre-peer-review)
+  url: "https://psyarxiv.com/8wg25"
 projects: [reputation-project]
 publication: 
 publication_short: 
@@ -28,11 +28,11 @@ tags:
 - Gossip
 - Social Networks
 title: "Perceiving Personality Through the Grapevine: A Network Approach to Reputations"
-url_code: "https://osf.io/65wfu/?view_only=d55187ada7984d1780b77313d641aec7"
-url_dataset: "https://osf.io/65wfu/?view_only=d55187ada7984d1780b77313d641aec7"
+url_code: "https://osf.io/65wfu"
+url_dataset: "https://osf.io/65wfu"
 #url_pdf: 
 #url_poster: ""
-url_project: "https://osf.io/65wfu/?view_only=d55187ada7984d1780b77313d641aec7"
+url_project: "https://osf.io/65wfu"
 #url_slides: ""
 #url_source: ""
 #url_video: ""

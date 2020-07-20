@@ -827,7 +827,7 @@ df_2
 ### Exercise 2.5.2c 
 > Using df_2, try to add the first and second rows together. what happens? Why?
 
-```{r}
+```{r eval = FALSE}
 df_2[1,] + df_2[2, ]
 ```
 

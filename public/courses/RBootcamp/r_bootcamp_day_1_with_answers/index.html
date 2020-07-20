@@ -1252,12 +1252,10 @@ df_1</code></pre>
 <h3>2.5.2 Indexing Data Frames</h3>
 <p>Indexing dataframes is sort of a hybrid between matrices and lists. Like matrices, you can index using the [row, column] format, using either numerical indexing:</p>
 <pre class="r"><code>df_1[1, 3]</code></pre>
-<pre><code>## [1] a
-## Levels: a b</code></pre>
+<pre><code>## [1] &quot;a&quot;</code></pre>
 <p>or names:</p>
 <pre class="r"><code>df_1[&quot;r1&quot;, &quot;c3&quot;]</code></pre>
-<pre><code>## [1] a
-## Levels: a b</code></pre>
+<pre><code>## [1] &quot;a&quot;</code></pre>
 <p>You can also get an entire row or column by leaving an index blank. Let’s get all rows for column 2:</p>
 <pre class="r"><code>df_1[, &quot;c2&quot;]</code></pre>
 <pre><code>## [1] 2 4</code></pre>
@@ -1291,7 +1289,7 @@ df_1</code></pre>
 <pre><code>## &#39;data.frame&#39;:    2 obs. of  4 variables:
 ##  $ c1: num  1 9
 ##  $ c2: num  2 4
-##  $ c3: Factor w/ 2 levels &quot;a&quot;,&quot;b&quot;: 1 2
+##  $ c3: chr  &quot;a&quot; &quot;b&quot;
 ##  $ c4: num  3 7</code></pre>
 <p>You can also coerce individual columns into other types. For example, we could turn c1 into an integer (from a numeric/double):</p>
 <pre class="r"><code>df_1$c1 &lt;- as.integer(df_1$c1)
@@ -1318,7 +1316,7 @@ str(df_2)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    3 obs. of  3 variables:
 ##  $ c1: num  1 2 3
 ##  $ c2: num  2 4 6
-##  $ c3: Factor w/ 3 levels &quot;a&quot;,&quot;b&quot;,&quot;c&quot;: 1 2 3</code></pre>
+##  $ c3: chr  &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
 </div>
 <div id="exercise-2.5.2b" class="section level3">
 <h3>Exercise 2.5.2b</h3>
@@ -1338,9 +1336,6 @@ df_2</code></pre>
 <p>Using df_2, try to add the first and second rows together. what happens? Why?</p>
 </blockquote>
 <pre class="r"><code>df_2[1,] + df_2[2, ]</code></pre>
-<pre><code>## Warning in Ops.factor(left, right): &#39;+&#39; not meaningful for factors</code></pre>
-<pre><code>##   c1 c2 c3 c4
-## 1  3  6 NA 10</code></pre>
 </div>
 </div>
 <div id="wrapping-up-data-types" class="section level2">
@@ -1544,14 +1539,12 @@ library(&quot;rio&quot;) # also works</code></pre>
 <pre class="r"><code>install.packages(&quot;tidyverse&quot;)</code></pre>
 <p>And let’s load it:</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 3.6.2</code></pre>
-<pre><code>## -- Attaching packages -------------------------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
-<pre><code>## &lt;U+2713&gt; ggplot2 3.2.1     &lt;U+2713&gt; purrr   0.3.3
-## &lt;U+2713&gt; tibble  2.1.3     &lt;U+2713&gt; dplyr   0.8.3
-## &lt;U+2713&gt; tidyr   1.0.0     &lt;U+2713&gt; stringr 1.4.0
-## &lt;U+2713&gt; readr   1.3.1     &lt;U+2713&gt; forcats 0.4.0</code></pre>
-<pre><code>## Warning: package &#39;purrr&#39; was built under R version 3.6.2</code></pre>
-<pre><code>## -- Conflicts ----------------------------------------------------------------------------------- tidyverse_conflicts() --
+<pre><code>## -- Attaching packages ----------------------------------------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.1     v purrr   0.3.4
+## v tibble  3.0.1     v dplyr   0.8.5
+## v tidyr   1.1.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>## -- Conflicts -------------------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 </div>

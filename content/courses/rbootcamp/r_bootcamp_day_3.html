@@ -29,14 +29,12 @@ true
 <p>Make sure you load the tidyverse first!</p>
 <pre class="r"><code>library(rio)
 library(tidyverse)</code></pre>
-<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 3.6.2</code></pre>
-<pre><code>## -- Attaching packages -------------------------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
-<pre><code>## &lt;U+2713&gt; ggplot2 3.2.1     &lt;U+2713&gt; purrr   0.3.3
-## &lt;U+2713&gt; tibble  2.1.3     &lt;U+2713&gt; dplyr   0.8.3
-## &lt;U+2713&gt; tidyr   1.0.0     &lt;U+2713&gt; stringr 1.4.0
-## &lt;U+2713&gt; readr   1.3.1     &lt;U+2713&gt; forcats 0.4.0</code></pre>
-<pre><code>## Warning: package &#39;purrr&#39; was built under R version 3.6.2</code></pre>
-<pre><code>## -- Conflicts ----------------------------------------------------------------------------------- tidyverse_conflicts() --
+<pre><code>## -- Attaching packages ----------------------------------------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.1     v purrr   0.3.4
+## v tibble  3.0.1     v dplyr   0.8.5
+## v tidyr   1.1.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>## -- Conflicts -------------------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 </div>
@@ -175,15 +173,15 @@ left_join(tidy4a, tidy4b)</code></pre>
 ##    &lt;chr&gt;      &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt;
 ##  1 Luke       Skywalker    172    77 blond      fair       blue            19  
 ##  2 C          3PO          167    75 &lt;NA&gt;       gold       yellow         112  
-##  3 R2         D2            96    32 &lt;NA&gt;       white, bl… red             33  
+##  3 R2         D2            96    32 &lt;NA&gt;       white, bl~ red             33  
 ##  4 Darth      Vader        202   136 none       white      yellow          41.9
 ##  5 Leia       Organa       150    49 brown      light      brown           19  
-##  6 Owen       Lars         178   120 brown, gr… light      blue            52  
+##  6 Owen       Lars         178   120 brown, gr~ light      blue            52  
 ##  7 Beru       Whitesun     165    75 brown      light      blue            47  
 ##  8 R5         D4            97    32 &lt;NA&gt;       white, red red             NA  
-##  9 Biggs      Darkligh…    183    84 black      light      brown           24  
-## 10 Obi        Wan          182    77 auburn, w… fair       blue-gray       57  
-## # … with 77 more rows, and 6 more variables: gender &lt;chr&gt;, homeworld &lt;chr&gt;,
+##  9 Biggs      Darkligh~    183    84 black      light      brown           24  
+## 10 Obi        Wan          182    77 auburn, w~ fair       blue-gray       57  
+## # ... with 77 more rows, and 6 more variables: gender &lt;chr&gt;, homeworld &lt;chr&gt;,
 ## #   species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 <p>You might notice that it separated based on different characters, such as white space (luke &amp; skywalker were separated) and by hyphens (C and 3PO were separated). By default, it separate looks for common separators (space, hyphen, underscore, periods, etc.) and uses all of them. This can be useful, but it has undesirable effects as you can see above. Let’s fix this by telling separate to use white space to separate first from last names using the <code>sep =</code> argument:</p>
 <pre class="r"><code>starwars_sep_names &lt;- starwars %&gt;% 
@@ -198,15 +196,15 @@ left_join(tidy4a, tidy4b)</code></pre>
 ##    &lt;chr&gt;      &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt;
 ##  1 Luke       Skywalker    172    77 blond      fair       blue            19  
 ##  2 C-3PO      &lt;NA&gt;         167    75 &lt;NA&gt;       gold       yellow         112  
-##  3 R2-D2      &lt;NA&gt;          96    32 &lt;NA&gt;       white, bl… red             33  
+##  3 R2-D2      &lt;NA&gt;          96    32 &lt;NA&gt;       white, bl~ red             33  
 ##  4 Darth      Vader        202   136 none       white      yellow          41.9
 ##  5 Leia       Organa       150    49 brown      light      brown           19  
-##  6 Owen       Lars         178   120 brown, gr… light      blue            52  
+##  6 Owen       Lars         178   120 brown, gr~ light      blue            52  
 ##  7 Beru       Whitesun     165    75 brown      light      blue            47  
 ##  8 R5-D4      &lt;NA&gt;          97    32 &lt;NA&gt;       white, red red             NA  
-##  9 Biggs      Darkligh…    183    84 black      light      brown           24  
-## 10 Obi-Wan    Kenobi       182    77 auburn, w… fair       blue-gray       57  
-## # … with 77 more rows, and 6 more variables: gender &lt;chr&gt;, homeworld &lt;chr&gt;,
+##  9 Biggs      Darkligh~    183    84 black      light      brown           24  
+## 10 Obi-Wan    Kenobi       182    77 auburn, w~ fair       blue-gray       57  
+## # ... with 77 more rows, and 6 more variables: gender &lt;chr&gt;, homeworld &lt;chr&gt;,
 ## #   species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 </div>
 <div id="unite" class="section level3">
@@ -217,17 +215,17 @@ left_join(tidy4a, tidy4b)</code></pre>
 <pre><code>## # A tibble: 87 x 13
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
-##  2 C-3P…    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D…     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
-##  8 R5-D…     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  1 Luke~    172    77 blond      fair       blue            19   male  
+##  2 C-3P~    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
+##  3 R2-D~     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
+##  8 R5-D~     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 <p>Okay, so a couple of things went wrong:</p>
 <ol style="list-style-type: decimal">
@@ -241,17 +239,17 @@ left_join(tidy4a, tidy4b)</code></pre>
 <pre><code>## # A tibble: 87 x 13
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 &quot;Luk…    172    77 blond      fair       blue            19   male  
-##  2 &quot;C-3…    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 &quot;R2-…     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 &quot;Dar…    202   136 none       white      yellow          41.9 male  
-##  5 &quot;Lei…    150    49 brown      light      brown           19   female
-##  6 &quot;Owe…    178   120 brown, gr… light      blue            52   male  
-##  7 &quot;Ber…    165    75 brown      light      blue            47   female
-##  8 &quot;R5-…     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 &quot;Big…    183    84 black      light      brown           24   male  
-## 10 &quot;Obi…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  1 &quot;Luk~    172    77 blond      fair       blue            19   male  
+##  2 &quot;C-3~    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
+##  3 &quot;R2-~     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 &quot;Dar~    202   136 none       white      yellow          41.9 male  
+##  5 &quot;Lei~    150    49 brown      light      brown           19   female
+##  6 &quot;Owe~    178   120 brown, gr~ light      blue            52   male  
+##  7 &quot;Ber~    165    75 brown      light      blue            47   female
+##  8 &quot;R5-~     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
+##  9 &quot;Big~    183    84 black      light      brown           24   male  
+## 10 &quot;Obi~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 <pre class="r"><code>                                            # name with NAs removed</code></pre>
 </div>
@@ -373,6 +371,7 @@ Note that loess is the default function for geom_smooth(); learn more <a href="h
   geom_smooth(aes(x = Sepal.Length, y = Petal.Length), 
               color = &quot;black&quot;,
               method = &quot;lm&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="/courses/rbootcamp/r_bootcamp_day_3_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
 </div>
 <div id="global-aesthetic-mapping" class="section level3">
@@ -382,6 +381,7 @@ Note that loess is the default function for geom_smooth(); learn more <a href="h
 <pre class="r"><code>ggplot(data = iris, aes(x = Sepal.Length, y = Petal.Length)) +
   geom_point(aes(color = Species)) +
   geom_smooth(color = &quot;black&quot;, method = &quot;lm&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="/courses/rbootcamp/r_bootcamp_day_3_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <p>You might be wondering, what do we put in global aesthetic mapping and what do we put in the aesthetic mapping of specific geoms? Basically, you want to put anything in the global mapping that you want <em>every layer to inherit</em> or at least the majority of them. In the above, I defined x and y globally, because I want those the same in every geom. I didn’t with color, since I wanted a single black line for the smooth line. Let’s take a look at it with color in the global aesthetic:</p>
 <pre class="r"><code>ggplot(data = iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +

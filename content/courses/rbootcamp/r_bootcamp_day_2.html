@@ -37,14 +37,12 @@ true
 </blockquote>
 <p>Last time, we ended by installing two packages, the <code>rio</code> package and the <code>tidyverse</code> package. This time, we’re going to learn how to use them to get our data into R, manipulate it, and visualize it. We’ll load them both now:</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 3.6.2</code></pre>
-<pre><code>## -- Attaching packages -------------------------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
-<pre><code>## &lt;U+2713&gt; ggplot2 3.2.1     &lt;U+2713&gt; purrr   0.3.3
-## &lt;U+2713&gt; tibble  2.1.3     &lt;U+2713&gt; dplyr   0.8.3
-## &lt;U+2713&gt; tidyr   1.0.0     &lt;U+2713&gt; stringr 1.4.0
-## &lt;U+2713&gt; readr   1.3.1     &lt;U+2713&gt; forcats 0.4.0</code></pre>
-<pre><code>## Warning: package &#39;purrr&#39; was built under R version 3.6.2</code></pre>
-<pre><code>## -- Conflicts ----------------------------------------------------------------------------------- tidyverse_conflicts() --
+<pre><code>## -- Attaching packages ----------------------------------------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.1     v purrr   0.3.4
+## v tibble  3.0.1     v dplyr   0.8.5
+## v tidyr   1.1.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>## -- Conflicts -------------------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>library(rio)</code></pre>
@@ -63,7 +61,7 @@ true
 <h2>1.1 Working Directories &amp; File Paths</h2>
 <p>On to challeng # 2. When R looks for a file, it has a starting point. This is called the <em>working directory</em>. The working directory that you’re currently in is displayed in the console window and the files tab. You can also get it with the <code>getwd()</code> function:</p>
 <pre class="r"><code>getwd()</code></pre>
-<pre><code>## [1] &quot;C:/Users/Coryc/OneDrive - University Of Oregon/Work/Costello-academic-site/content/courses/rbootcamp&quot;</code></pre>
+<pre><code>## [1] &quot;C:/Users/coryc3133/OneDrive - University Of Oregon/Work/Costello-academic-site/content/courses/rbootcamp&quot;</code></pre>
 <p>For this tutorial, your working directory should be wherever you downloaded the materials and opened the r project. If you opened the .Rmd, you should be in the uoregon_r_bootcamp directory already. You can change your working directory with:</p>
 <pre class="r"><code>setwd(&quot;PATH&quot;)</code></pre>
 <p>It is considered bad practice to use <code>setwd()</code> and it typically will not work in an Rmd; you can see the author’s rationale for that <a href="https://groups.google.com/forum/#!topic/knitr/knM0VWoexT0">here</a>.</p>
@@ -11225,7 +11223,7 @@ unique(data_subset_age_ids)</code></pre>
 ##  8 R5-D4              Tatooine 
 ##  9 Biggs Darklighter  Tatooine 
 ## 10 Obi-Wan Kenobi     Stewjon  
-## # … with 77 more rows</code></pre>
+## # ... with 77 more rows</code></pre>
 </div>
 <div id="selecting-a-range" class="section level3">
 <h3>4.1.2 selecting a range</h3>
@@ -11235,17 +11233,17 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 87 x 9
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 Luke~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
 ##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 1 more variable: homeworld &lt;chr&gt;</code></pre>
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 1 more variable: homeworld &lt;chr&gt;</code></pre>
 </div>
 <div id="selecting-with-helper-functions" class="section level3">
 <h3>4.1.3 selecting with helper functions</h3>
@@ -11265,7 +11263,7 @@ unique(data_subset_age_ids)</code></pre>
 ##  8 &lt;NA&gt;          white, red  red      
 ##  9 black         light       brown    
 ## 10 auburn, white fair        blue-gray
-## # … with 77 more rows</code></pre>
+## # ... with 77 more rows</code></pre>
 </div>
 <div id="re-arranging-columns-with-select" class="section level3">
 <h3>4.1.4 Re-arranging columns with select</h3>
@@ -11275,17 +11273,17 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 87 x 13
 ##    homeworld name  height  mass hair_color skin_color eye_color birth_year
 ##    &lt;chr&gt;     &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt;
-##  1 Tatooine  Luke…    172    77 blond      fair       blue            19  
+##  1 Tatooine  Luke~    172    77 blond      fair       blue            19  
 ##  2 Tatooine  C-3PO    167    75 &lt;NA&gt;       gold       yellow         112  
-##  3 Naboo     R2-D2     96    32 &lt;NA&gt;       white, bl… red             33  
-##  4 Tatooine  Dart…    202   136 none       white      yellow          41.9
-##  5 Alderaan  Leia…    150    49 brown      light      brown           19  
-##  6 Tatooine  Owen…    178   120 brown, gr… light      blue            52  
-##  7 Tatooine  Beru…    165    75 brown      light      blue            47  
+##  3 Naboo     R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33  
+##  4 Tatooine  Dart~    202   136 none       white      yellow          41.9
+##  5 Alderaan  Leia~    150    49 brown      light      brown           19  
+##  6 Tatooine  Owen~    178   120 brown, gr~ light      blue            52  
+##  7 Tatooine  Beru~    165    75 brown      light      blue            47  
 ##  8 Tatooine  R5-D4     97    32 &lt;NA&gt;       white, red red             NA  
-##  9 Tatooine  Bigg…    183    84 black      light      brown           24  
-## 10 Stewjon   Obi-…    182    77 auburn, w… fair       blue-gray       57  
-## # … with 77 more rows, and 5 more variables: gender &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Tatooine  Bigg~    183    84 black      light      brown           24  
+## 10 Stewjon   Obi-~    182    77 auburn, w~ fair       blue-gray       57  
+## # ... with 77 more rows, and 5 more variables: gender &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 </div>
 <div id="exercise-4.1a" class="section level3">
@@ -11312,14 +11310,14 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 7 x 13
 ##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
 ##   &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;    
-## 1 R2-D2     96    32 &lt;NA&gt;       white, bl… red               33 &lt;NA&gt;   Naboo    
+## 1 R2-D2     96    32 &lt;NA&gt;       white, bl~ red               33 &lt;NA&gt;   Naboo    
 ## 2 R5-D4     97    32 &lt;NA&gt;       white, red red               NA &lt;NA&gt;   Tatooine 
 ## 3 Yoda      66    17 white      green      brown            896 male   &lt;NA&gt;     
-## 4 Wick…     88    20 brown      brown      brown              8 male   Endor    
-## 5 Dud …     94    45 none       blue, grey yellow            NA male   Vulpter  
-## 6 Ratt…     79    15 none       grey, blue unknown           NA male   Aleen Mi…
-## 7 R4-P…     96    NA none       silver, r… red, blue         NA female &lt;NA&gt;     
-## # … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
+## 4 Wick~     88    20 brown      brown      brown              8 male   Endor    
+## 5 Dud ~     94    45 none       blue, grey yellow            NA male   Vulpter  
+## 6 Ratt~     79    15 none       grey, blue unknown           NA male   Aleen Mi~
+## 7 R4-P~     96    NA none       silver, r~ red, blue         NA female &lt;NA&gt;     
+## # ... with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
 ## #   starships &lt;list&gt;</code></pre>
 <p>Or we could do even more advanced filtering, such as by filter for observations 1 SD above the average height:</p>
 <pre class="r"><code>starwars %&gt;% 
@@ -11327,14 +11325,14 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 7 x 13
 ##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
 ##   &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;    
-## 1 Chew…    228   112 brown      unknown    blue             200 male   Kashyyyk 
-## 2 Roos…    224    82 none       grey       orange            NA male   Naboo    
-## 3 Yara…    264    NA none       white      yellow            NA male   Quermia  
-## 4 Lama…    229    88 none       grey       black             NA male   Kamino   
-## 5 Taun…    213    NA none       grey       black             NA female Kamino   
-## 6 Grie…    216   159 none       brown, wh… green, y…         NA male   Kalee    
-## 7 Tarf…    234   136 brown      brown      blue              NA male   Kashyyyk 
-## # … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
+## 1 Chew~    228   112 brown      unknown    blue             200 male   Kashyyyk 
+## 2 Roos~    224    82 none       grey       orange            NA male   Naboo    
+## 3 Yara~    264    NA none       white      yellow            NA male   Quermia  
+## 4 Lama~    229    88 none       grey       black             NA male   Kamino   
+## 5 Taun~    213    NA none       grey       black             NA female Kamino   
+## 6 Grie~    216   159 none       brown, wh~ green, y~         NA male   Kalee    
+## 7 Tarf~    234   136 brown      brown      blue              NA male   Kashyyyk 
+## # ... with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
 ## #   starships &lt;list&gt;</code></pre>
 <p>Speaking of NAs, let’s see which characters have missing mass by filtering for rows where mass is NA.</p>
 <pre class="r"><code>starwars %&gt;% 
@@ -11346,17 +11344,17 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 28 x 13
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Wilh…    180    NA auburn, g… fair       blue              64 male  
-##  2 Mon …    150    NA auburn     fair       blue              48 female
-##  3 Arve…     NA    NA brown      fair       brown             NA male  
-##  4 Fini…    170    NA blond      fair       blue              91 male  
-##  5 Rugo…    206    NA none       green      orange            NA male  
-##  6 Ric …    183    NA brown      fair       blue              NA male  
+##  1 Wilh~    180    NA auburn, g~ fair       blue              64 male  
+##  2 Mon ~    150    NA auburn     fair       blue              48 female
+##  3 Arve~     NA    NA brown      fair       brown             NA male  
+##  4 Fini~    170    NA blond      fair       blue              91 male  
+##  5 Rugo~    206    NA none       green      orange            NA male  
+##  6 Ric ~    183    NA brown      fair       blue              NA male  
 ##  7 Watto    137    NA black      blue, grey yellow            NA male  
-##  8 Quar…    183    NA black      dark       brown             62 male  
-##  9 Shmi…    163    NA black      fair       brown             72 female
-## 10 Bib …    180    NA none       pale       pink              NA male  
-## # … with 18 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  8 Quar~    183    NA black      dark       brown             62 male  
+##  9 Shmi~    163    NA black      fair       brown             72 female
+## 10 Bib ~    180    NA none       pale       pink              NA male  
+## # ... with 18 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 <p>To get the values that aren’t missing, you have to put a <code>!</code> before <code>is.na()</code>, so it looks like <code>!is.na(variable)</code>. Let’s get every observation that isn’t mising on mass:</p>
 <pre class="r"><code>starwars %&gt;% 
@@ -11364,17 +11362,17 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 59 x 13
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 Luke~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
 ##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 49 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 49 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 <p>This works because <code>!</code> converts a logical value to its opposite:</p>
 <pre class="r"><code>!TRUE</code></pre>
@@ -11395,9 +11393,9 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 2 x 13
 ##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
 ##   &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;    
-## 1 Roos…    224    82 none       grey       orange            NA male   Naboo    
-## 2 Lama…    229    88 none       grey       black             NA male   Kamino   
-## # … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
+## 1 Roos~    224    82 none       grey       orange            NA male   Naboo    
+## 2 Lama~    229    88 none       grey       black             NA male   Kamino   
+## # ... with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
 ## #   starships &lt;list&gt;</code></pre>
 <p>We could get observations either 1 SD above <em>or</em> below the mean of height too:</p>
 <pre class="r"><code>  starwars %&gt;% 
@@ -11406,17 +11404,17 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 81 x 13
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 Luke~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
 ##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 71 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 71 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 <p>You can also filter based on character variables. For example, we could get ever character grey hair:</p>
 <pre class="r"><code>starwars %&gt;% 
@@ -11424,8 +11422,8 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 1 x 13
 ##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
 ##   &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;    
-## 1 Palp…    170    75 grey       pale       yellow            82 male   Naboo    
-## # … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
+## 1 Palp~    170    75 grey       pale       yellow            82 male   Naboo    
+## # ... with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
 ## #   starships &lt;list&gt;</code></pre>
 <p>Or characters that have grey or brown hair:</p>
 <pre class="r"><code>starwars %&gt;% 
@@ -11434,26 +11432,26 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 19 x 13
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Leia…    150    49 brown      light      brown             19 female
-##  2 Beru…    165    75 brown      light      blue              47 female
-##  3 Chew…    228   112 brown      unknown    blue             200 male  
-##  4 Han …    180    80 brown      fair       brown             29 male  
-##  5 Wedg…    170    77 brown      fair       hazel             21 male  
-##  6 Jek …    180   110 brown      fair       blue              NA male  
-##  7 Palp…    170    75 grey       pale       yellow            82 male  
-##  8 Arve…     NA    NA brown      fair       brown             NA male  
-##  9 Wick…     88    20 brown      brown      brown              8 male  
-## 10 Qui-…    193    89 brown      fair       blue              92 male  
-## 11 Ric …    183    NA brown      fair       blue              NA male  
+##  1 Leia~    150    49 brown      light      brown             19 female
+##  2 Beru~    165    75 brown      light      blue              47 female
+##  3 Chew~    228   112 brown      unknown    blue             200 male  
+##  4 Han ~    180    80 brown      fair       brown             29 male  
+##  5 Wedg~    170    77 brown      fair       hazel             21 male  
+##  6 Jek ~    180   110 brown      fair       blue              NA male  
+##  7 Palp~    170    75 grey       pale       yellow            82 male  
+##  8 Arve~     NA    NA brown      fair       brown             NA male  
+##  9 Wick~     88    20 brown      brown      brown              8 male  
+## 10 Qui-~    193    89 brown      fair       blue              92 male  
+## 11 Ric ~    183    NA brown      fair       blue              NA male  
 ## 12 Cordé    157    NA brown      light      brown             NA female
-## 13 Clie…    183    NA brown      fair       blue              82 male  
+## 13 Clie~    183    NA brown      fair       blue              82 male  
 ## 14 Dormé    165    NA brown      light      brown             NA female
-## 15 Tarf…    234   136 brown      brown      blue              NA male  
-## 16 Raym…    188    79 brown      light      brown             NA male  
+## 15 Tarf~    234   136 brown      brown      blue              NA male  
+## 16 Raym~    188    79 brown      light      brown             NA male  
 ## 17 Rey       NA    NA brown      light      hazel             NA female
-## 18 Poe …     NA    NA brown      light      brown             NA male  
-## 19 Padm…    165    45 brown      light      brown             46 female
-## # … with 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+## 18 Poe ~     NA    NA brown      light      brown             NA male  
+## 19 Padm~    165    45 brown      light      brown             46 female
+## # ... with 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 <p>Or characters that don’t have brown hair:</p>
 <pre class="r"><code>starwars %&gt;% 
@@ -11461,17 +11459,17 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 64 x 13
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172  77   blond      fair       blue            19   male  
-##  2 Dart…    202 136   none       white      yellow          41.9 male  
-##  3 Owen…    178 120   brown, gr… light      blue            52   male  
-##  4 Bigg…    183  84   black      light      brown           24   male  
-##  5 Obi-…    182  77   auburn, w… fair       blue-gray       57   male  
-##  6 Anak…    188  84   blond      fair       blue            41.9 male  
-##  7 Wilh…    180  NA   auburn, g… fair       blue            64   male  
+##  1 Luke~    172  77   blond      fair       blue            19   male  
+##  2 Dart~    202 136   none       white      yellow          41.9 male  
+##  3 Owen~    178 120   brown, gr~ light      blue            52   male  
+##  4 Bigg~    183  84   black      light      brown           24   male  
+##  5 Obi-~    182  77   auburn, w~ fair       blue-gray       57   male  
+##  6 Anak~    188  84   blond      fair       blue            41.9 male  
+##  7 Wilh~    180  NA   auburn, g~ fair       blue            64   male  
 ##  8 Yoda      66  17   white      green      brown          896   male  
-##  9 Palp…    170  75   grey       pale       yellow          82   male  
-## 10 Boba…    183  78.2 black      fair       brown           31.5 male  
-## # … with 54 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Palp~    170  75   grey       pale       yellow          82   male  
+## 10 Boba~    183  78.2 black      fair       brown           31.5 male  
+## # ... with 54 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 <p>You may be wandering if there is some way to extract those observations that have “grey” listed as one of several colors.</p>
 <p>It’s a little tricky, but it can be done by using the <code>stringr</code> function <code>str_detect()</code>. Time permitting, we’ll cover <code>stringr</code> in a bit more detail tomorrow, but <code>str_detect()</code> can be used to look for a string in an object; it returns a logical (TRUE or FALSE) based on whether or not the string is found in that object. It is a lot like <code>grep()</code> which we saw earlier, but has the string/data as its first argument (a la tidyverse convention). Let’s use it in combination with <code>filter()</code> to get these salt &amp; pepper starwars characters:</p>
@@ -11480,10 +11478,10 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 3 x 13
 ##   name  height  mass hair_color skin_color eye_color birth_year gender homeworld
 ##   &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;    
-## 1 Owen…    178   120 brown, gr… light      blue              52 male   Tatooine 
-## 2 Wilh…    180    NA auburn, g… fair       blue              64 male   Eriadu   
-## 3 Palp…    170    75 grey       pale       yellow            82 male   Naboo    
-## # … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
+## 1 Owen~    178   120 brown, gr~ light      blue              52 male   Tatooine 
+## 2 Wilh~    180    NA auburn, g~ fair       blue              64 male   Eriadu   
+## 3 Palp~    170    75 grey       pale       yellow            82 male   Naboo    
+## # ... with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
 ## #   starships &lt;list&gt;</code></pre>
 <pre class="r"><code>                       # followed by pattern it looks for</code></pre>
 <p>Since <code>str_detect()</code> returns a logical, we can negate it with <code>!</code> to get the opposite (observations that don’t contain the string <code>"grey"</code> in <code>hair_color</code>):</p>
@@ -11492,17 +11490,17 @@ unique(data_subset_age_ids)</code></pre>
 <pre><code>## # A tibble: 79 x 13
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
-##  2 Dart…    202   136 none       white      yellow          41.9 male  
-##  3 Leia…    150    49 brown      light      brown           19   female
-##  4 Beru…    165    75 brown      light      blue            47   female
-##  5 Bigg…    183    84 black      light      brown           24   male  
-##  6 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-##  7 Anak…    188    84 blond      fair       blue            41.9 male  
-##  8 Chew…    228   112 brown      unknown    blue           200   male  
-##  9 Han …    180    80 brown      fair       brown           29   male  
-## 10 Wedg…    170    77 brown      fair       hazel           21   male  
-## # … with 69 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  1 Luke~    172    77 blond      fair       blue            19   male  
+##  2 Dart~    202   136 none       white      yellow          41.9 male  
+##  3 Leia~    150    49 brown      light      brown           19   female
+##  4 Beru~    165    75 brown      light      blue            47   female
+##  5 Bigg~    183    84 black      light      brown           24   male  
+##  6 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+##  7 Anak~    188    84 blond      fair       blue            41.9 male  
+##  8 Chew~    228   112 brown      unknown    blue           200   male  
+##  9 Han ~    180    80 brown      fair       brown           29   male  
+## 10 Wedg~    170    77 brown      fair       hazel           21   male  
+## # ... with 69 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 </div>
 <div id="exercise-4.2a-1" class="section level3">
@@ -11536,17 +11534,17 @@ starwars </code></pre>
 <pre><code>## # A tibble: 87 x 14
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 Luke~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
 ##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 6 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 6 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_m &lt;dbl&gt;</code></pre>
 <pre class="r"><code># cleaning it back up
 starwars &lt;- starwars %&gt;% 
@@ -11563,17 +11561,17 @@ starwars &lt;- starwars %&gt;%
 <pre><code>## # A tibble: 87 x 18
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 Luke~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
 ##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 10 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 10 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;, height_z[,1] &lt;dbl&gt;, mass_z[,1] &lt;dbl&gt;,
 ## #   height_mass_z &lt;dbl&gt;</code></pre>
@@ -11589,17 +11587,17 @@ starwars &lt;- starwars %&gt;%
 ## # A tibble: 87 x 18
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 Luke~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
 ##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 10 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 10 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;, height_z &lt;dbl&gt;, mass_z &lt;dbl&gt;, height_mass_z &lt;dbl&gt;</code></pre>
 <p>Oops, as you can see we got <code>NaN</code>, because it’s trying to get z scores for each row, which are not defined. We would need to do two <code>mutate</code> calls and use the <code>rowwise()</code> function between them:</p>
@@ -11614,17 +11612,17 @@ starwars &lt;- starwars %&gt;%
 ## # A tibble: 87 x 18
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 Luke~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
 ##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 10 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 10 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;, height_z[,1] &lt;dbl&gt;, mass_z[,1] &lt;dbl&gt;,
 ## #   height_mass_z &lt;dbl&gt;</code></pre>
@@ -11634,17 +11632,17 @@ starwars &lt;- starwars %&gt;%
 <pre><code>## # A tibble: 87 x 15
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;fct&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 Luke~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
 ##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;</code></pre>
 </div>
@@ -11667,7 +11665,7 @@ starwars &lt;- starwars %&gt;%
 ##  8      -2.22      -0.385 
 ##  9       0.249     -0.0786
 ## 10       0.220     -0.120 
-## # … with 77 more rows</code></pre>
+## # ... with 77 more rows</code></pre>
 <p>Note that this basically equivalent to doing a <code>mutate()</code> followed by a <code>select()</code> for the newly mutated columns.</p>
 </div>
 <div id="exercise-4.3a" class="section level3">
@@ -11693,17 +11691,17 @@ starwars &lt;- starwars %&gt;%
 ## # Groups:   homeworld [49]
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 Luke~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
 ##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;</code></pre>
 <p>Okay, by the looks of it, nothing happened. But, if we paste it into the console, you can see that it did change something. It adds some meta-data saying that <code>homeworld</code> is a grouping factor, but that is it.</p>
@@ -11714,17 +11712,17 @@ starwars &lt;- starwars %&gt;%
 <pre><code>## # A tibble: 87 x 16
 ##    homeworld mean_mass name  height  mass hair_color skin_color eye_color
 ##    &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;    
-##  1 Tatooine       97.3 Luke…    172    77 blond      fair       blue     
+##  1 Tatooine       97.3 Luke~    172    77 blond      fair       blue     
 ##  2 Tatooine       97.3 C-3PO    167    75 &lt;NA&gt;       gold       yellow   
-##  3 Naboo          97.3 R2-D2     96    32 &lt;NA&gt;       white, bl… red      
-##  4 Tatooine       97.3 Dart…    202   136 none       white      yellow   
-##  5 Alderaan       97.3 Leia…    150    49 brown      light      brown    
-##  6 Tatooine       97.3 Owen…    178   120 brown, gr… light      blue     
-##  7 Tatooine       97.3 Beru…    165    75 brown      light      blue     
+##  3 Naboo          97.3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red      
+##  4 Tatooine       97.3 Dart~    202   136 none       white      yellow   
+##  5 Alderaan       97.3 Leia~    150    49 brown      light      brown    
+##  6 Tatooine       97.3 Owen~    178   120 brown, gr~ light      blue     
+##  7 Tatooine       97.3 Beru~    165    75 brown      light      blue     
 ##  8 Tatooine       97.3 R5-D4     97    32 &lt;NA&gt;       white, red red      
-##  9 Tatooine       97.3 Bigg…    183    84 black      light      brown    
-## 10 Stewjon        97.3 Obi-…    182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 8 more variables: birth_year &lt;dbl&gt;, gender &lt;chr&gt;,
+##  9 Tatooine       97.3 Bigg~    183    84 black      light      brown    
+## 10 Stewjon        97.3 Obi-~    182    77 auburn, w~ fair       blue-gray
+## # ... with 77 more rows, and 8 more variables: birth_year &lt;dbl&gt;, gender &lt;chr&gt;,
 ## #   species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;,
 ## #   height_in_mm &lt;dbl&gt;, height_in_m &lt;dbl&gt;</code></pre>
 <p>Now, let’s see what happens if we <code>group_by()</code> first:</p>
@@ -11736,17 +11734,17 @@ starwars &lt;- starwars %&gt;%
 ## # Groups:   homeworld [49]
 ##    homeworld mean_mass name  height  mass hair_color skin_color eye_color
 ##    &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;    
-##  1 Tatooine       85.4 Luke…    172    77 blond      fair       blue     
+##  1 Tatooine       85.4 Luke~    172    77 blond      fair       blue     
 ##  2 Tatooine       85.4 C-3PO    167    75 &lt;NA&gt;       gold       yellow   
-##  3 Naboo          64.2 R2-D2     96    32 &lt;NA&gt;       white, bl… red      
-##  4 Tatooine       85.4 Dart…    202   136 none       white      yellow   
-##  5 Alderaan       64   Leia…    150    49 brown      light      brown    
-##  6 Tatooine       85.4 Owen…    178   120 brown, gr… light      blue     
-##  7 Tatooine       85.4 Beru…    165    75 brown      light      blue     
+##  3 Naboo          64.2 R2-D2     96    32 &lt;NA&gt;       white, bl~ red      
+##  4 Tatooine       85.4 Dart~    202   136 none       white      yellow   
+##  5 Alderaan       64   Leia~    150    49 brown      light      brown    
+##  6 Tatooine       85.4 Owen~    178   120 brown, gr~ light      blue     
+##  7 Tatooine       85.4 Beru~    165    75 brown      light      blue     
 ##  8 Tatooine       85.4 R5-D4     97    32 &lt;NA&gt;       white, red red      
-##  9 Tatooine       85.4 Bigg…    183    84 black      light      brown    
-## 10 Stewjon        77   Obi-…    182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 8 more variables: birth_year &lt;dbl&gt;, gender &lt;chr&gt;,
+##  9 Tatooine       85.4 Bigg~    183    84 black      light      brown    
+## 10 Stewjon        77   Obi-~    182    77 auburn, w~ fair       blue-gray
+## # ... with 77 more rows, and 8 more variables: birth_year &lt;dbl&gt;, gender &lt;chr&gt;,
 ## #   species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;,
 ## #   height_in_mm &lt;dbl&gt;, height_in_m &lt;dbl&gt;</code></pre>
 <p>You can also group by multiple factors, which you can just add as comma-separated unquoted variable names. For example, let’s group by homeworld and species and get the average mass:</p>
@@ -11758,17 +11756,17 @@ starwars &lt;- starwars %&gt;%
 ## # Groups:   homeworld, species [58]
 ##    homeworld mean_mass name  height  mass hair_color skin_color eye_color
 ##    &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;    
-##  1 Tatooine       96   Luke…    172    77 blond      fair       blue     
+##  1 Tatooine       96   Luke~    172    77 blond      fair       blue     
 ##  2 Tatooine       53.5 C-3PO    167    75 &lt;NA&gt;       gold       yellow   
-##  3 Naboo          32   R2-D2     96    32 &lt;NA&gt;       white, bl… red      
-##  4 Tatooine       96   Dart…    202   136 none       white      yellow   
-##  5 Alderaan       64   Leia…    150    49 brown      light      brown    
-##  6 Tatooine       96   Owen…    178   120 brown, gr… light      blue     
-##  7 Tatooine       96   Beru…    165    75 brown      light      blue     
+##  3 Naboo          32   R2-D2     96    32 &lt;NA&gt;       white, bl~ red      
+##  4 Tatooine       96   Dart~    202   136 none       white      yellow   
+##  5 Alderaan       64   Leia~    150    49 brown      light      brown    
+##  6 Tatooine       96   Owen~    178   120 brown, gr~ light      blue     
+##  7 Tatooine       96   Beru~    165    75 brown      light      blue     
 ##  8 Tatooine       53.5 R5-D4     97    32 &lt;NA&gt;       white, red red      
-##  9 Tatooine       96   Bigg…    183    84 black      light      brown    
-## 10 Stewjon        77   Obi-…    182    77 auburn, w… fair       blue-gray
-## # … with 77 more rows, and 8 more variables: birth_year &lt;dbl&gt;, gender &lt;chr&gt;,
+##  9 Tatooine       96   Bigg~    183    84 black      light      brown    
+## 10 Stewjon        77   Obi-~    182    77 auburn, w~ fair       blue-gray
+## # ... with 77 more rows, and 8 more variables: birth_year &lt;dbl&gt;, gender &lt;chr&gt;,
 ## #   species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;,
 ## #   height_in_mm &lt;dbl&gt;, height_in_m &lt;dbl&gt;</code></pre>
 <div id="exercise-4.4a" class="section level3">
@@ -11810,17 +11808,17 @@ starwars &lt;- starwars %&gt;%
 <pre><code>## # A tibble: 38 x 4
 ##    species   mean_mass sd_mass     n
 ##    &lt;chr&gt;         &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;
-##  1 Aleena         15     NaN       1
-##  2 Besalisk      102     NaN       1
-##  3 Cerean         82     NaN       1
-##  4 Chagrian      NaN     NaN       1
-##  5 Clawdite       55     NaN       1
+##  1 Aleena         15      NA       1
+##  2 Besalisk      102      NA       1
+##  3 Cerean         82      NA       1
+##  4 Chagrian      NaN      NA       1
+##  5 Clawdite       55      NA       1
 ##  6 Droid          69.8    51.0     5
-##  7 Dug            40     NaN       1
-##  8 Ewok           20     NaN       1
-##  9 Geonosian      80     NaN       1
+##  7 Dug            40      NA       1
+##  8 Ewok           20      NA       1
+##  9 Geonosian      80      NA       1
 ## 10 Gungan         74      11.3     3
-## # … with 28 more rows</code></pre>
+## # ... with 28 more rows</code></pre>
 <p>Let’s clean that up a bit by filtering out species with just 1 observation:</p>
 <pre class="r"><code>starwars %&gt;% 
   group_by(species) %&gt;% # just add the group_by() call
@@ -11834,12 +11832,12 @@ starwars &lt;- starwars %&gt;%
 ## 1 Droid         69.8   51.0      5
 ## 2 Gungan        74     11.3      3
 ## 3 Human         82.8   19.4     35
-## 4 Kaminoan      88    NaN        2
+## 4 Kaminoan      88     NA        2
 ## 5 Mirialan      53.1    4.38     2
-## 6 Twi&#39;lek       55    NaN        2
+## 6 Twi&#39;lek       55     NA        2
 ## 7 Wookiee      124     17.0      2
-## 8 Zabrak        80    NaN        2
-## 9 &lt;NA&gt;          48    NaN        5</code></pre>
+## 8 Zabrak        80     NA        2
+## 9 &lt;NA&gt;          48     NA        5</code></pre>
 <p>Of course you can use multiple groups in <code>group_by()</code> to get crosstabs:</p>
 <pre class="r"><code>starwars %&gt;% 
   group_by(species, gender) %&gt;% # just change the group_by() call
@@ -11851,15 +11849,15 @@ starwars &lt;- starwars %&gt;%
 ## # Groups:   species [7]
 ##    species  gender mean_mass sd_mass     n
 ##    &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;
-##  1 Droid    none       140    NaN        2
+##  1 Droid    none       140     NA        2
 ##  2 Droid    &lt;NA&gt;        46.3   24.8      3
 ##  3 Gungan   male        74     11.3      3
 ##  4 Human    female      56.3   16.3      9
 ##  5 Human    male        87.0   16.5     26
 ##  6 Mirialan female      53.1    4.38     2
 ##  7 Wookiee  male       124     17.0      2
-##  8 Zabrak   male        80    NaN        2
-##  9 &lt;NA&gt;     female      48    NaN        3
+##  8 Zabrak   male        80     NA        2
+##  9 &lt;NA&gt;     female      48     NA        3
 ## 10 &lt;NA&gt;     male       NaN    NaN        2</code></pre>
 </div>
 <div id="exercise-4.5a" class="section level3">
@@ -11881,17 +11879,17 @@ starwars &lt;- starwars %&gt;%
 <pre><code>## # A tibble: 87 x 15
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Ratt…     79    15 none       grey, blue unknown           NA male  
+##  1 Ratt~     79    15 none       grey, blue unknown           NA male  
 ##  2 Yoda      66    17 white      green      brown            896 male  
-##  3 Wick…     88    20 brown      brown      brown              8 male  
-##  4 R2-D2     96    32 &lt;NA&gt;       white, bl… red               33 &lt;NA&gt;  
+##  3 Wick~     88    20 brown      brown      brown              8 male  
+##  4 R2-D2     96    32 &lt;NA&gt;       white, bl~ red               33 &lt;NA&gt;  
 ##  5 R5-D4     97    32 &lt;NA&gt;       white, red red               NA &lt;NA&gt;  
-##  6 Sebu…    112    40 none       grey, red  orange            NA male  
-##  7 Dud …     94    45 none       blue, grey yellow            NA male  
-##  8 Padm…    165    45 brown      light      brown             46 female
-##  9 Wat …    193    48 none       green, gr… unknown           NA male  
-## 10 Sly …    178    48 none       pale       white             NA female
-## # … with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  6 Sebu~    112    40 none       grey, red  orange            NA male  
+##  7 Dud ~     94    45 none       blue, grey yellow            NA male  
+##  8 Padm~    165    45 brown      light      brown             46 female
+##  9 Wat ~    193    48 none       green, gr~ unknown           NA male  
+## 10 Sly ~    178    48 none       pale       white             NA female
+## # ... with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;</code></pre>
 <p>You can make it descending order by wrapping the variable in <code>desc()</code>:</p>
@@ -11900,17 +11898,17 @@ starwars &lt;- starwars %&gt;%
 <pre><code>## # A tibble: 87 x 15
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Jabb…    175  1358 &lt;NA&gt;       green-tan… orange         600   herma…
-##  2 Grie…    216   159 none       brown, wh… green, y…       NA   male  
+##  1 Jabb~    175  1358 &lt;NA&gt;       green-tan~ orange         600   herma~
+##  2 Grie~    216   159 none       brown, wh~ green, y~       NA   male  
 ##  3 IG-88    200   140 none       metal      red             15   none  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Tarf…    234   136 brown      brown      blue            NA   male  
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Tarf~    234   136 brown      brown      blue            NA   male  
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
 ##  7 Bossk    190   113 none       green      red             53   male  
-##  8 Chew…    228   112 brown      unknown    blue           200   male  
-##  9 Jek …    180   110 brown      fair       blue            NA   male  
-## 10 Dext…    198   102 none       brown      yellow          NA   male  
-## # … with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  8 Chew~    228   112 brown      unknown    blue           200   male  
+##  9 Jek ~    180   110 brown      fair       blue            NA   male  
+## 10 Dext~    198   102 none       brown      yellow          NA   male  
+## # ... with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;</code></pre>
 <p>And, you can provide multiple variables to sort on, and it will do each in order:</p>
@@ -11920,16 +11918,16 @@ starwars &lt;- starwars %&gt;%
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
 ##  1 Yoda      66    17 white      green      brown            896 male  
-##  2 Ratt…     79    15 none       grey, blue unknown           NA male  
-##  3 Wick…     88    20 brown      brown      brown              8 male  
-##  4 Dud …     94    45 none       blue, grey yellow            NA male  
-##  5 R2-D2     96    32 &lt;NA&gt;       white, bl… red               33 &lt;NA&gt;  
-##  6 R4-P…     96    NA none       silver, r… red, blue         NA female
+##  2 Ratt~     79    15 none       grey, blue unknown           NA male  
+##  3 Wick~     88    20 brown      brown      brown              8 male  
+##  4 Dud ~     94    45 none       blue, grey yellow            NA male  
+##  5 R2-D2     96    32 &lt;NA&gt;       white, bl~ red               33 &lt;NA&gt;  
+##  6 R4-P~     96    NA none       silver, r~ red, blue         NA female
 ##  7 R5-D4     97    32 &lt;NA&gt;       white, red red               NA &lt;NA&gt;  
-##  8 Sebu…    112    40 none       grey, red  orange            NA male  
-##  9 Gasg…    122    NA none       white, bl… black             NA male  
+##  8 Sebu~    112    40 none       grey, red  orange            NA male  
+##  9 Gasg~    122    NA none       white, bl~ black             NA male  
 ## 10 Watto    137    NA black      blue, grey yellow            NA male  
-## # … with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+## # ... with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;</code></pre>
 <p>If you tell it to arrange by a character variable, it will order them alphabetically:</p>
@@ -11938,17 +11936,17 @@ starwars &lt;- starwars %&gt;%
 <pre><code>## # A tibble: 87 x 15
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Ackb…    180    83 none       brown mot… orange          41   male  
-##  2 Adi …    184    50 none       dark       blue            NA   female
-##  3 Anak…    188    84 blond      fair       blue            41.9 male  
-##  4 Arve…     NA    NA brown      fair       brown           NA   male  
-##  5 Ayla…    178    55 none       blue       hazel           48   female
-##  6 Bail…    191    NA black      tan        brown           67   male  
-##  7 Barr…    166    50 black      yellow     blue            40   female
+##  1 Ackb~    180    83 none       brown mot~ orange          41   male  
+##  2 Adi ~    184    50 none       dark       blue            NA   female
+##  3 Anak~    188    84 blond      fair       blue            41.9 male  
+##  4 Arve~     NA    NA brown      fair       brown           NA   male  
+##  5 Ayla~    178    55 none       blue       hazel           48   female
+##  6 Bail~    191    NA black      tan        brown           67   male  
+##  7 Barr~    166    50 black      yellow     blue            40   female
 ##  8 BB8       NA    NA none       none       black           NA   none  
-##  9 Ben …    163    65 none       grey, gre… orange          NA   male  
-## 10 Beru…    165    75 brown      light      blue            47   female
-## # … with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Ben ~    163    65 none       grey, gre~ orange          NA   male  
+## 10 Beru~    165    75 brown      light      blue            47   female
+## # ... with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;</code></pre>
 </div>
@@ -11960,17 +11958,17 @@ starwars &lt;- starwars %&gt;%
 <pre><code>## # A tibble: 87 x 15
 ##    char_name height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke Sky…    172    77 blond      fair       blue            19   male  
+##  1 Luke Sky~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO        167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2         96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Darth Va…    202   136 none       white      yellow          41.9 male  
-##  5 Leia Org…    150    49 brown      light      brown           19   female
-##  6 Owen Lars    178   120 brown, gr… light      blue            52   male  
-##  7 Beru Whi…    165    75 brown      light      blue            47   female
+##  3 R2-D2         96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Darth Va~    202   136 none       white      yellow          41.9 male  
+##  5 Leia Org~    150    49 brown      light      brown           19   female
+##  6 Owen Lars    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru Whi~    165    75 brown      light      blue            47   female
 ##  8 R5-D4         97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Biggs Da…    183    84 black      light      brown           24   male  
-## 10 Obi-Wan …    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Biggs Da~    183    84 black      light      brown           24   male  
+## 10 Obi-Wan ~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;</code></pre>
 <p>And, you can provide multiple renames:</p>
@@ -11981,17 +11979,17 @@ starwars &lt;- starwars %&gt;%
 <pre><code>## # A tibble: 87 x 15
 ##    char_name height_cm mass_kg hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;         &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke Sky…       172      77 blond      fair       blue            19   male  
+##  1 Luke Sky~       172      77 blond      fair       blue            19   male  
 ##  2 C-3PO           167      75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2            96      32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Darth Va…       202     136 none       white      yellow          41.9 male  
-##  5 Leia Org…       150      49 brown      light      brown           19   female
-##  6 Owen Lars       178     120 brown, gr… light      blue            52   male  
-##  7 Beru Whi…       165      75 brown      light      blue            47   female
+##  3 R2-D2            96      32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Darth Va~       202     136 none       white      yellow          41.9 male  
+##  5 Leia Org~       150      49 brown      light      brown           19   female
+##  6 Owen Lars       178     120 brown, gr~ light      blue            52   male  
+##  7 Beru Whi~       165      75 brown      light      blue            47   female
 ##  8 R5-D4            97      32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Biggs Da…       183      84 black      light      brown           24   male  
-## 10 Obi-Wan …       182      77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Biggs Da~       183      84 black      light      brown           24   male  
+## 10 Obi-Wan ~       182      77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;</code></pre>
 </div>
@@ -12010,30 +12008,26 @@ starwars &lt;- starwars %&gt;%
 <pre class="r"><code>left_join(starwars,
           lightsabers)</code></pre>
 <pre><code>## Joining, by = &quot;name&quot;</code></pre>
-<pre><code>## Warning: Column `name` joining character vector and factor, coercing into
-## character vector</code></pre>
 <pre><code>## # A tibble: 87 x 16
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue            19   male  
+##  1 Luke~    172    77 blond      fair       blue            19   male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33   &lt;NA&gt;  
-##  4 Dart…    202   136 none       white      yellow          41.9 male  
-##  5 Leia…    150    49 brown      light      brown           19   female
-##  6 Owen…    178   120 brown, gr… light      blue            52   male  
-##  7 Beru…    165    75 brown      light      blue            47   female
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   &lt;NA&gt;  
+##  4 Dart~    202   136 none       white      yellow          41.9 male  
+##  5 Leia~    150    49 brown      light      brown           19   female
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  
+##  7 Beru~    165    75 brown      light      blue            47   female
 ##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   &lt;NA&gt;  
-##  9 Bigg…    183    84 black      light      brown           24   male  
-## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57   male  
-## # … with 77 more rows, and 8 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  9 Bigg~    183    84 black      light      brown           24   male  
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  
+## # ... with 77 more rows, and 8 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
-## #   height_in_m &lt;dbl&gt;, lightsaber_color &lt;fct&gt;</code></pre>
+## #   height_in_m &lt;dbl&gt;, lightsaber_color &lt;chr&gt;</code></pre>
 <p>And let’s see what happens if we reverse the order:</p>
 <pre class="r"><code>left_join(lightsabers,
           starwars)</code></pre>
 <pre><code>## Joining, by = &quot;name&quot;</code></pre>
-<pre><code>## Warning: Column `name` joining factor and character vector, coercing into
-## character vector</code></pre>
 <pre><code>##             name lightsaber_color height mass    hair_color skin_color
 ## 1 Luke Skywalker            green    172   77         blond       fair
 ## 2    Darth Vader              red    202  136          none      white
@@ -12084,7 +12078,7 @@ starwars &lt;- starwars %&gt;%
 ##  8 Rodia     
 ##  9 Nal Hutta 
 ## 10 Bestine IV
-## # … with 39 more rows</code></pre>
+## # ... with 39 more rows</code></pre>
 <p>You can also get distinct combination by supplying more than 1 variable:</p>
 <pre class="r"><code>starwars %&gt;% 
   distinct(homeworld, species)</code></pre>
@@ -12101,24 +12095,24 @@ starwars &lt;- starwars %&gt;%
 ##  8 Corellia  Human  
 ##  9 Rodia     Rodian 
 ## 10 Nal Hutta Hutt   
-## # … with 48 more rows</code></pre>
+## # ... with 48 more rows</code></pre>
 <p>Note that by default it give us just the variables included in the <code>distinct()</code> call. We can change this by changing the <code>.keep_all</code> argument to TRUE:</p>
 <pre class="r"><code>starwars %&gt;% 
   distinct(homeworld, species, .keep_all = TRUE)</code></pre>
 <pre><code>## # A tibble: 58 x 15
 ##    name  height  mass hair_color skin_color eye_color birth_year gender
 ##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
-##  1 Luke…    172    77 blond      fair       blue              19 male  
+##  1 Luke~    172    77 blond      fair       blue              19 male  
 ##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow           112 &lt;NA&gt;  
-##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red               33 &lt;NA&gt;  
-##  4 Leia…    150    49 brown      light      brown             19 female
-##  5 Obi-…    182    77 auburn, w… fair       blue-gray         57 male  
-##  6 Wilh…    180    NA auburn, g… fair       blue              64 male  
-##  7 Chew…    228   112 brown      unknown    blue             200 male  
-##  8 Han …    180    80 brown      fair       brown             29 male  
-##  9 Gree…    173    74 &lt;NA&gt;       green      black             44 male  
-## 10 Jabb…    175  1358 &lt;NA&gt;       green-tan… orange           600 herma…
-## # … with 48 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red               33 &lt;NA&gt;  
+##  4 Leia~    150    49 brown      light      brown             19 female
+##  5 Obi-~    182    77 auburn, w~ fair       blue-gray         57 male  
+##  6 Wilh~    180    NA auburn, g~ fair       blue              64 male  
+##  7 Chew~    228   112 brown      unknown    blue             200 male  
+##  8 Han ~    180    80 brown      fair       brown             29 male  
+##  9 Gree~    173    74 &lt;NA&gt;       green      black             44 male  
+## 10 Jabb~    175  1358 &lt;NA&gt;       green-tan~ orange           600 herma~
+## # ... with 48 more rows, and 7 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
 ## #   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;, height_in_mm &lt;dbl&gt;,
 ## #   height_in_m &lt;dbl&gt;</code></pre>
 </div>
@@ -12140,7 +12134,7 @@ starwars &lt;- starwars %&gt;%
 ##  8 Ewok          1
 ##  9 Geonosian     1
 ## 10 Gungan        3
-## # … with 28 more rows</code></pre>
+## # ... with 28 more rows</code></pre>
 <p>You can also get counts of combinations of variables by adding more variables, separated by a comma:</p>
 <pre class="r"><code>starwars %&gt;% 
   count(species, homeworld) %&gt;% 
@@ -12158,7 +12152,7 @@ starwars &lt;- starwars %&gt;%
 ##  8 Human    Corellia      2
 ##  9 Human    Coruscant     2
 ## 10 Kaminoan Kamino        2
-## # … with 48 more rows</code></pre>
+## # ... with 48 more rows</code></pre>
 </div>
 <div id="exercise-4.6a" class="section level3">
 <h3>Exercise 4.6a</h3>
