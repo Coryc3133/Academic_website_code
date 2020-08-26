@@ -5,7 +5,7 @@
     <link>/authors/sanjay-srivastava/</link>
       <atom:link href="/authors/sanjay-srivastava/index.xml" rel="self" type="application/rss+xml" />
     <description>Sanjay Srivastava</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Tue, 10 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Tue, 04 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Sanjay Srivastava</title>
@@ -13,18 +13,18 @@
     </image>
     
     <item>
-      <title>Predicting Mental Health from Followed Accounts on Twitter</title>
-      <link>/publication/followed-acct-predict-mh/</link>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/followed-acct-predict-mh/</guid>
+      <title>Perceiving Personality Through the Grapevine: A Network Approach to Reputations</title>
+      <link>/publication/personality-through-grapevine/</link>
+      <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/personality-through-grapevine/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Perceiving Personality Through the Grapevine: A Network Approach to Reputations</title>
-      <link>/publication/personality-through-grapevine/</link>
-      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/personality-through-grapevine/</guid>
+      <title>Predicting Mental Health from Followed Accounts on Twitter</title>
+      <link>/publication/followed-acct-predict-mh/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/followed-acct-predict-mh/</guid>
       <description></description>
     </item>
     
