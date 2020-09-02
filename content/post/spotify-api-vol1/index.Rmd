@@ -173,7 +173,7 @@ dead_rel_spot_imp <- dead_relatives %>%
   as_tibble()
 
 dead_rel_tw_imp <- dead_relatives_followers_bip %>% 
-  mutate(twitter_centrality = centrality_eigen()) %>% 
+  mutate(twitter_centrality = centrality_eigen(weights = weight)) %>% 
   as_tibble()
 
 library(ggpubr)
@@ -193,7 +193,7 @@ p_dis <- dead_rel_spot_imp %>%
 ggbackground(p_dis, img)
 ```
 
-Noting the negative skew, I applied a log (base 10) transformation to each.
+Noting the positive skew, I applied a log (base 10) transformation to each.
 
 ```{r}
 p_dis_log <- dead_rel_spot_imp %>% 
@@ -327,4 +327,4 @@ Third, this is a single network and we might expect things to look different in 
 
 Even with those limitations in mind, I think there is something interesting here. In some ways it is unsurprising that artists with more listeners in common on spotify have more followers in common on Twitter - we might expect fandom to be expressed similarly across many different networks. At the same time, it is a little surprising given the differences in what each platform affords users (music listening & discovery vs. microblogging). 
 
-That's all for now! Tune in soon for **Vol. 2** of Spotify API Fun, where I'll take a look at community detection algorithms, and the extent to which they find similar communities in the two networks I introduced today.
+That's all for now! Tune in for **Vol. 2** of Spotify API Fun, where I'll take a look at community detection algorithms, and the extent to which they find similar communities in the two networks I introduced today.
