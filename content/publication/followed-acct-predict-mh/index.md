@@ -5,7 +5,7 @@ authors:
 - "Sanjay Srivastava"
 - "Reza Rejaie"
 - "Maureen Zalewski"
-date: "2019-09-10T00:00:00"
+date: "2020-12-02T00:00:00"
 doi: ""
 featured: true
 image:
@@ -17,7 +17,7 @@ links:
   url: https://osf.io/s4rtp/
 projects:
 - twitter-project
-publication: '*Stage 1 In Principle Acceptance at Collabra: Psychology*'
+publication: '*In Press at Collabra: Psychology*'
 publication_short: 
 publication_types:
 - "2"
@@ -32,7 +32,7 @@ tags:
 title: Predicting Mental Health from Followed Accounts on Twitter
 url_code: "https://osf.io/54qdm/"
 url_dataset: ""
-url_pdf: "files/MHTwitterFriends_S1RR_revision1.pdf"
+url_pdf: "files/MHTwitterFriends_S2RR_final_wSupplement.pdf"
 #url_poster: ""
 url_project: "https://osf.io/54qdm/"
 #url_slides: ""
