@@ -1,9 +1,9 @@
 {
-    "path" : "C:/Users/Coryc/OneDrive - University Of Oregon/Work/Costello-academic-site-2/content/courses/RBootcamp",
-    "sortOrder" : [
+    "path": "C:/Users/Coryc/OneDrive - University Of Oregon/Work/Costello-academic-site-2/content/courses/RBootcamp",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "ascending": true,
+            "columnIndex": 2
         }
     ]
 }

@@ -5,7 +5,7 @@
     <link>/authors/admin/</link>
       <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Cory K. Costello</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Cory K. Costello</title>
@@ -13,18 +13,18 @@
     </image>
     
     <item>
-      <title>Social Media and Well-Being: Pitfalls, Progress, and Next Steps</title>
-      <link>/publication/social-media-wellbeing-tics/</link>
-      <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/social-media-wellbeing-tics/</guid>
+      <title>Predicting Mental Health from Followed Accounts on Twitter</title>
+      <link>/publication/followed-acct-predict-mh/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/followed-acct-predict-mh/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Predicting Mental Health from Followed Accounts on Twitter</title>
-      <link>/publication/followed-acct-predict-mh/</link>
-      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/followed-acct-predict-mh/</guid>
+      <title>Social Media and Well-Being: Pitfalls, Progress, and Next Steps</title>
+      <link>/publication/social-media-wellbeing-tics/</link>
+      <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/social-media-wellbeing-tics/</guid>
       <description></description>
     </item>
     
