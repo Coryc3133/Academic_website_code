@@ -8,7 +8,7 @@ authors:
 - admin
 date: "2019-02-03T00:00:00Z"
 doi: ""
-featured: true
+featured: false
 image:
   caption: ''
   focal_point: ""

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Joshua Pearman | Cory K. Costello</title>
+    <link>/authors/joshua-pearman/</link>
+      <atom:link href="/authors/joshua-pearman/index.xml" rel="self" type="application/rss+xml" />
+    <description>Joshua Pearman</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Joshua Pearman</title>
+      <link>/authors/joshua-pearman/</link>
+    </image>
+    
+    <item>
+      <title>The Big Five Across Socioeconomic Status: Measurement Invariance, Relationships, and Age Trends</title>
+      <link>/publication/big5-ses/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/big5-ses/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

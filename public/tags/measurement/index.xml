@@ -5,12 +5,20 @@
     <link>/tags/measurement/</link>
       <atom:link href="/tags/measurement/index.xml" rel="self" type="application/rss+xml" />
     <description>Measurement</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Measurement</title>
       <link>/tags/measurement/</link>
     </image>
+    
+    <item>
+      <title>The Big Five Across Socioeconomic Status: Measurement Invariance, Relationships, and Age Trends</title>
+      <link>/publication/big5-ses/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/big5-ses/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Predicting Mental Health from Followed Accounts on Twitter</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bradley T. Hughes | Cory K. Costello</title>
+    <link>/authors/bradley-t.-hughes/</link>
+      <atom:link href="/authors/bradley-t.-hughes/index.xml" rel="self" type="application/rss+xml" />
+    <description>Bradley T. Hughes</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Bradley T. Hughes</title>
+      <link>/authors/bradley-t.-hughes/</link>
+    </image>
+    
+    <item>
+      <title>The Big Five Across Socioeconomic Status: Measurement Invariance, Relationships, and Age Trends</title>
+      <link>/publication/big5-ses/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/big5-ses/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
