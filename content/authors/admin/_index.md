@@ -15,15 +15,13 @@ education:
     year: 2012
 email: ""
 interests:
-- Personality Assesment & Development
-- Interpersonal Perception & Reputation
-- Data Science
+- Personality, Interpersonal Perception & Reputation
+- Data Science, Statistics, & Machine Learning
 
 name: Cory K. Costello
 organizations:
-- name: University of Michigan
-  url: "https://lsa.umich.edu/psych"
-role: Postdoctoral Fellow in Emotion and Self-Control Lab
+- name: Nielsen Corporation
+role: Senior Data Scientist
 social:
 - icon: envelope
   icon_pack: fas
@@ -47,4 +45,4 @@ user_groups:
 - Visitors
 ---
 
-Cory Costello is a postdoctoral fellow in the [Emotion and Self-Control Lab](http://selfcontrol.psych.lsa.umich.edu/) (PI: Ethan Kross) at University of Michigan, Department of Psychology. His research interests include **Personality** (*who we are*), **Interpersonal Perception** (*what people think about us*), **Reputations** (*what people say and hear about us*), how these are manifest in online environments, and the extent to which they're recoverable from digital footprints. He combines survey, experimental, and data scientific methods in pursuit of these interests. He is an open science and R enthusiast. His methodological interests include social network analysis, predictive modelling / machine learning, text analysis, structural equation modelling, hierarchical linear modelling.
+I am Psychological Scientist by training, currently working as a Senior Data Scientist at the Nielsen Corporation, where I use my expertise in statistics, data science, and behavioral science to contribute to Nielsen's audience measurement products. I was previously a postdoctoral fellow in the [Emotion and Self-Control Lab](http://selfcontrol.psych.lsa.umich.edu/) (PI: Ethan Kross) at University of Michigan's Department of Psychology. Prior to that, I was a PhD student in the [Personality and Social Dynamics Lab](https://psdlab.uoregon.edu/) (PI: Sanjay Srivastava) at the University of Oregon's Department of Psychology. I spent my time in academics learning to apply complex data analytic techniques - social network analysis, predictive modelling / machine learning, text analysis, structural equation modelling, hierarchical linear modelling - to answer questions about personality, emotion, and reputation.

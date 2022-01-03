@@ -18,23 +18,29 @@ subtitle = ""
   icon = "chart-line"
   icon_pack = "fas"
   name = "Statistics"
-  description = "Expertise"  
+  description = "Expert"  
 
 [[feature]]
   icon = "r-project"
   icon_pack = "fab"
   name = "R"
-  description = "Expertise"
+  description = "Expert"
   
 [[feature]]
   icon = "git-square"
   icon_pack = "fab"
   name = "git"
-  description = "Moderate Proficiency"
+  description = "Proficient"
 
 [[feature]]
   icon = "python"
   icon_pack = "fab"
   name = "Python"
-  description = "Moderate Proficiency"
+  description = "Proficient"
+
+  [[feature]]
+  icon = "database"
+  icon_pack = "fas"
+  name = "SQL"
+  description = "Proficient"
 +++
