@@ -19,14 +19,26 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
+  title = "Senior Data Scientist"
+  company = "Nielsen"
+  company_url = "https://www.nielsen.com/?gclid=CjwKCAjwvNaYBhA3EiwACgndgmmJyW4yYiLUGE6WHaIEWvdBzKHRFDq2kgxFKKz8SVi_WlkOGb01BhoCRS4QAvD_BwE&gclsrc=aw.ds"
+  location = "Oldsmar, FL (remote)"
+  date_start = "2020-08-01"
+  date_end = "2021-06-25"
+  description = """
+  + Senior Data Scientist conducting end-to-end research on audience measurement products.
+  """
+
+[[experience]]
   title = "Postdoctoral Fellow"
   company = "University of Michigan"
   company_url = "https://lsa.umich.edu/psych"
   location = "Ann Arbor, MI"
   date_start = "2020-08-01"
-  date_end = ""
+  date_end = "2021-06-25"
   description = """
   + **Postdoctoral Fellow** in Emotion and Self-Control Lab (PI: Ethan Kross)
+  + Conducted research on emotions and emotion regulation in online social networks and offline in daily life.
   """
 
 [[experience]]

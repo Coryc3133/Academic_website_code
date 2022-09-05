@@ -30,17 +30,17 @@ subtitle = ""
   icon = "git-square"
   icon_pack = "fab"
   name = "git"
-  description = "Proficient"
+  description = "Expert"
 
 [[feature]]
   icon = "python"
   icon_pack = "fab"
   name = "Python"
-  description = "Proficient"
+  description = "Expert"
 
   [[feature]]
   icon = "database"
   icon_pack = "fas"
   name = "SQL"
-  description = "Proficient"
+  description = "Expert"
 +++
